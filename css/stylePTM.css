@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+/********************************************** DEV SPECIFIC SYTLES *****************************************************************/
+/*************************************************************************************************************************************/
+
+
+.hover:hover{background-color:#C1FFC1;}
+.devProjects td{border:1px #ABABAB solid;  text-align:center;  }
+
+.prSortable:hover{ background-color: #FFFF66 ; color: #0000ff; font-weight:bold; cursor:pointer;}
+.projectLinks{border:1px #575757 solid; margin:10px; overflow:auto;  height:75px; float:left; width:938px;}
+.projectAttachments{border:1px #575757 solid; margin:10px; overflow:auto; height:100px; float:right; width:300px};
+#projectLink{width:610px; overflow:auto;}
+#projectLink a{ margin:0px 5px; color:blue;}
+#projectLink a:hover{ text-decoration:underline; margin:0px 5px; color:blue;}
+#projectLink a:visited{color:blue;}
+#projectAttachment a:visited{color:blue;}
+.taskArea{padding: 10px; cursor:pointer; max-height:510px; overflow:auto;}
+.live{ background-color:#FFFF66; color:#0000ff; font-weight:bold; cursor:pointer; border:1px #0B0B0B solid;}
+.head{ background-color: #FFFFBB; font-weight:bold; border:1px #CFA703 solid; padding:0px 0px; margin-left:-1px;}
+.task{ }
+.task_off{ color:#818181;}
+.proj_off{ color: #818181;}
+
+.projName{float:left;  background-color: #f4f4f4; color: blue;  font-family:arial; border-bottom:none; margin-left:10px; padding:6px 20px 7px 20px; -moz-border-radius-topright:10px;-moz-border-radius-topleft:10px; border:1px #ABABAB solid;  border-bottom:1px #f4f4f4 solid; margin-bottom:-1px;}
+.projVars{float:right;  background-color: #f4f4f4; color: blue;  font-family:arial; border-bottom:none; margin-right:10px; padding:5px 20px 5px 20px; -moz-border-radius-topright:10px;-moz-border-radius-topleft:10px; border:1px #ABABAB solid;  border-bottom:1px #f4f4f4 solid; margin-bottom:-1px;}
+.editTaskHead{padding:5px; background-color:blue; color:white; font-size:12px; font-weight:bold; }
+.editTaskBody{padding:10px; color:#222222; font-size:10px; }
+.editTaskBody table tr td{font-size:10px;   color:#080808;}
+.button{background-image:url(buttonBg.gif); background-repeat:repeat-x; -moz-border-radius:4px;}
+.editTaskSave{ background-color:#006200; color:white; font-weight:bold; border:1px #252525 solid; padding:2px 3px;}
+.tabMenu ul{padding-left:0px; list-style:none;  margin:0 0 0 200px;}
+.tabMenu ul li{-moz-border-radius-topleft:5px; -moz-border-radius-topright:5px; border:1px #7B7B7B solid; border-bottom:1px #1f1f1f solid; color:#818181; background-color:#D5D5D5; padding:5px 20px 0 20px; display:inline; cursor:pointer;}
+.tabMenu ul .activeTab{color:#2D2D2D; background-color:white; border:1px #1F1F1F solid; border-bottom:1px white solid;}
+.addTask{padding: 7px 0px; background-color:#008A00; font-weight:bold; color:white; border:1px #8D8D8D solid;}
+.saveTaskNotes{padding: 3px 5px; background-color: #006F00; font-weight:bold; font-family:verdana; color:white; border:1px #383838 solid; -moz-border-radius:5px;}
+.adminOptions{border:1px #797979 solid; border-bottom:none; margin-left:160px; width:559px; border-top:none; -moz-border-radius-bottomleft:5px;-moz-border-radius-bottomright:5px; color: #2D2D2D;}
+.adminOptions ul{ list-style:none; margin:0px; padding:0px;}
+.adminOptions ul li{ display:inline; padding:2px 1px;  }

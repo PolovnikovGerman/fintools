@@ -1,0 +1,134 @@
+@charset "utf-8";
+/* CSS Document */
+
+.navigation ul{
+ margin:0px; padding:0px; list-style:none;
+}
+.navigation li{
+display:inline;
+padding:5px 20px 5px 20px;
+border:1px #969696 solid;
+border-bottom:1px #6c6c6c solid;
+-moz-border-radius:7px 7px 0px 0px;
+font-size:12px;
+background-color: #EAEAEA;
+cursor: pointer;
+}
+.navigation ul  .live{
+
+background-color:white;
+border:1px #6C6C6C solid;
+-moz-border-radius:7px 7px 0px 0px;
+border-bottom:1px white solid;
+background:-moz-linear-gradient(top, #ABABAB,white, white);
+cursor:pointer;
+}
+
+input{font-size:12px;}
+
+.categoryPane{
+width:250px;
+
+background-color: #F6F6F6;
+border:1px #424242 solid;
+border-left:none;
+max-height:700px;
+padding-bottom:10px;
+-moz-border-radius:0px 10px 10px 0px;
+
+}
+.categoryTable tr td{
+font-size:11px;
+font-family:verdana;
+padding:2px 2px 3px 10px;
+text-align:left;
+border-bottom:1px #C0C0C0 dashed;
+font-weight:bold;
+}
+.categoryTable tr td:hover{
+background-color: #424242;
+border-bottom:1px #424242 solid;
+color:white;
+cursor:pointer;
+
+}
+
+#sortable { 
+list-style-type: none; 
+margin:0;
+padding: 0; 
+}
+#sortable li{
+color:white;
+}
+.sbCatItemsList{ 
+margin: 3px 3px 3px 3px; 
+padding: 1px; float: left; 
+width: 100px; 
+background-color:#EAEAEA; 
+border:1px #ABABAB solid; 
+height: 90px;  
+text-align: center;
+}
+.sbItemsList{
+max-height:700px; 
+overflow:auto;
+}
+.sbItemsList table{
+border:1px #6C6C6C solid;
+border-right:none;
+max-width:300px; 
+margin-right:20px; 
+
+}
+ 
+.sbItemsList table tr td
+{
+padding:2px 5px;
+font-family:arial;
+font-size:12px;
+}
+
+.sbCatSort{
+margin-top:8px;
+
+padding:10px;
+overflow:auto; 
+max-height:650px;
+background-color: #424242;
+width:350px;
+-moz-border-radius:10px 10px 10px 10px;
+border:1px solid #d5d5d5; 
+border-left:none;
+}
+.sbCatSortStyle{
+
+}
+.catActive, .catActive td{
+color:white;
+background-color:#424242;
+border-bottom:1px #424242 solid;
+}
+.noCat{
+background-color:#FFFF77;)
+}
+.actEditRed{
+border:1px #B0230B solid;
+background-color: #C00C0C;
+font-family:verdana;
+color:white;
+font-weight:bold;
+padding:5px;
+background:-moz-linear-gradient(top,#C00C0C,#E9311D,#E9311D, #C00C0C);
+font-size:12px;
+}
+.actEditGreen{
+color:#00AA00;
+font-family:verdana;
+font-weight:bold;
+border:none;
+background-color:none;
+background:-moz-linear-gradient(top,white);
+font-size:12px;
+}
+.pr{border:none; font-size:10px; color:#004000;}

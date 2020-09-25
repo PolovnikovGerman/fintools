@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+.couponBody{  margin:20px;  }
+
+.couponHeadTable{ border:1px #555555 solid;} 
+.couponHeadTable tr th{ background-color:#4D3231; color:white; font-family:verdana; font-weight:bold; padding:3px 15px;}
+.couponHeadTable tr td{padding:5px 10px; } 
+
+.couponDiv{ margin-top:20px; height:630px; overflow:auto;  }
+#couponTable{border:1px #818181 solid;}
+#couponTable tr th{ background-color:#E7E7E7; padding:2px 15px;}
+#couponTable tr td{ padding:2px 5px; border-top:1px #EAEAEA solid;}
+.edit{cursor:pointer;}
+.coupCode{color:#0000ff; font-weight:bold; font-family:verdana; }
+
+

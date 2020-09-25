@@ -1,0 +1,4 @@
+# AuthUserFile "/home/bluetrac/.htpasswds/public_html/system/passwd"
+# AuthType Basic
+# AuthName "BLUETRACK's vendor center is protected with a special pin.  Please enter it below.  Please contact us if you forgot your pin number."
+# require valid-user

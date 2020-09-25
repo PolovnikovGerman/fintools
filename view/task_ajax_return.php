@@ -1,0 +1,267 @@
+<?php
+include_once('../controller/task_controller.php');
+include_once ('../model/mysql.php');
+
+$obj = new db();
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+if($_GET['q'] == 'add_task')
+{
+
+$disp='';
+$_SESSION['status'] = ($_SESSION['status'] != 'closed') ? 'open' : 'closed';
+ $qry = "insert into task_roll values(null,".$_GET['cat'].",'".$_GET['msg']."','".$_GET['type']."','".$_SESSION['status']."',now(),".$_SESSION['uid']." )";
+if($obj->query($qry))
+{
+$last_id=mysql_insert_id();
+$sort = array();
+$sort = $obj->get_sort_order($_SESSION['uid'],$_GET['cat']);  
+if($_SESSION['status']=='closed')
+$insert_sort = $obj->insert_dead_sort($last_id,$_SESSION['uid'],$_GET['cat']);
+else if($_SESSION['status'] == 'open')
+$insert_sort = $obj->insert_sort($last_id,$_SESSION['uid'],$_GET['cat']);
+ 
+}
+echo display($_SESSION['uid'],$_GET['cat'],$_GET['live']);
+
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+if($_GET['q'] == 'update_task')
+{
+
+$disp='';
+
+ $qry = "update task_roll set task_msg = '".$_GET['msg']."' where task_id = ".$_GET['taskid'];
+if($res=$obj->query($qry))
+{
+$qry = "select * from task_roll where task_id = ".$_GET['taskid'];
+$res = $obj->query($qry);
+$data = $obj->fetch($res);
+echo ($data['task_msg'] != '') ? $data['task_msg'] : 'No Message';
+}
+else
+echo "Could not Edit: Error.";
+
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+if($_GET['q'] == 'make_task_active')
+{
+$tid = $_GET['taskid'];
+$secid = $_GET['secid'];
+$ttype = $_GET['type'];
+$tcat = $_GET['cat'];
+$qry = "select * from task_active where task_id = $tid and section_id = $secid and hilite_cat = $tcat";
+$res = $obj->query($qry);
+if(!$obj->numrow($res))
+{
+$qry = "insert into task_active values(null,$tid,$secid,'$tcat','$ttype',now())";
+if($obj->query($qry))
+{
+$last_id = mysql_insert_id();
+if($_SESSION['status']=='closed')
+$insert_active_sort = $obj->insert_dead_sort($tid,$secid,$tcat);
+else if($_SESSION['status']=='open')
+$insert_active_sort = $obj->insert_sort($tid,$secid,$tcat);
+}
+}
+echo display_active($secid,$tcat);
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+if($_GET['q'] == 'make_task_inactive')
+{
+$hid = $_GET['hid'];
+$taskid = $_GET['taskid'];
+$secid = $_GET['secid'];
+$tcat = $_GET['cat'];
+
+$qry = "delete from task_active where hilite_id = $hid";
+$res = $obj->query($qry);
+if($_SESSION['status']=='closed')
+$remove_active_sort = $obj->remove_task_from_dead_sort($taskid,$secid,$tcat);
+else if($_SESSION['status'] == 'open')
+$remove_active_sort = $obj->remove_task_from_sort($taskid,$secid,$tcat);
+
+echo display_active($secid,$tcat);
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////// CHANGE ORDER /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+if($_GET['q']=='change_order')
+{
+$pos=$_GET['pos']-1;
+$curr=$_GET['curr']-1;
+$sec=$_GET['sec'];
+$cat=$_GET['cat'];
+$iid=$_GET['iid'];
+if($_SESSION['status'] == 'closed')
+{
+$qry="select * from task_dead_sort where dead_sec = $sec and dead_cat = '$cat'" ;
+$res=$obj->query($qry);
+$new=$obj->fetch($res);
+$old_order=array(); $new_order=array();
+$old_order=unserialize($new['dead_array']);
+$old=0;
+
+	for($i=0;$i<sizeof($old_order);$i++)
+	{
+		if($i==$pos)
+		{
+		$new_order[]=$iid;
+		}
+		else
+		{
+			 if($old_order[$old]==$iid)
+			{
+				$old++;
+				$new_order[]=$old_order[$old];
+				$old++;
+			}
+			else 
+			{
+				$new_order[]=$old_order[$old];
+				$old++;
+			}
+		}
+	}
+$qry="update task_dead_sort set dead_array= '".serialize($new_order)."' where dead_sec = $sec and dead_cat = '$cat' ";
+$res=$obj->query($qry);
+}
+else if($_SESSION['status'] == 'open')
+{
+$qry="select * from task_sort where sort_sec = $sec and sort_cat = '$cat'" ;
+$res=$obj->query($qry);
+$new=$obj->fetch($res);
+$old_order=array(); $new_order=array();
+$old_order=unserialize($new['sort_array']);
+$old=0;
+
+	for($i=0;$i<sizeof($old_order);$i++)
+	{
+		if($i==$pos)
+		{
+		$new_order[]=$iid;
+		}
+		else
+		{
+			 if($old_order[$old]==$iid)
+			{
+				$old++;
+				$new_order[]=$old_order[$old];
+				$old++;
+			}
+			else 
+			{
+				$new_order[]=$old_order[$old];
+				$old++;
+			}
+		}
+	}
+$qry="update task_sort set sort_array= '".serialize($new_order)."' where sort_sec = $sec and sort_cat = '$cat' ";
+$res=$obj->query($qry);
+}
+
+if($sec>100)
+echo display_active($sec,$cat);
+else
+echo display($_SESSION['uid'],$cat,$_GET['live']);
+}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////CLOSE TASK//////////////////////////////////////////////////////////////////////////////////////////////////////////////
+if($_GET['q']=='close_task')
+{
+$tid=$_GET['taskid'];
+$sid=$_GET['secid'];
+$cat=$_GET['cat'];
+$live=$_GET['live']; 
+//echo "tid ".$_GET['taskid']." sid/secid ".$_GET['secid']." cat ".$_GET['cat']." live ".$_GET['live'];
+if($_SESSION['status'] == 'closed' )
+{
+ $qry = "update task_roll set task_status = 'open' where task_id = ".$tid;
+$res = $obj->query($qry);
+if($res)
+{
+		
+		if($obj->isin_section($tid,$live))
+		{
+		$obj->remove_task_from_dead_sort($tid,$live,$cat);
+		$obj->remove_task_from_dead_sort($tid,$sid,$cat);
+		
+		$obj->insert_sort($tid,$live,$cat);
+		$obj->insert_sort($tid,$sid,$cat);
+		}
+		else
+		{
+		$obj->remove_task_from_dead_sort($tid,$sid,$cat);
+		$obj->insert_sort($tid,$sid,$cat);
+		
+		}
+		$d1 = display($_SESSION['uid'],$cat,$live);
+		$d2 = (display_active($live,$cat)=='') ? '' : display_active($live,$cat); 
+		//$d2 = display_active($live,$cat);
+		
+		$ret = array('firstResponse' => $d1, 'secondResponse' => $d2); 
+		//echo "{\"firstResponse\":".$d1.",\"secondResponse\":".$d2."}";
+		echo json_encode($ret); 
+		
+		
+	
+	
+}
+
+}//end of session status if
+else if($_SESSION['status'] == 'open')
+{
+$qry = "update task_roll set task_status = 'closed' where task_id = ".$tid;
+$res = $obj->query($qry);
+if($res)
+{
+
+		if($obj->isin_section($tid,$live))
+		{
+		$obj->remove_task_from_sort($tid,$live,$cat);
+		$obj->remove_task_from_sort($tid,$sid,$cat);
+		
+		$obj->insert_dead_sort($tid,$live,$cat);
+		$obj->insert_dead_sort($tid,$sid,$cat);
+		}
+		else
+		{
+		$obj->remove_task_from_sort($tid,$sid,$cat);
+		$obj->insert_dead_sort($tid,$sid,$cat);
+		}
+		
+		$d1 = display($_SESSION['uid'],$cat,$live);
+		$d2 = (display_active($live,$cat)=='') ? '' : display_active($live,$cat); 
+		//$d2 = display_active($live,$cat);
+		
+		$ret = array('firstResponse' => $d1, 'secondResponse' => $d2); 
+		//echo "{\"firstResponse\":".$d1.",\"secondResponse\":".$d2."}";
+		echo json_encode($ret); 
+		
+		
+	
+}
+
+}//end of session status if	
+
+
+}
+?>

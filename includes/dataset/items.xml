@@ -1,0 +1,2543 @@
+<?xml version="1.0"?>
+<items>
+  <item>
+    <itemid>22-AA001</itemid>
+    <description>Penguin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA002</itemid>
+    <description>Whale Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA003</itemid>
+    <description>White Seal Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA004</itemid>
+    <description>Tropical Fish Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA005</itemid>
+    <description>Dolphin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA006</itemid>
+    <description>Killer Whale Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA007</itemid>
+    <description>Bass Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA008</itemid>
+    <description>Hammerhead Shark Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA009</itemid>
+    <description>Shark Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA010</itemid>
+    <description>Sea Shell Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA011</itemid>
+    <description>Sting Ray Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA012</itemid>
+    <description>Lobster Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA013</itemid>
+    <description>Lobster Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-AA014</itemid>
+    <description>Crab Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA015</itemid>
+    <description>Starfish Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA016</itemid>
+    <description>Frog Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA017</itemid>
+    <description>Alligator Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA018</itemid>
+    <description>Turtle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA019</itemid>
+    <description>Sitting Penguin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA020</itemid>
+    <description>Clownfish Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA021</itemid>
+    <description>Humpback Whale Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA022</itemid>
+    <description>Grey Seal Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA023</itemid>
+    <description>Gentleman Penguin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA024</itemid>
+    <description>Cartoon Frog Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA025</itemid>
+    <description>Cartoon Blue Shark Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA026</itemid>
+    <description>Octopus Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA027</itemid>
+    <description>Blue Marlin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA028</itemid>
+    <description>Sea Turtle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA029</itemid>
+    <description>Squid Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA030</itemid>
+    <description>Sea Horse Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA031</itemid>
+    <description>Speckle Shark Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AA032</itemid>
+    <description>Walrus Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AL002</itemid>
+    <description>Black Panther Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AL003</itemid>
+    <description>Elephant with Raised Tusks Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AL004</itemid>
+    <description>Icosahedron Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AL005</itemid>
+    <description>Dodecahedron Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AL006</itemid>
+    <description>Golden Apple Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AL008</itemid>
+    <description>Prescription Bottle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AL009</itemid>
+    <description>Pill Caplet Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AL012</itemid>
+    <description>French Horn Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AL013</itemid>
+    <description>Violin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-AL014</itemid>
+    <description>Playing Card Stress Balls - Any Style</description>
+  </item>
+  <item>
+    <itemid>22-AL016</itemid>
+    <description>Chrysanthemum Flower Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC001</itemid>
+    <description>Blue Water Droplet Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC002</itemid>
+    <description>Mail Box Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC003</itemid>
+    <description>Fire Hydrant Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC004</itemid>
+    <description>Fire Extinguisher Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC005</itemid>
+    <description>Fire Truck Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC006</itemid>
+    <description>Fire Helmet Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC007</itemid>
+    <description>Stop Sign Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC008</itemid>
+    <description>Ambulance Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC009</itemid>
+    <description>Police Car Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC010</itemid>
+    <description>Traffic Light Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC011</itemid>
+    <description>Trash Can Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC012</itemid>
+    <description>Garbage Truck Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC013</itemid>
+    <description>Newspaper Stress Balls - Rolled Up</description>
+  </item>
+  <item>
+    <itemid>22-CC014</itemid>
+    <description>Postal Mail Box Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC015</itemid>
+    <description>Gavel Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC016</itemid>
+    <description>Pedestal Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC017</itemid>
+    <description>Police Badge Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC018</itemid>
+    <description>Gavel Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-CC019</itemid>
+    <description>Fireman Mad Cap Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC020</itemid>
+    <description>City Bus Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC021</itemid>
+    <description>Metro Bus Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC022</itemid>
+    <description>Police Hat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC023</itemid>
+    <description>Police Bear Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC024</itemid>
+    <description>Newspaper Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-CC025</itemid>
+    <description>Mr. Recycle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-ED001</itemid>
+    <description>School Bus Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-ED002</itemid>
+    <description>Pencil Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-ED003</itemid>
+    <description>Mortarboard Grad Cap Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-ED004</itemid>
+    <description>Book Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-ED005</itemid>
+    <description>Blue Ribbon Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-ED006</itemid>
+    <description>Teacher Bear Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-ED007</itemid>
+    <description>Flat Front School Bus Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-ED008</itemid>
+    <description>Brain Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-ED009</itemid>
+    <description>Rainbow Brain Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-ED010</itemid>
+    <description>Apple Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-ED011</itemid>
+    <description>Desktop PC Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB001</itemid>
+    <description>File Box Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB003</itemid>
+    <description>Penny Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB004</itemid>
+    <description>$100 Bill Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB005</itemid>
+    <description>Shopping Cart Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB006</itemid>
+    <description>Brown Suitcase Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB007</itemid>
+    <description>Black Briefcase Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB008</itemid>
+    <description>Armored Truck Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB009</itemid>
+    <description>Gold Bar Ingot Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB010</itemid>
+    <description>Business Cow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB011</itemid>
+    <description>Shopping Cart Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-FB012</itemid>
+    <description>Money Bag Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB013</itemid>
+    <description>Green Money Bag Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB015</itemid>
+    <description>Thrifty Pig Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB016</itemid>
+    <description>Million Dollar Bill Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB017</itemid>
+    <description>Wall Street Bull Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB018</itemid>
+    <description>Credit Card Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB019</itemid>
+    <description>Banker Pig Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB020</itemid>
+    <description>Cool Pig Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB022</itemid>
+    <description>Piggy Bank Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FB023</itemid>
+    <description>Black Oil Droplet Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD001</itemid>
+    <description>Hamburger Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD002</itemid>
+    <description>Chocolate Cake Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD003</itemid>
+    <description>Ice Cream Cone Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD004</itemid>
+    <description>Pizza Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD005</itemid>
+    <description>Coffee Bean Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD006</itemid>
+    <description>Hot Dog Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD007</itemid>
+    <description>Birthday Cake Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD008</itemid>
+    <description>Tea Latte Coffee Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD009</itemid>
+    <description>Cup of Coffee Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD010</itemid>
+    <description>Cookie Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD011</itemid>
+    <description>Loaf of Bread Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD012</itemid>
+    <description>Salt Shaker Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD013</itemid>
+    <description>Popsicle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD014</itemid>
+    <description>Egg Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD015</itemid>
+    <description>Sunnyside Up Egg Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD016</itemid>
+    <description>Popcorn Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD017</itemid>
+    <description>Chef Hat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD018</itemid>
+    <description>Peanut Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD019</itemid>
+    <description>Mushroom Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD020</itemid>
+    <description>Cheese Wedge Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD022</itemid>
+    <description>Seltzer Bottle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD023</itemid>
+    <description>Wine Bottle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD024</itemid>
+    <description>Hot Dog Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-FD025</itemid>
+    <description>Chef Cow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD026</itemid>
+    <description>Chocolate Donut Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD027</itemid>
+    <description>Champagne Bottle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD028</itemid>
+    <description>French Fries Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD029</itemid>
+    <description>Slice of Bread Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD030</itemid>
+    <description>Pickle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD032</itemid>
+    <description>Beer Bottle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD033</itemid>
+    <description>Ice Cream Bar Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD034</itemid>
+    <description>Muffin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FD035</itemid>
+    <description>Beer Pilsner Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF001</itemid>
+    <description>Smiling Star Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF002</itemid>
+    <description>Robot Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF003</itemid>
+    <description>Green Alien Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF004</itemid>
+    <description>Genie Lamp Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF005</itemid>
+    <description>Crescent Moon Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF006</itemid>
+    <description>Castle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF007</itemid>
+    <description>Wizard Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF008</itemid>
+    <description>Treasure Chest Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF009</itemid>
+    <description>Colorful Rainbow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF010</itemid>
+    <description>Glow-In-The-Dark Man in Moon Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF011</itemid>
+    <description>Rocket Ship Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF012</itemid>
+    <description>Flying Pig Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF013</itemid>
+    <description>Man In The Moon Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FF014</itemid>
+    <description>Crown Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV002</itemid>
+    <description>Orange Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV003</itemid>
+    <description>Banana Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV004</itemid>
+    <description>Strawberry Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV005</itemid>
+    <description>Lime Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV006</itemid>
+    <description>Lemon Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV007</itemid>
+    <description>Pineapple Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV008</itemid>
+    <description>Cherry Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV009</itemid>
+    <description>Grape Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV010</itemid>
+    <description>Tomato Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV011</itemid>
+    <description>Broccoli Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV012</itemid>
+    <description>Avocado Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV013</itemid>
+    <description>Potato Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV014</itemid>
+    <description>Carrot Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV015</itemid>
+    <description>Corn Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV016</itemid>
+    <description>Hot Chili Pepper Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV017</itemid>
+    <description>Eggplant Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV018</itemid>
+    <description>Garlic Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV019</itemid>
+    <description>Peach Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV020</itemid>
+    <description>Watermelon Stress Balls - Whole</description>
+  </item>
+  <item>
+    <itemid>22-FV021</itemid>
+    <description>Watermelon Stress Balls - Slice</description>
+  </item>
+  <item>
+    <itemid>22-FV022</itemid>
+    <description>Artichoke Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV023</itemid>
+    <description>Lettuce Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV024</itemid>
+    <description>Romaine Lettuce Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV025</itemid>
+    <description>Peas Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV026</itemid>
+    <description>Bell Pepper Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV027</itemid>
+    <description>Coconut Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV028</itemid>
+    <description>Cantaloupe Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV029</itemid>
+    <description>Cauilflower Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV030</itemid>
+    <description>Pear Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV031</itemid>
+    <description>Cucumber Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV032</itemid>
+    <description>Onion Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV033</itemid>
+    <description>Kernel of Corn Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV034</itemid>
+    <description>Green Squash Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV035</itemid>
+    <description>Radish Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-FV036</itemid>
+    <description>Pumpkin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD002</itemid>
+    <description>Santa Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD003</itemid>
+    <description>Snowman Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD004</itemid>
+    <description>Halloween Pumpkin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD006</itemid>
+    <description>Church Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD008</itemid>
+    <description>Shamrock Clover Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD009</itemid>
+    <description>Turkey Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD010</itemid>
+    <description>Christmas Tree Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD011</itemid>
+    <description>Easter Bunny Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD012</itemid>
+    <description>Angry Pumpkin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD013</itemid>
+    <description>Maniacal Pumpkin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD014</itemid>
+    <description>Smile Pumpkin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD016</itemid>
+    <description>Chicken in Egg Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD017</itemid>
+    <description>Glow-In-The-Dark Ghost Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD019</itemid>
+    <description>Vampire Bat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD020</itemid>
+    <description>Spider Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD021</itemid>
+    <description>Spiderweb Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-HD022</itemid>
+    <description>Christmas Teddy Bear Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA003</itemid>
+    <description>Bull Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA004</itemid>
+    <description>Panda Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-LA005</itemid>
+    <description>Panda Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-LA006</itemid>
+    <description>Donkey Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA007</itemid>
+    <description>Owl Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-LA008</itemid>
+    <description>Camel Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA009</itemid>
+    <description>Wolf Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA010</itemid>
+    <description>Horse Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA011</itemid>
+    <description>Pig Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA012</itemid>
+    <description>Chicken Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-LA013</itemid>
+    <description>Chicken Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-LA014</itemid>
+    <description>Milk Cow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA015</itemid>
+    <description>Rubber Duck Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA017</itemid>
+    <description>Goat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA018</itemid>
+    <description>Teddy Bear Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-LA019</itemid>
+    <description>Teddy Bear Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-LA020</itemid>
+    <description>Polar Bear Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-LA021</itemid>
+    <description>Polar Bear Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-LA022</itemid>
+    <description>White Cat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA023</itemid>
+    <description>Spotted Dog Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA024</itemid>
+    <description>Ram Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA025</itemid>
+    <description>Cobra Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA026</itemid>
+    <description>Giraffe Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-LA027</itemid>
+    <description>Giraffe Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-LA028</itemid>
+    <description>Kangaroo Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA029</itemid>
+    <description>Rhino Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA030</itemid>
+    <description>Elephant Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-LA031</itemid>
+    <description>Hippo Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA032</itemid>
+    <description>Zebra Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA033</itemid>
+    <description>Gorilla Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA035</itemid>
+    <description>Parakeet Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA036</itemid>
+    <description>Snail Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA037</itemid>
+    <description>Butterfly Stress Balls - Black &amp; Orange</description>
+  </item>
+  <item>
+    <itemid>22-LA038</itemid>
+    <description>Butterfly Stress Balls - Special Edition Black &amp; Blue</description>
+  </item>
+  <item>
+    <itemid>22-LA040</itemid>
+    <description>Bumble Bee Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA042</itemid>
+    <description>Parrot Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA043</itemid>
+    <description>Toucan Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA046</itemid>
+    <description>Fat Cat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA047</itemid>
+    <description>Fat Dog Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA048</itemid>
+    <description>Mouse with Cheese Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA049</itemid>
+    <description>Skunk Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-LA050</itemid>
+    <description>Owl Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-LA051</itemid>
+    <description>Bull Dog Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-LA052</itemid>
+    <description>Lady Bug Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA053</itemid>
+    <description>Yellow Hippo Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA054</itemid>
+    <description>Bassett Hound Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA055</itemid>
+    <description>Grey Donkey Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA056</itemid>
+    <description>Lucky Dog Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA057</itemid>
+    <description>Farmer Pig Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA058</itemid>
+    <description>Grey &amp; Black Cat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA059</itemid>
+    <description>T-Rex Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA060</itemid>
+    <description>Black &amp; White Cat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA061</itemid>
+    <description>Tiger Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA062</itemid>
+    <description>Sitting Dog Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA063</itemid>
+    <description>Elephant Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-LA064</itemid>
+    <description>Cool Cow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA065</itemid>
+    <description>Bikini Pig Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA067</itemid>
+    <description>Beefcake Cow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA075</itemid>
+    <description>Buffalo Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA076</itemid>
+    <description>Buffalo Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-LA080</itemid>
+    <description>Yellow Ducky Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA081</itemid>
+    <description>Milk Cow Funny Face Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA082</itemid>
+    <description>Pig Funny Face Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA083</itemid>
+    <description>Sheep Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA086</itemid>
+    <description>Bull Dog Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA087</itemid>
+    <description>Persian Cat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA088</itemid>
+    <description>Spaniel Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA089</itemid>
+    <description>Dog Treat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA090</itemid>
+    <description>Dog Paw Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA091</itemid>
+    <description>Dog Ball Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA092</itemid>
+    <description>Puffin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA093</itemid>
+    <description>Bear Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA094</itemid>
+    <description>Grizzly Bear Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA095</itemid>
+    <description>Lion Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA096</itemid>
+    <description>Koala Bear Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA097</itemid>
+    <description>Monkey Ball Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA099</itemid>
+    <description>Mouse Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA100</itemid>
+    <description>Owl Stress Balls - Version C</description>
+  </item>
+  <item>
+    <itemid>22-LA105</itemid>
+    <description>Circus Elephant Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA106</itemid>
+    <description>Blue Parrot Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA107</itemid>
+    <description>Monkey Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA110</itemid>
+    <description>Cute Bee Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA111</itemid>
+    <description>Dinosaur Stress Balls - Brontosaurus</description>
+  </item>
+  <item>
+    <itemid>22-LA112</itemid>
+    <description>Field Duck Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA113</itemid>
+    <description>Swan Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA114</itemid>
+    <description>Cool Bull Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA115</itemid>
+    <description>Cool Dog Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA117</itemid>
+    <description>Gorilla Ball Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA118</itemid>
+    <description>Rabbit Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-LA119</itemid>
+    <description>Teddy Bear Stress Balls - Version D</description>
+  </item>
+  <item>
+    <itemid>22-MD001</itemid>
+    <description>Pill Capsule Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD002</itemid>
+    <description>Tablet Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD003</itemid>
+    <description>Medicine Bottle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD005</itemid>
+    <description>Anatomical Heart Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD006</itemid>
+    <description>Red Blood Droplet Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD007</itemid>
+    <description>Band Aid Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD010</itemid>
+    <description>Cigarette Box Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD011</itemid>
+    <description>Bed Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD013</itemid>
+    <description>Foot Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD014</itemid>
+    <description>Arm in Cast Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD015</itemid>
+    <description>Hand Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD016</itemid>
+    <description>Nose Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD017</itemid>
+    <description>Tooth Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD018</itemid>
+    <description>Nurse Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-MD019</itemid>
+    <description>Doctor Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-MD020</itemid>
+    <description>Lungs Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD023</itemid>
+    <description>Toothpaste Tube Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD024</itemid>
+    <description>Vertebrae Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD025</itemid>
+    <description>Lips Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD026</itemid>
+    <description>Prostate Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD027</itemid>
+    <description>Dr. Cow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD028</itemid>
+    <description>Red Blood Cell Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD029</itemid>
+    <description>Kidney Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD030</itemid>
+    <description>Round Pill Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD031</itemid>
+    <description>Physician Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD032</itemid>
+    <description>Pill Nurse Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD033</itemid>
+    <description>Doctor Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-MD034</itemid>
+    <description>Nurse Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-MD035</itemid>
+    <description>Nurse Bear Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD036</itemid>
+    <description>Doctor Bear Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD037</itemid>
+    <description>Physician Bear Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD038</itemid>
+    <description>Bone Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD040</itemid>
+    <description>Blood Platelet Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD041</itemid>
+    <description>Humanbone Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD042</itemid>
+    <description>Liver Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD043</itemid>
+    <description>Stomach Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD044</itemid>
+    <description>Lungs Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-MD045</itemid>
+    <description>Spinal Cord Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD046</itemid>
+    <description>Eyeball Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD047</itemid>
+    <description>Ear Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD048</itemid>
+    <description>Doctor w Scrubs Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD049</itemid>
+    <description>Doctor Stress Balls - Version C</description>
+  </item>
+  <item>
+    <itemid>22-MD050</itemid>
+    <description>Pill Bottle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD051</itemid>
+    <description>Cell Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MD053</itemid>
+    <description>Trigon Troche Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI001</itemid>
+    <description>Toilet Bowl Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI002</itemid>
+    <description>Fire Place Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI003</itemid>
+    <description>High Heel Shoe Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI004</itemid>
+    <description>Flip Flop Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI005</itemid>
+    <description>Dice Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI006</itemid>
+    <description>Ace of Spade Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI007</itemid>
+    <description>Slot Machine Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI008</itemid>
+    <description>Sofa Cell Phone Holder Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI009</itemid>
+    <description>Barn Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI010</itemid>
+    <description>Baby Carriage Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI011</itemid>
+    <description>Baby Bottle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI012</itemid>
+    <description>Pacifier Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI013</itemid>
+    <description>Domino Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI014</itemid>
+    <description>Baby Block Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI015</itemid>
+    <description>Pregnant Woman Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI016</itemid>
+    <description>Clown Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI017</itemid>
+    <description>Bicycle Horn Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI018</itemid>
+    <description>Bouquet of Roses Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI019</itemid>
+    <description>Scale Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI020</itemid>
+    <description>Pot Glove Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI021</itemid>
+    <description>Teapot Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI022</itemid>
+    <description>Top Hat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI023</itemid>
+    <description>Candle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI024</itemid>
+    <description>Chess Knight Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI025</itemid>
+    <description>Chess Pawn Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI026</itemid>
+    <description>Chess King Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI027</itemid>
+    <description>Chess Queen Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI028</itemid>
+    <description>Devil Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI029</itemid>
+    <description>Buddha Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI030</itemid>
+    <description>T-Shirt Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI031</itemid>
+    <description>Stressed Out Man Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI032</itemid>
+    <description>Couch Potato Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI033</itemid>
+    <description>Umbrella Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI034</itemid>
+    <description>Captain Smiley Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI035</itemid>
+    <description>Starman Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI036</itemid>
+    <description>Pillow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI037</itemid>
+    <description>Sad Mood Dude Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI038</itemid>
+    <description>Shocked Mood Dude Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI039</itemid>
+    <description>Disgusted Mood Dude Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI040</itemid>
+    <description>Anxious Mood Dude Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI041</itemid>
+    <description>Happy Mood Dude Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI042</itemid>
+    <description>Goofy Guy Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI043</itemid>
+    <description>Spunky Guy Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MI044</itemid>
+    <description>Cell Phone Chair Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-MI045</itemid>
+    <description>Blue Alarm Clock Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS001</itemid>
+    <description>Grenade Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS002</itemid>
+    <description>Tank Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS003</itemid>
+    <description>Submarine Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS004</itemid>
+    <description>Camping Tent Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS005</itemid>
+    <description>Ship's Anchor Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS006</itemid>
+    <description>Moon Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS007</itemid>
+    <description>Bomb Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS008</itemid>
+    <description>Glow-In-The-Dark Star Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS009</itemid>
+    <description>Glow-In-The-Dark Earth Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS010</itemid>
+    <description>Earth Globe Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS013</itemid>
+    <description>Yellow Awareness Ribbon Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS014</itemid>
+    <description>Military Truck Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS015</itemid>
+    <description>Soldier Mad Cap Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS016</itemid>
+    <description>Astronaut Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MS017</itemid>
+    <description>Space Shuttle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MU001</itemid>
+    <description>Piano Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MU002</itemid>
+    <description>Music Note Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MU003</itemid>
+    <description>Guitar Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MU005</itemid>
+    <description>Saxophone Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-MU006</itemid>
+    <description>Treble Clef Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-NA002</itemid>
+    <description>Sunflower Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-NA006</itemid>
+    <description>Tree Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-NA008</itemid>
+    <description>Lightning Bolt Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-NA009</itemid>
+    <description>River Rock Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-NA011</itemid>
+    <description>Acorn Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-NA012</itemid>
+    <description>Tree Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-NA013</itemid>
+    <description>Tulip in Pot Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-NA014</itemid>
+    <description>Marbled Rock Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-NA015</itemid>
+    <description>Sunflower in Pot Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-NA016</itemid>
+    <description>Mountain Peak Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-NA017</itemid>
+    <description>Gray Rock Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-PA004</itemid>
+    <description>Stars &amp; Stripes Hat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-PA011</itemid>
+    <description>George Washington Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-PA012</itemid>
+    <description>Abraham Lincoln Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-PA014</itemid>
+    <description>Uncle Sam Mad Cap Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-PA015</itemid>
+    <description>Democrat Donkey Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-PA016</itemid>
+    <description>Republican Elephant Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-PA017</itemid>
+    <description>Eagle Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-PA019</itemid>
+    <description>Bald Eagle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC002</itemid>
+    <description>Screwdriver Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC003</itemid>
+    <description>Wrench Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC004</itemid>
+    <description>Wrench Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-SC005</itemid>
+    <description>Paint Brush Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC006</itemid>
+    <description>Hammer Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-SC007</itemid>
+    <description>Hammer Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-SC008</itemid>
+    <description>Cinderblock Brick Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC009</itemid>
+    <description>Safety Cone Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC010</itemid>
+    <description>Hard Hat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC011</itemid>
+    <description>55 Gallon Drum Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC012</itemid>
+    <description>Hi-Low Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC013</itemid>
+    <description>Tool Box Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC014</itemid>
+    <description>Bulldozer Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC015</itemid>
+    <description>Cement Mixer Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC016</itemid>
+    <description>Dump Truck Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC017</itemid>
+    <description>Tractor Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC018</itemid>
+    <description>Steamroller Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC019</itemid>
+    <description>Nut &amp; Bolt Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC020</itemid>
+    <description>House Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-SC021</itemid>
+    <description>Hard Hat Mad Cap Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC022</itemid>
+    <description>Construction Bear Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC023</itemid>
+    <description>Safety Barrel Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SC024</itemid>
+    <description>Screwdriver Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-SC025</itemid>
+    <description>Backhoe Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR001</itemid>
+    <description>Basketball Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR002</itemid>
+    <description>Large 4" Basketball</description>
+  </item>
+  <item>
+    <itemid>22-SR003</itemid>
+    <description>Baseball Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR004</itemid>
+    <description>Soccer Ball Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR005</itemid>
+    <description>Football Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR006</itemid>
+    <description>Large 5" Football</description>
+  </item>
+  <item>
+    <itemid>22-SR007</itemid>
+    <description>Football Helmet Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR009</itemid>
+    <description>Tennis Ball Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR010</itemid>
+    <description>Golf Ball Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR011</itemid>
+    <description>Volleyball Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR012</itemid>
+    <description>Bowling Pin Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR013</itemid>
+    <description>Sneaker Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-SR014</itemid>
+    <description>Hockey Puck Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR015</itemid>
+    <description>Bowling Ball Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR016</itemid>
+    <description>Number 1 Fan Hand Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR017</itemid>
+    <description>Silver Dumbbell Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR018</itemid>
+    <description>Black Dumbbell Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR019</itemid>
+    <description>Beachball Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR020</itemid>
+    <description>Trophy Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR021</itemid>
+    <description>Trophy Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-SR022</itemid>
+    <description>Skateboard Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR023</itemid>
+    <description>Innertube Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR024</itemid>
+    <description>Muscle Arm Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR025</itemid>
+    <description>Sumo Wrestler Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR027</itemid>
+    <description>Cricket Ball Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR028</itemid>
+    <description>Sumo Wrestler Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-SR029</itemid>
+    <description>Swimmer in Tube Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR030</itemid>
+    <description>Fat Sumo Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR031</itemid>
+    <description>Soccer Cow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR032</itemid>
+    <description>Boxing Cow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR033</itemid>
+    <description>Baseball Mad Cap Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR034</itemid>
+    <description>Baseball Cap Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-SR035</itemid>
+    <description>Boxing Glove Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR036</itemid>
+    <description>Bicycle Helmet Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR037</itemid>
+    <description>Karate Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR038</itemid>
+    <description>Muscle Man Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR039</itemid>
+    <description>Golf Bag Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR040</itemid>
+    <description>Yoga Girl Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SR041</itemid>
+    <description>Golf Club Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS001</itemid>
+    <description>Heart Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS002</itemid>
+    <description>Heart Stress Balls - Colors</description>
+  </item>
+  <item>
+    <itemid>22-SS003</itemid>
+    <description>Round Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS004</itemid>
+    <description>Round Stress Balls - Rare Colors</description>
+  </item>
+  <item>
+    <itemid>22-SS005</itemid>
+    <description>Round Stress Balls - Rainbow</description>
+  </item>
+  <item>
+    <itemid>22-SS008</itemid>
+    <description>Star Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS009</itemid>
+    <description>Star Stress Balls - Colors</description>
+  </item>
+  <item>
+    <itemid>22-SS010</itemid>
+    <description>Star Stress Balls - Silver, Gold, Green</description>
+  </item>
+  <item>
+    <itemid>22-SS011</itemid>
+    <description>Patriotic Star Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS012</itemid>
+    <description>Patriotic Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS015</itemid>
+    <description>Smiley Face Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS016</itemid>
+    <description>Standing Heart Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS017</itemid>
+    <description>Droplet Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS018</itemid>
+    <description>Awareness Ribbon Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS019</itemid>
+    <description>Red Cross Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS020</itemid>
+    <description>Thumbs Up Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS021</itemid>
+    <description>Key Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS022</itemid>
+    <description>Real Estate House Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS023</itemid>
+    <description>Diamond Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS024</itemid>
+    <description>Puzzle Piece Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS025</itemid>
+    <description>Fist Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS026</itemid>
+    <description>#1 Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS027</itemid>
+    <description>Question Mark Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-SS028</itemid>
+    <description>Building Block Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS030</itemid>
+    <description>Pyramid Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS031</itemid>
+    <description>Red, White, &amp; Blue Ribbon Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS032</itemid>
+    <description>Cube Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS033</itemid>
+    <description>Limited Edition - Black Cube Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS037</itemid>
+    <description>Patriotic Heart Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS038</itemid>
+    <description>Earth Cube Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS040</itemid>
+    <description>Jesus Fish Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS041</itemid>
+    <description>Dove Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-SS042</itemid>
+    <description>Curved Arrow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS043</itemid>
+    <description>Question Mark Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-SS044</itemid>
+    <description>Dollar Sign Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS045</itemid>
+    <description>Steps Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS046</itemid>
+    <description>Unity Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS047</itemid>
+    <description>Building Block Stress Balls - Special Set</description>
+  </item>
+  <item>
+    <itemid>22-SS048</itemid>
+    <description>Gripper Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS049</itemid>
+    <description>Puzzle Piece Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-SS050</itemid>
+    <description>Ladder Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-SS051</itemid>
+    <description>Straight Arrow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE001</itemid>
+    <description>Light Bulb Stress Balls - Idea!</description>
+  </item>
+  <item>
+    <itemid>22-TE003</itemid>
+    <description>Beeper Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE004</itemid>
+    <description>Remote Control Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE005</itemid>
+    <description>Clock Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE006</itemid>
+    <description>Camera Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE007</itemid>
+    <description>Rotary Phone Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE008</itemid>
+    <description>Battery Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE009</itemid>
+    <description>Cell Phone Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE010</itemid>
+    <description>LCD TV Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE011</itemid>
+    <description>Computer Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE012</itemid>
+    <description>Computer Mouse Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE013</itemid>
+    <description>Copy Machine Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE014</itemid>
+    <description>Laptop Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE015</itemid>
+    <description>Black TV Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE016</itemid>
+    <description>Fluorescent Light Bulb Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE018</itemid>
+    <description>MP3 Player Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE019</itemid>
+    <description>Stereo Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE020</itemid>
+    <description>Telephone Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE021</itemid>
+    <description>Flip Cell Phone Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE022</itemid>
+    <description>Widescreen TV Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE024</itemid>
+    <description>Ink Cartridge Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TE026</itemid>
+    <description>'@' Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG002</itemid>
+    <description>Multicolor Globe Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG003</itemid>
+    <description>Standing Globe Man Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG004</itemid>
+    <description>Florida Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG005</itemid>
+    <description>California Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG006</itemid>
+    <description>New York Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG007</itemid>
+    <description>Texas Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG008</itemid>
+    <description>White Cowboy Hat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG010</itemid>
+    <description>Cowboy Boot Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG011</itemid>
+    <description>Mountain Range Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG012</itemid>
+    <description>Cactus Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG013</itemid>
+    <description>Sun Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG014</itemid>
+    <description>Lighthouse Stress Balls - Version A</description>
+  </item>
+  <item>
+    <itemid>22-TG015</itemid>
+    <description>Lighthouse Stress Balls - Version B</description>
+  </item>
+  <item>
+    <itemid>22-TG016</itemid>
+    <description>Lighthouse Stress Balls - Version C</description>
+  </item>
+  <item>
+    <itemid>22-TG017</itemid>
+    <description>Cruise Ship Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG018</itemid>
+    <description>Fat Airplane Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG019</itemid>
+    <description>Palm Tree Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG020</itemid>
+    <description>American Flag Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG021</itemid>
+    <description>USA Shape Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG022</itemid>
+    <description>Statue of Liberty Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG023</itemid>
+    <description>Liberty Bell Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG024</itemid>
+    <description>U.S. Capital Dome Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG025</itemid>
+    <description>Brown Cowboy Hat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG026</itemid>
+    <description>Easter Island Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG027</itemid>
+    <description>Cowboy Cow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG028</itemid>
+    <description>Hula Girl Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG029</itemid>
+    <description>Deserted Island Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG030</itemid>
+    <description>Fiesta Mad Cap Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG031</itemid>
+    <description>Cool Sun Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG032</itemid>
+    <description>Illinois Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG033</itemid>
+    <description>Canadian Flag Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG034</itemid>
+    <description>Lone Star Texas Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG035</itemid>
+    <description>Tourist Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG036</itemid>
+    <description>RV Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TG037</itemid>
+    <description>Cruise Ship Stress Balls - Blue</description>
+  </item>
+  <item>
+    <itemid>22-TG038</itemid>
+    <description>Checker Cab Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR001</itemid>
+    <description>Hot Air Balloon Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR002</itemid>
+    <description>Locomotive Train Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR003</itemid>
+    <description>Covered Wagon Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR004</itemid>
+    <description>Sail Boat Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR005</itemid>
+    <description>Helicopter Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR006</itemid>
+    <description>Tire Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR008</itemid>
+    <description>Blimp Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR009</itemid>
+    <description>Subway Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR010</itemid>
+    <description>Caboose Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR013</itemid>
+    <description>Truck Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR016</itemid>
+    <description>Indy Race Car Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR017</itemid>
+    <description>Convertible Sports Car Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR018</itemid>
+    <description>Hot Air Balloon Stress Balls - USA</description>
+  </item>
+  <item>
+    <itemid>22-TR019</itemid>
+    <description>Panel Van Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR020</itemid>
+    <description>Motorcycle Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR022</itemid>
+    <description>Tractor Truck Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR024</itemid>
+    <description>Delivery Van Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR026</itemid>
+    <description>Pickup Truck Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR027</itemid>
+    <description>Shuttle Bus Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR029</itemid>
+    <description>Motorcoach Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR030</itemid>
+    <description>Minivan Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR031</itemid>
+    <description>Vintage Roadster Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR032</itemid>
+    <description>Colorful Train Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR034</itemid>
+    <description>Antique Car Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR035</itemid>
+    <description>Cargo Ship Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR038</itemid>
+    <description>Container Ship Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR039</itemid>
+    <description>Luxury Car Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR040</itemid>
+    <description>Oil Tanker Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR041</itemid>
+    <description>Limo Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR042</itemid>
+    <description>Sedan Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR043</itemid>
+    <description>Sports Car Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR045</itemid>
+    <description>Tow Truck Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR046</itemid>
+    <description>SUV Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR048</itemid>
+    <description>Passenger Plane Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR049</itemid>
+    <description>Shipping Container Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TR050</itemid>
+    <description>Race Car Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TV001</itemid>
+    <description>Mooing Cow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TV003</itemid>
+    <description>Talking Plane Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TV005</itemid>
+    <description>Talking Train Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TV007</itemid>
+    <description>Talking Horse Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TV008</itemid>
+    <description>Vibrating Milk Cow Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TV009</itemid>
+    <description>Dancing Pig Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TV010</itemid>
+    <description>Vibrating Earthquake Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-TV011</itemid>
+    <description>Vibrating Grenade Stress Balls</description>
+  </item>
+  <item>
+    <itemid>22-ZZ000</itemid>
+    <description>Other Items</description>
+  </item>
+  <item>
+    <itemid>22-ZZ999</itemid>
+    <description>Custom Stress Balls</description>
+  </item>
+  <item>
+    <itemid>bt-art</itemid>
+    <description>Artwork Set Up Charge</description>
+  </item>
+  <item>
+    <itemid>bt-disc</itemid>
+    <description>Discount</description>
+  </item>
+  <item>
+    <itemid>bt-imp</itemid>
+    <description>Location _ _ Color Imprinting</description>
+  </item>
+  <item>
+    <itemid>bt-messa</itemid>
+    <description></description>
+  </item>
+  <item>
+    <itemid>bt-misc</itemid>
+    <description>Misc Charge</description>
+  </item>
+  <item>
+    <itemid>bt-mold</itemid>
+    <description>Mold Charges</description>
+  </item>
+  <item>
+    <itemid>bt-ship</itemid>
+    <description>Shipping Charge</description>
+  </item>
+  <item>
+    <itemid>bt-trans</itemid>
+    <description>Transfer logo setup</description>
+  </item>
+  <item>
+    <itemid>skip</itemid>
+    <description>none</description>
+  </item>
+</items>

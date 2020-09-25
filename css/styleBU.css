@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* CSS Document */
+.priceList{
+width:150px; 
+float:right;
+border:1px #427D06 solid;
+background-color:#CCF1B6;
+-moz-border-radius: 5px;
+padding:25px 0px 25px 0px;
+}
+.priceList td,input{
+text-align:center;
+
+}
+
+.itemFieldList{
+width:250px;   float:left; padding:10px;
+}
+.itemFieldList input{
+border:1px #6C6C6C solid;
+}
+.BU_viewTable{
+border-bottom:1px #ababab solid;
+}
+.BU_viewTable td{ 
+
+border-right:1px #ABABAB solid;
+text-align:center;
+padding:2px 1px;
+font-size:12px;
+}
+.buPicArea{
+width:200px; height:200px; border:1px #6C6C6C solid; 
+}
+
+.actEditRed{
+border:1px #B0230B solid;
+background-color: #C00C0C;
+font-family:verdana;
+color:white;
+font-weight:bold;
+padding:5px;
+background:-moz-linear-gradient(top,#C00C0C,#E9311D,#E9311D, #C00C0C);
+font-size:12px;
+}
+.actEditGreen{
+color:#00AA00;
+font-family:verdana;
+font-weight:bold;
+border:none;
+background-color:none;
+background:-moz-linear-gradient(top,white);
+font-size:12px;
+}

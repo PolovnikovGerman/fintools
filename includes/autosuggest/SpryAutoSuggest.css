@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/* SpryAutoSuggest.css - version 0.2 - Spry Pre-Release 1.6.1 */
+
+/* Copyright (c) 2006. Adobe Systems Incorporated. All rights reserved. */
+
+.hideSuggestClass{
+	border: 2px solid #999999;
+	background-color: white;
+	height:300px;
+	overflow:auto;
+	display:none;
+	width: 400px;
+	margin: inherit;
+	cursor: pointer;
+	z-index: 5001;
+	font-size:12px;
+	padding:3px 1px;
+	position: absolute;
+	
+}
+
+.showSuggestClass .hideSuggestClass{
+	display: block !important;
+	text-align:left;
+	
+}
+
+.showSuggestClass .hoverSuggestClass{
+	background-color:#aeffae;  !important;
+}
+
+.iframeSuggest
+{
+	position: absolute;
+	z-index: 1010;
+	filter:alpha(opacity:0.1);
+}
+#in{
+padding-top:3px;
+}
+#resultsDIV {  position: absolute; }
+
+#mySuggest0{ position:absolute; top:314px;}
+#mySuggest1{ position:absolute; top:338px; }
+#mySuggest2{ position:absolute; top:362px;}
+#mySuggest3{ position:absolute; top:386px; }
+
+#mySuggest4{ position:absolute; top:410px;}
+#mySuggest5{ position:absolute; top:434px; }
+#mySuggest6{ position:absolute; top:458px;}
+#mySuggest7{ position:absolute; top:482px; }
+
+#mySuggest8{ position:absolute; top:506px;}
+#mySuggest9{ position:absolute; top:530px; }
+
