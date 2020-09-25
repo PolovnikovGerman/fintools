@@ -1247,7 +1247,7 @@ if ($data['cnt']==0) {
             r2_ship_act, r2_d1_date, r2_d1_type, r2_d1_add, r2_d2_date,
             r2_d2_type, r2_d2_add, r2_d3_date, r2_d3_type,
             r2_d3_add, r2_histid, r2_datetime)
-    VALUES (".$_POST['chid'].", ".$_POST['r2_ven_id'].", '" . format_date($_POST['r2_date']) . "', '" . $_POST['r2_ven_msg'] . "', '" . format_date($_POST['r2_ship_date']) . "',
+    VALUES (".$_POST['chid'].", ".$_POST['r2_ven_id'].", '" . format_date($_POST['r2_date']) . "', '" . mysql_real_escape_string($_POST['r2_ven_msg']) . "', '" . format_date($_POST['r2_ship_date']) . "',
         '" . $_POST['r2_ship_act'] . "','" . format_date($_POST['r2_d1_date']) . "',  '" . $_POST['r2_d1_type'] . "', '" . mysql_real_escape_string($_POST['r2_d1_add']) . "', '" . format_date($_POST['r2_d2_date']) . "',
         '" . $_POST['r2_d2_type'] . "', '" . mysql_real_escape_string($_POST['r2_d2_add']) . "', '" . format_date($_POST['r2_d3_date']) . "', '" . $_POST['r2_d3_type'] . "',
         '" . mysql_real_escape_string($_POST['r2_d3_add']) . "', 5, now())";
@@ -1256,7 +1256,7 @@ if ($data['cnt']==0) {
     $qry = "update af_r2 set
     r2_ven_id = ".$_POST['r2_ven_id'].",
     r2_date = '".format_date($_POST['r2_date'])."',
-    r2_ven_msg = '".$_POST['r2_ven_msg']."',
+    r2_ven_msg = '".mysql_real_escape_string($_POST['r2_ven_msg'])."',
     r2_ship_date = '".format_date($_POST['r2_ship_date'])."',
     r2_ship_act = '".$_POST['r2_ship_act']."',
     r2_d1_date = '".format_date($_POST['r2_d1_date'])."',
