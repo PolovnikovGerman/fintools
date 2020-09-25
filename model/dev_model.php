@@ -1,4 +1,4 @@
-<?php  session_start();
+<?php  if ($_SERVER['SERVER_NAME']!=='fintools.local')  session_start();
 include_once('mysql.php');
 		include_once('../controller/generic_functions.php');
 		include_once('../includes/utility_functions.php'); 
@@ -95,7 +95,7 @@ if($projID)
 
 /*********************************************************************************************************************************************************/
 $obj = new db();
-if($_POST['q'] == 'getProj')
+if(isset($_POST['q']) &&  $_POST['q']== 'getProj')
 {
 $qry = "select * from dev_project where projID = ".$_POST['projID'];
 $res = $obj->query($qry);
@@ -106,8 +106,8 @@ echo json_encode($data);
 
 /*********************************************************************************************************************************************************/
 /*********************************************************************************************************************************************************/
-if($_POST['q'] == 'addProj')
-{ 
+if(isset($_POST['q']) &&  $_POST['q']== 'addProj')
+{
 
 if($_SESSION['uid'] > 0 || $_SESSION['uid'] < 15)
 {
@@ -140,7 +140,7 @@ echo json_encode($ret);
 
 /*********************************************************************************************************************************************************/
 /*********************************************************************************************************************************************************/
-if($_POST['q'] == 'getProjects')
+if(isset($_POST['q']) &&  $_POST['q']== 'getProjects')
 {
 $qry = "select ptmCat from client_info where user_id = ".$_POST['user'];
 $res = $obj->query($qry);

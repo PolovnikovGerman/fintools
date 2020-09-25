@@ -1,7 +1,7 @@
 <?php
 ob_start();
 session_start();
-if ($_SERVER['SERVER_NAME']=='fintool.test') {
+if ($_SERVER['SERVER_NAME']=='fintools.local') {
     if(!$_SESSION['uid'])
     header("location:../index.php");        
 } else {
