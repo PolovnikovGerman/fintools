@@ -97,7 +97,7 @@ Sincerely,<br>
 Fulfillment Team<br>
 BLUETRACK, Inc.<br>
 Tel: 201-902-9960<br>
-Email: fulfillment@bluetrack.com ";
+Email: ff@bluetrack.com ";
 break;
 
 case 'clayChange':
@@ -163,7 +163,7 @@ BLUETRACK, Inc.<br>
 
 Tel: 201-902-9960<br>
 
-Email: fulfillment@bluetrack.com";
+Email: ff@bluetrack.com";
 return $ret;
 break;
 
@@ -185,7 +185,7 @@ BLUETRACK, Inc.<br>
 
 Tel: 201-902-9960<br>
 
-Email: fulfillment@bluetrack.com";
+Email: ff@bluetrack.com";
 return $ret;
 break;
 
@@ -208,7 +208,7 @@ BLUETRACK, Inc.<br>
 
 201-902-9960<br>
 
-fulfillment@bluetrack.com";
+ff@bluetrack.com";
 
 }
 return FALSE;
@@ -224,7 +224,7 @@ $files =array();
 $filenames = array();
 $files = $paths;
 $filenames = $names;
-$from = "fulfillment@bluetrack.com";
+$from = "ff@bluetrack.com";
 $to = $too; 
 $subject =$sub;
 
@@ -277,7 +277,7 @@ return 0;
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-function send_email_TEXT($too, $sub, $msg, $frm = 'fulfillment@bluetrack.com')
+function send_email_TEXT($too, $sub, $msg, $frm = 'ff@bluetrack.com')
 { 
 // email fields: to, from, subject, and so on
 $files =array();
