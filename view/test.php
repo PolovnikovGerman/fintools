@@ -98,7 +98,7 @@ function generate_testpdf($details) {
         $pdf->SetXY(6, 35);
         $pdf->SetFont('Arial', '', 9);
         $bull = '&bull;';
-        $pdf->Cell(75, 5, 'Tel: 201-902-9960 | Fax: 201-604-2691');
+        $pdf->Cell(75, 5, 'Tel: 201-902-9960 | Fax: 201-604-2688');
 
 //creating number bullets
         $pdf->SetFont('Arial', 'B', 14);
@@ -389,7 +389,7 @@ function generate_testpdf($details) {
         $pdf->SetXY(6, 35);
         $pdf->SetFont('Arial', '', 9);
         $bull = '&bull;';
-        $pdf->Cell(75, 5, 'Tel: 201-902-9960 | Fax: 201-604-2691');
+        $pdf->Cell(75, 5, 'Tel: 201-902-9960 | Fax: 201-604-2688');
 
 //creating number bullets
         $pdf->SetFont('Arial', 'B', 14);
@@ -736,7 +736,7 @@ function generate_testpdf($details) {
         $pdf->SetXY(6, 35);
         $pdf->SetFont('Arial', '', 9);
         $bull = '&bull;';
-        $pdf->Cell(75, 5, 'Tel: 201-902-9960 | Fax: 201-604-2691');
+        $pdf->Cell(75, 5, 'Tel: 201-902-9960 | Fax: 201-604-2688');
 
 //creating number bullets
         $pdf->SetFont('Arial', 'B', 14);
