@@ -198,6 +198,10 @@ echo "<tr><td><b>".$po_hist['r2_user'][$i]." - ".print_date(substr($po_hist['r2_
 <option value="Intl - FedEx Economy">Intl FedEx Economy</option>
 <option value="Intl - FedEx Priority">Intl FedEx Priority</option>
 <option value="US Postal Service">USPS</option>
+<option value="DHL Express">DHL Express</option>
+<option value="DHL Expedited">DHL Expedited</option>
+<option value="Ocean">Ocean</option>
+<option value="Truck">Truck</option>
 </select>
 </td>
 <td><input type="text" size="6"  onblur="__dt(this)"   name="r2_d2_date" id="f_date4"  value="<?php echo print_date($epo['r2_d2_date']); ?>" />&nbsp;<input type="button" value=".." class="date" id="f_btn4"></td><td><select  name="r2_d2_type"   >
@@ -214,6 +218,10 @@ echo "<tr><td><b>".$po_hist['r2_user'][$i]." - ".print_date(substr($po_hist['r2_
 <option value="Intl - FedEx Economy">Intl FedEx Economy</option>
 <option value="Intl - FedEx Priority">Intl FedEx Priority</option>
 <option value="US Postal Service">USPS</option>
+<option value="DHL Express">DHL Express</option>
+<option value="DHL Expedited">DHL Expedited</option>
+<option value="Ocean">Ocean</option>
+<option value="Truck">Truck</option>
 </select>
 </td>
 <td><input type="text" size="6"  onblur="__dt(this)"  name="r2_d3_date" id="f_date5" value="<?php echo print_date($epo['r2_d3_date']); ?>"  />&nbsp;<input type="button" value=".." class="date" id="f_btn5"></td><td><select  name="r2_d3_type">
@@ -229,6 +237,10 @@ echo "<tr><td><b>".$po_hist['r2_user'][$i]." - ".print_date(substr($po_hist['r2_
 <option value="Intl - FedEx Economy">Intl FedEx Economy</option>
 <option value="Intl - FedEx Priority">Intl FedEx Priority</option>
 <option value="US Postal Service">USPS</option>
+<option value="DHL Express">DHL Express</option>
+<option value="DHL Expedited">DHL Expedited</option>
+<option value="Ocean">Ocean</option>
+<option value="Truck">Truck</option>
 </select>
 </td>
 </tr>

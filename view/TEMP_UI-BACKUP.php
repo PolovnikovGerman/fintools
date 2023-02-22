@@ -122,6 +122,10 @@ echo "</select>";
 <option value="NextDay">Next Day Saver</option>
 <option value="NextDay AM">Next Day</option>
 <option value="NextDay Early">Next Day Early AM</option>
+<option value="DHL Express">DHL Express</option>
+<option value="DHL Expedited">DHL Expedited</option>
+<option value="Ocean">Ocean</option>
+<option value="Truck">Truck</option>
 </select>
 </td>
 <td><input type="text" size="6"  onblur="__dt(this)" id="f_date4"   name="r2_d2_date" />&nbsp;<input type="button" value=".." class="date" id="f_btn4"></td><td><select  name="r2_d2_type"   >
@@ -132,6 +136,10 @@ echo "</select>";
 <option value="NextDay">Next Day Saver</option>
 <option value="NextDay AM">Next Day</option>
 <option value="NextDay Early">Next Day Early AM</option>
+<option value="DHL Express">DHL Express</option>
+<option value="DHL Expedited">DHL Expedited</option>
+<option value="Ocean">Ocean</option>
+<option value="Truck">Truck</option>
 </select>
 </td>
 <td><input type="text" size="6"  onblur="__dt(this)" id="f_date5" name="r2_d3_date" />&nbsp;<input type="button" value=".." class="date" id="f_btn5"></td><td><select  name="r2_d3_type"><option value="0"></option>
@@ -141,6 +149,10 @@ echo "</select>";
 <option value="NextDay">Next Day Saver</option>
 <option value="NextDay AM">Next Day</option>
 <option value="NextDay Early">Next Day Early AM</option>
+<option value="DHL Express">DHL Express</option>
+<option value="DHL Expedited">DHL Expedited</option>
+<option value="Ocean">Ocean</option>
+<option value="Truck">Truck</option>
 </select>
 </td>
 </tr>

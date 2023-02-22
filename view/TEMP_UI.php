@@ -184,6 +184,10 @@ echo "</select>";
 <option value="Intl - FedEx Economy">Intl FedEx Economy</option>
 <option value="Intl - FedEx Priority">Intl FedEx Priority</option>
 <option value="US Postal Service">USPS</option>
+<option value="DHL Express">DHL Express</option>
+<option value="DHL Expedited">DHL Expedited</option>
+<option value="Ocean">Ocean</option>
+<option value="Truck">Truck</option>
 </select>
 </td>
 <td><input type="text" size="6"  onblur="__dt(this)" id="f_date4"   name="r2_d2_date" />&nbsp;<input type="button" value=".." class="date" id="f_btn4"></td><td><select  name="r2_d2_type"   >
@@ -199,6 +203,10 @@ echo "</select>";
 <option value="Intl - FedEx Economy">Intl FedEx Economy</option>
 <option value="Intl - FedEx Priority">Intl FedEx Priority</option>
 <option value="US Postal Service">USPS</option>
+<option value="DHL Express">DHL Express</option>
+<option value="DHL Expedited">DHL Expedited</option>
+<option value="Ocean">Ocean</option>
+<option value="Truck">Truck</option>
 </select>
 </td>
 <td><input type="text" size="6"  onblur="__dt(this)" id="f_date5" name="r2_d3_date" />&nbsp;<input type="button" value=".." class="date" id="f_btn5"></td><td><select  name="r2_d3_type"><option></option>
@@ -213,6 +221,10 @@ echo "</select>";
 <option value="Intl - FedEx Economy">Intl FedEx Economy</option>
 <option value="Intl - FedEx Priority">Intl FedEx Priority</option>
 <option value="US Postal Service">USPS</option>
+<option value="DHL Express">DHL Express</option>
+<option value="DHL Expedited">DHL Expedited</option>
+<option value="Ocean">Ocean</option>
+<option value="Truck">Truck</option>
 </select>
 </td>
 </tr>
