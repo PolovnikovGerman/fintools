@@ -143,6 +143,7 @@ echo "</select>";
     <option value="UPS 084YR7" >UPS 084YR7</option>
     <option  value="Ship on your acct">Ship on your acct</option>
     <option value="FedEx 260424580">FedEx 260424580</option>
+    <option value="DHL">DHL</option>
 </select>
 <br />
 <br />

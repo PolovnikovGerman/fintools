@@ -91,7 +91,14 @@ echo "</select>";
 <div class="mid_left_cover" >
 <span class="blue">Shp Date : </span><input name="r2_ship_date" id="r2_ship_date" onkeyup="yellow('r2_ship_date')" onblur="__dt(this)" class="yellow" type="text" size="6" />&nbsp;<input type="button" value=".." class="date" id="f_btn2"><span class="blue">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Deliver:</span><br />
 <br />
-<span class="blue">Ship Act:</span> <select class="yellow"  onchange=yellowdd('r2_ship_act',this.value) id="r2_ship_act"  name="r2_ship_act"><option value="0"></option><option value="UPS 084YR7" >UPS 084YR7</option><option  value="Ship on your acct">Ship on your acct</option></select><br />
+<span class="blue">Ship Act:</span>
+    <select class="yellow"  onchange=yellowdd('r2_ship_act',this.value) id="r2_ship_act"  name="r2_ship_act">
+        <option value="0"></option>
+        <option value="UPS 084YR7" >UPS 084YR7</option>
+        <option  value="Ship on your acct">Ship on your acct</option>
+        <option value="DHL">DHL</option>
+    </select>
+    <br />
 <br />
 <span class="blue">History:</span><br />
 <textarea cols="27" id="hist_msg"></textarea><br />
