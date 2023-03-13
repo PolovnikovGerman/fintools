@@ -141,9 +141,12 @@ echo "</select>";
 <select class="yellow"  id="r2_ship_act"  name="r2_ship_act">
     <option value="0"></option>
     <option value="UPS 084YR7" >UPS 084YR7</option>
-    <option  value="Ship on your acct">Ship on your acct</option>
-    <option value="FedEx 260424580">FedEx 260424580</option>
     <option value="DHL 942934274">DHL 942934274</option>
+    <option value="FedEx 260424580">FedEx 260424580</option>
+    <option value="USPS">USPS</option>
+    <option value="TNT">TNT</option>
+    <option value="Truck">Truck</option>
+    <option  value="Ship on your acct">Ship on your acct</option>
 </select>
 <br />
 <br />
@@ -173,60 +176,79 @@ echo "</select>";
 
 <table width="100%" cellpadding="2" cellspacing="0" border="0">
 <tr>
-<td><input type="text" size="6"  onblur="__dt(this)"  name="r2_d1_date" id=r2_d1_date onkeyup="yellow('r2_d1_date')"   class="yellow" />&nbsp;<input type="button"  value=".." class="date" id="f_btn3"></td><td><select class="yellow"  name="r2_d1_type"  id="r2_d1_type"  >
-<option value="Ground">Ground</option>
-<option value="3 Day">3 Day</option>
-<option value="2nd Day">2nd Day</option>
-<option value="NextDay">Next Day Saver</option>
-<option value="NextDay AM">Next Day</option>
-<option value="NextDay Early">Next Day Early AM</option>
-<option value="Intl - UPS Expedited">Intl UPS Expdtd</option>
-<option value="Intl - UPS Express">Intl UPS Express</option>
-<option value="Intl - FedEx Economy">Intl FedEx Economy</option>
-<option value="Intl - FedEx Priority">Intl FedEx Priority</option>
-<option value="US Postal Service">USPS</option>
-<option value="DHL Express">DHL Express</option>
-<option value="DHL Expedited">DHL Expedited</option>
-<option value="Ocean">Ocean</option>
-<option value="Truck">Truck</option>
-</select>
+<td><input type="text" size="6"  onblur="__dt(this)"  name="r2_d1_date" id=r2_d1_date onkeyup="yellow('r2_d1_date')"   class="yellow" />&nbsp;<input type="button"  value=".." class="date" id="f_btn3"></td>
+    <td>
+        <select class="yellow"  name="r2_d1_type"  id="r2_d1_type"  >
+            <option value="Ground">Ground</option>
+            <option value="3 Day">3 Day</option>
+            <option value="2nd Day">2nd Day</option>
+            <option value="NextDay AM">Next Day</option>
+            <option value="NextDay">Next Day Saver</option>
+            <!-- <option value="NextDay Early">Next Day Early AM</option> -->
+            <option value="Intl - UPS Standard">Intl Standard</option>
+            <option value="Intl - UPS Expedited">Intl UPS Expdtd</option> -->
+            <option value="Intl - UPS Express">Intl UPS Express</option>
+            <option value="Intl - FedEx Economy">Intl FedEx Economy</option>
+            <option value="Intl - FedEx Priority">Intl FedEx Priority</option>
+            <!-- <option value="US Postal Service">USPS</option> -->
+            <!-- <option value="DHL Express">DHL Express</option> -->
+            <!-- <option value="DHL Expedited">DHL Expedited</option> -->
+            <!-- <option value="Ocean">Ocean</option> -->
+            <option value="1st Class">1st Class</option>
+            <option value="Priority"></option>
+            <option value="Truck">Truck</option>
+            <option value="ASAP">ASAP</option>
+        </select>
+    </td>
+<td><input type="text" size="6"  onblur="__dt(this)" id="f_date4"   name="r2_d2_date" />&nbsp;<input type="button" value=".." class="date" id="f_btn4"></td>
+    <td>
+        <select  name="r2_d2_type"   >
+            <option></option>
+            <option value="Ground">Ground</option>
+            <option value="3 Day">3 Day</option>
+            <option value="2nd Day">2nd Day</option>
+            <option value="NextDay AM">Next Day</option>
+            <option value="NextDay">Next Day Saver</option>
+            <!-- <option value="NextDay Early">Next Day Early AM</option> -->
+            <option value="Intl - UPS Standard">Intl Standard</option>
+            <option value="Intl - UPS Expedited">Intl UPS Expdtd</option> -->
+            <option value="Intl - UPS Express">Intl UPS Express</option>
+            <option value="Intl - FedEx Economy">Intl FedEx Economy</option>
+            <option value="Intl - FedEx Priority">Intl FedEx Priority</option>
+            <!-- <option value="US Postal Service">USPS</option> -->
+            <!-- <option value="DHL Express">DHL Express</option> -->
+            <!-- <option value="DHL Expedited">DHL Expedited</option> -->
+            <!-- <option value="Ocean">Ocean</option> -->
+            <option value="1st Class">1st Class</option>
+            <option value="Priority"></option>
+            <option value="Truck">Truck</option>
+            <option value="ASAP">ASAP</option>
+        </select>
 </td>
-<td><input type="text" size="6"  onblur="__dt(this)" id="f_date4"   name="r2_d2_date" />&nbsp;<input type="button" value=".." class="date" id="f_btn4"></td><td><select  name="r2_d2_type"   >
-<option></option>
-<option value="Ground">Ground</option>
-<option value="3 Day">3 Day</option>
-<option value="2nd Day">2nd Day</option>
-<option value="NextDay">Next Day Saver</option>
-<option value="NextDay AM">Next Day</option>
-<option value="NextDay Early">Next Day Early AM</option>
-<option value="Intl - UPS Expedited">Intl UPS Expdtd</option>
-<option value="Intl - UPS Express">Intl UPS Express</option>
-<option value="Intl - FedEx Economy">Intl FedEx Economy</option>
-<option value="Intl - FedEx Priority">Intl FedEx Priority</option>
-<option value="US Postal Service">USPS</option>
-<option value="DHL Express">DHL Express</option>
-<option value="DHL Expedited">DHL Expedited</option>
-<option value="Ocean">Ocean</option>
-<option value="Truck">Truck</option>
-</select>
-</td>
-<td><input type="text" size="6"  onblur="__dt(this)" id="f_date5" name="r2_d3_date" />&nbsp;<input type="button" value=".." class="date" id="f_btn5"></td><td><select  name="r2_d3_type"><option></option>
-<option value="Ground">Ground</option>
-<option value="3 Day">3 Day</option>
-<option value="2nd Day">2nd Day</option>
-<option value="NextDay">Next Day Saver</option>
-<option value="NextDay AM">Next Day</option>
-<option value="NextDay Early">Next Day Early AM</option>
-<option value="Intl - UPS Expedited">Intl UPS Expdtd</option>
-<option value="Intl - UPS Express">Intl UPS Express</option>
-<option value="Intl - FedEx Economy">Intl FedEx Economy</option>
-<option value="Intl - FedEx Priority">Intl FedEx Priority</option>
-<option value="US Postal Service">USPS</option>
-<option value="DHL Express">DHL Express</option>
-<option value="DHL Expedited">DHL Expedited</option>
-<option value="Ocean">Ocean</option>
-<option value="Truck">Truck</option>
-</select>
+<td><input type="text" size="6"  onblur="__dt(this)" id="f_date5" name="r2_d3_date" />&nbsp;<input type="button" value=".." class="date" id="f_btn5"></td>
+    <td>
+        <select  name="r2_d3_type">
+            <option></option>
+            <option value="Ground">Ground</option>
+            <option value="3 Day">3 Day</option>
+            <option value="2nd Day">2nd Day</option>
+            <option value="NextDay AM">Next Day</option>
+            <option value="NextDay">Next Day Saver</option>
+            <!-- <option value="NextDay Early">Next Day Early AM</option> -->
+            <option value="Intl - UPS Standard">Intl Standard</option>
+            <option value="Intl - UPS Expedited">Intl UPS Expdtd</option> -->
+            <option value="Intl - UPS Express">Intl UPS Express</option>
+            <option value="Intl - FedEx Economy">Intl FedEx Economy</option>
+            <option value="Intl - FedEx Priority">Intl FedEx Priority</option>
+            <!-- <option value="US Postal Service">USPS</option> -->
+            <!-- <option value="DHL Express">DHL Express</option> -->
+            <!-- <option value="DHL Expedited">DHL Expedited</option> -->
+            <!-- <option value="Ocean">Ocean</option> -->
+            <option value="1st Class">1st Class</option>
+            <option value="Priority"></option>
+            <option value="Truck">Truck</option>
+            <option value="ASAP">ASAP</option>
+        </select>
 </td>
 </tr>
 <tr>
