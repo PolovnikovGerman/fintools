@@ -9,8 +9,6 @@ $obj = new db();
 $qry = "select id, order_number, doc_type, doc_link, doc_name from lift_exports where managed=0 limit 100";
 $res = $obj->query($qry);
 while($data = $obj->fetch($res) ) {
-    $updsql = "update lift_exports set managed=1 where id=".$data['id'];
-    $resupd = $obj->query($updsql);
     $params = array(
         'order_number' => $data['order_number'],
         'doc_type' => $data['doc_type'],
@@ -28,6 +26,9 @@ while($data = $obj->fetch($res) ) {
     $result=curl_exec ($ch);
     $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);   //get status code
     curl_close ($ch);
+    echo 'Curl send '.$data['id'].' Status - '.$status_code.PHP_EOL;
+    $updsql = "update lift_exports set managed=1 where id=".$data['id'];
+    $resupd = $obj->query($updsql);
 }
 $endtime = time();
 $period = ($endtime - $starttime);
