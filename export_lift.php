@@ -12,12 +12,22 @@ $headers = array(
 $obj = new db();
 $qry = "select id, order_number, doc_type, doc_link, doc_name from lift_exports where managed=0 limit 10";
 $res = $obj->query($qry);
+$results = array();
 while($data = $obj->fetch($res) ) {
-    $params = array(
+    $results[] = array(
         'order_number' => $data['order_number'],
         'doc_type' => $data['doc_type'],
         'doc_link' => $data['doc_link'],
         'doc_name' => $data['doc_name'],
+    );
+}
+echo 'Prepare '.count($results).' records'.PHP_EOL;
+foreach ($results as $result) {
+    $params = array(
+        'order_number' => $result['order_number'],
+        'doc_type' => $result['doc_type'],
+        'doc_link' => $result['doc_link'],
+        'doc_name' => $result['doc_name'],
     );
     try {
         $ch = curl_init();
@@ -30,8 +40,8 @@ while($data = $obj->fetch($res) ) {
         $status_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);   //get status code
         curl_close ($ch);
         if ($status_code==200) {
-            echo 'Success '.PHP_EOL;
-            $updsql = "update lift_exports set managed=1 where id=".$data['id'];
+            echo 'Success ID '.$result['id'].PHP_EOL;
+            $updsql = "update lift_exports set managed=1 where id=".$result['id'];
             $resupd = $obj->query($updsql);
         }
     } catch (Exception $e) {
