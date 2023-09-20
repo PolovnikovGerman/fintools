@@ -220,7 +220,7 @@ echo  "<td width=\"75px\" align=\"center\"  bgcolor=\"".$key_c[$point]['clr_ven'
 
 	echo "<td align=\"center\"    width=\"35px\"
 			 				 >";
-			if($att['poart'][$key_c[$point]['ch_id'][0]] == 'yes')
+			if(isset($att['poart']) && $att['poart'][$key_c[$point]['ch_id'][0]] == 'yes')
 			echo "<span class=get_art_files id=".$key_c[$point]['ch_id'][0]."><span id=icon_".$key_c[$point]['ch_id'][0]." onclick=send_data(".$key_c[$point]['af_order_id'][0].",'poart','yes',".$key_c[$point]['ch_id'][0].",'".$key_c[$point]['ch_po'][0]."')><img class=point src=\"../images/open_icon.png\"></span></span>";
 			else
 			echo "<span id=icon_".$key_c[$point]['ch_id'][0]." onclick=send_data(".$key_c[$point]['af_order_id'][0].",'poart','yes',".$key_c[$point]['ch_id'][0].",'".$key_c[$point]['ch_po'][0]."') class=point ><img src=\"../images/attch_icon.png\"></span>";

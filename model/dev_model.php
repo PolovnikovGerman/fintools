@@ -462,8 +462,8 @@ if($_POST['q'] == 'changeSection')
 {
 	$taskid = $_POST['taskID'];
 	 $qry = "select * from dev_project where projID = ".$_POST['from'];
-			$res = mysql_query($qry);
-			$data = mysql_fetch_array($res);
+			$res = $obj->query($qry);
+			$data = $obj->fetch($res);
 			
 			$sort_array = array();
 			$sort_array = unserialize($data['projSort']); 
@@ -473,7 +473,7 @@ if($_POST['q'] == 'changeSection')
 				$key = array_search($taskid, $sort_array); 
 				array_splice($sort_array, $key, 1); 
 				 $qry = "update dev_project set projSort = '".serialize($sort_array)."' where projID = ".$_POST['from'];
-				$res = mysql_query($qry);
+				$res = $obj->query($qry);
 				if($res)
 					sortTask('bottom',$_POST['to'],$taskid,0);
 					
