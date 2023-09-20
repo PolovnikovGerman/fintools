@@ -3,6 +3,9 @@ ob_start();
 session_start();
 //if(!session_is_registered(myusername))
 //header("location:../index.php");
+if (!isset($_SESSION['myusername'])) {
+    header("location:../index.php");
+}
 include('../model/fl_model.php');
 include('../includes/utility_functions.php');
 // include('../includes/firephp.php');
