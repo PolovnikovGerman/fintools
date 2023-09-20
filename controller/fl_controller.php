@@ -3,7 +3,7 @@ ob_start();
 session_start();
 //if(!session_is_registered(myusername))
 //header("location:../index.php");
-if (!isset($_SESSION['myusername'])) {
+if (!isset($_SESSION['uid']) || empty($_SESSION['uid'])) {
     header("location:../index.php");
 }
 include('../model/fl_model.php');
