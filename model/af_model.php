@@ -92,7 +92,7 @@ for ($i=1; $i<sizeof($_FILES['fileX']['name']); $i++)
 if($go){
 	$qry = substr($qry,0,strlen($qry)-1);
 		if(!$obj->query($qry)) $ret =  0;
-			else $ret=mysql_insert_id();
+			else $ret=mysqli_insert_id();
 		}
 if($_POST['_type'] == 'poart'){
 $qry = "update af_child set ch_placed_ck = 'yes' where ch_id = ".$_POST['chid'];
@@ -114,6 +114,7 @@ function get_orderart($af_order_id) {
     $obj = new db();
     $qry = "select * from af_master where af_order_id = " . $af_order_id;
     $res = $obj->query($qry);
+	$ret = [];
     while ($data = $obj->fetch($res)) {
         $ret = $data;
     }
