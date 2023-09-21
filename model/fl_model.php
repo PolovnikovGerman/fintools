@@ -43,104 +43,93 @@ return false;
 
 function get_child()
 {
-if(isset($_SESSION['or']) && is_numeric($_SESSION['or']))
-$value = $_SESSION['or'];
-else
-$value = 22000;
-$obj = new db(); $key=array();
-
-if(isset($_SESSION['whr']) && !empty($_SESSION['whr'])  )
-{
-     if($_SESSION['whr'] == 'ch_issue_ck')  $st = 'yes'; else $st = 'no';
-	 if($_SESSION['whr'] == 'ch_conf_ck')
-	 $qry = "select af_order_id from af_child where af_order_id >= $value and af_order_id <=".($value+500)." and ".$_SESSION['whr']." = '$st' and ch_active = 'on' and ch_placed_ck = 'yes'  order by af_order_id";
-	 else if($_SESSION['whr'] == 'ch_ship_ck')
-	 $qry = "select af_order_id from af_child where af_order_id >= $value and af_order_id <=".($value+500)." and ".$_SESSION['whr']." = '$st' and ch_active = 'on' and ch_conf_ck = 'yes'  order by af_order_id";
-	 else if($_SESSION['whr'] == 'ch_placed_ck')
-	 $qry = "select af_order_id from af_child where af_order_id >= $value and af_order_id <=".($value+500)." and ".$_SESSION['whr']." = '$st'  and ch_active = 'on'  order by af_order_id";
-	 else if($_SESSION['whr'] == 'ch_cust_ck')
-	 $qry = "select af_order_id from af_child where af_order_id >= $value and af_order_id <=".($value+500)." and ".$_SESSION['whr']." = '$st' and ch_ship_ck = 'yes' and ch_active = 'on'  order by af_order_id";
-	 else
-	 $qry = "select af_order_id from af_child where af_order_id >= $value and af_order_id <=".($value+500)." and ".$_SESSION['whr']." = '$st' and ch_active = 'on'  order by af_order_id";
-
-	$res = $obj->query($qry);
-	$num = 0; $num = $obj->numrow($res);
-	while($ddd = $obj->fetch($res) )
-	{
-		$d[]=$ddd['af_order_id'];
-	}
-		if($num > 0)
-		$m=implode(",",array_unique($d)); $temp=0;
-		if($_SESSION['whr'] == 'ch_placed_ck')
-$qry = "select * from af_child a, af_master b   where a.af_order_id = b.af_order_id and a.ch_active = 'on' and a.af_order_id >= $value and a.af_order_id <=".($value+500)." and af_appr_ck = 'yes' and a.af_order_id IN (".$m.") order by a.af_order_id ".$_SESSION['sort'];
+	if (isset($_SESSION['or']) && is_numeric($_SESSION['or']))
+		$value = $_SESSION['or'];
+	else
+		$value = 22000;
+	$obj = new db();
+	$key = array();
+	$temp = 0;
+	if (isset($_SESSION['whr']) && !empty($_SESSION['whr'])) {
+		if ($_SESSION['whr'] == 'ch_issue_ck') $st = 'yes'; else $st = 'no';
+		if ($_SESSION['whr'] == 'ch_conf_ck')
+			$qry = "select af_order_id from af_child where af_order_id >= $value and af_order_id <=" . ($value + 500) . " and " . $_SESSION['whr'] . " = '$st' and ch_active = 'on' and ch_placed_ck = 'yes'  order by af_order_id";
+		else if ($_SESSION['whr'] == 'ch_ship_ck')
+			$qry = "select af_order_id from af_child where af_order_id >= $value and af_order_id <=" . ($value + 500) . " and " . $_SESSION['whr'] . " = '$st' and ch_active = 'on' and ch_conf_ck = 'yes'  order by af_order_id";
+		else if ($_SESSION['whr'] == 'ch_placed_ck')
+			$qry = "select af_order_id from af_child where af_order_id >= $value and af_order_id <=" . ($value + 500) . " and " . $_SESSION['whr'] . " = '$st'  and ch_active = 'on'  order by af_order_id";
+		else if ($_SESSION['whr'] == 'ch_cust_ck')
+			$qry = "select af_order_id from af_child where af_order_id >= $value and af_order_id <=" . ($value + 500) . " and " . $_SESSION['whr'] . " = '$st' and ch_ship_ck = 'yes' and ch_active = 'on'  order by af_order_id";
 		else
-$qry = "select * from af_child a, af_master b   where a.af_order_id = b.af_order_id and a.ch_active = 'on' and a.af_order_id >= $value and a.af_order_id <=".($value+500)." and a.af_order_id IN (".$m.") order by a.af_order_id ".$_SESSION['sort'];
+			$qry = "select af_order_id from af_child where af_order_id >= $value and af_order_id <=" . ($value + 500) . " and " . $_SESSION['whr'] . " = '$st' and ch_active = 'on'  order by af_order_id";
 
-}
-else
-{
-    // $qry = "select * from af_child a, af_master b   where a.af_order_id = b.af_order_id and a.ch_active = 'on' and a.af_order_id >= $value and a.af_order_id <=".($value+500)."  order by a.af_order_id ".$_SESSION['sort'];
-    $qry = "select * from af_child a, af_master b   where a.af_order_id = b.af_order_id and a.ch_active = 'on' and a.af_order_id >= $value and a.af_order_id <=".($value+500)."  order by a.af_order_id ".$_SESSION['sort']." , a.ch_po";
-$num = 1;
-}
+		$res = $obj->query($qry);
+		$num = 0;
+		$num = $obj->numrow($res);
+		while ($ddd = $obj->fetch($res)) {
+			$d[] = $ddd['af_order_id'];
+		}
+		if ($num > 0)
+			$m = implode(",", array_unique($d));
+		$temp = 0;
+		if ($_SESSION['whr'] == 'ch_placed_ck')
+			$qry = "select * from af_child a, af_master b   where a.af_order_id = b.af_order_id and a.ch_active = 'on' and a.af_order_id >= $value and a.af_order_id <=" . ($value + 500) . " and af_appr_ck = 'yes' and a.af_order_id IN (" . $m . ") order by a.af_order_id " . $_SESSION['sort'];
+		else
+			$qry = "select * from af_child a, af_master b   where a.af_order_id = b.af_order_id and a.ch_active = 'on' and a.af_order_id >= $value and a.af_order_id <=" . ($value + 500) . " and a.af_order_id IN (" . $m . ") order by a.af_order_id " . $_SESSION['sort'];
 
-
-if($num>0) {
-
-$res = $obj->query($qry);
-while($data = $obj->fetch($res) )
-{
-
-
-$val=$data['af_order_id'];
-if($temp != $val) {
-$key_c['1']['1'][]=$val;
-$temp=$val;
-}
-$key_c[$val]['af_cust'][]=$data['af_cust'];
-$key_c[$val]['af_desc'][]=$data['af_desc'];
-$key_c[$val]['af_appr_ck'][]=$data['af_appr_ck'];
-$key_c[$val]['clr_appr'][]=($data['af_appr_ck']=='yes') ? '#59b75b' : '';
-$key_c[$val]['af_datetime'][]=$data['af_datetime'];
+	} else {
+		$qry = "select * from af_child a, af_master b   where a.af_order_id = b.af_order_id and a.ch_active = 'on' and a.af_order_id >= $value and a.af_order_id <=" . ($value + 500) . "  order by a.af_order_id " . $_SESSION['sort'] . " , a.ch_po";
+		$num = 1;
+	}
 
 
-//$key_c['af_order_id'][]=$data['af_order_id'];
-$val=$data['af_order_id'];
-$key_c[$val]['ch_id'][]=$data['ch_id'];
-$key_c[$val]['ch_ship_date'][]=($data['ch_ship_date']=='2090-12-30' || $data['ch_ship_date']=='0000-00-00') ? '' : $data['ch_ship_date'];
-$key_c[$val]['ch_ship'][]=(($data['ch_ship_date']!='2090-12-30' && $data['ch_ship_date']!='0000-00-00' && $data['ch_ship_date']!= '') || $data['ch_placed_ck'] == 'yes') ? '#ff2a00' : '';
-$key_c[$val]['af_order_id'][]=$data['af_order_id'];
-$key_c[$val]['ch_po'][]=$data['ch_po'];
-$key_c[$val]['ch_vendor'][]=$data['ch_vendor'];
-$key_c[$val]['clr_ven'][]=($data['ch_vendor']!='' || $data['ch_placed_ck'] == 'yes') ? '#ff2a00' : '';
-$key_c[$val]['ch_placed_ck'][]=$data['ch_placed_ck'];
-$key_c[$val]['clr_pl'][]=($data['ch_placed_ck']=='yes') ? '#ff2a00' : '';
-$key_c[$val]['ch_conf_ck'][]=$data['ch_conf_ck'];
-$key_c[$val]['clr_conf'][]=($data['ch_conf_ck']=='yes') ? '#ff2a00' : '';
-$key_c[$val]['ch_cust_ck'][]=$data['ch_cust_ck'];
-$key_c[$val]['clr_cust'][]=($data['ch_cust_ck']=='yes') ? '#ff2a00' : '';
+	if ($num > 0) {
 
-$key_c[$val]['ch_ship_ck'][]=$data['ch_ship_ck'];
-$key_c[$val]['clr_ship'][]=($data['ch_ship_ck']=='yes') ? '#ff2a00' : '';
-
-$key_c[$val]['ch_ship_notes'][]=$data['ch_ship_notes'];
-$key_c[$val]['ch_issue_ck'][]=$data['ch_issue_ck'];
-$key_c[$val]['clr_is'][]=($data['ch_issue_ck']=='yes') ? '#fdae03' : '';
-$key_c[$val]['ch_notes'][]=(!empty($data['af_contacinfo']) ? $data['af_contacinfo'].' ' : '').$data['ch_notes'];
-$key_c[$val]['ch_datetime'][]=$data['ch_datetime'];
+		$res = $obj->query($qry);
+		while ($data = $obj->fetch($res)) {
 
 
+			$val = $data['af_order_id'];
+			if ($temp != $val) {
+				$key_c['1']['1'][] = $val;
+				$temp = $val;
+			}
+			$key_c[$val]['af_cust'][] = $data['af_cust'];
+			$key_c[$val]['af_desc'][] = $data['af_desc'];
+			$key_c[$val]['af_appr_ck'][] = $data['af_appr_ck'];
+			$key_c[$val]['clr_appr'][] = ($data['af_appr_ck'] == 'yes') ? '#59b75b' : '';
+			$key_c[$val]['af_datetime'][] = $data['af_datetime'];
 
-}
-}
-if($num == 0)
-$key_c['msg'][0]="<div style=\"text-align:center; margin:20px; font-weight:bold; font-size:15px;\">No results to display</div>";
-//echo sizeof($key_c);
-//echo sizeof($key_c['22000']['af_order_id']);
-//echo "<pre>";
-//print_r($key_c);
-//echo "</pre>";
-return $key_c;
+			$val = $data['af_order_id'];
+			$key_c[$val]['ch_id'][] = $data['ch_id'];
+			$key_c[$val]['ch_ship_date'][] = ($data['ch_ship_date'] == '2090-12-30' || $data['ch_ship_date'] == '0000-00-00') ? '' : $data['ch_ship_date'];
+			$key_c[$val]['ch_ship'][] = (($data['ch_ship_date'] != '2090-12-30' && $data['ch_ship_date'] != '0000-00-00' && $data['ch_ship_date'] != '') || $data['ch_placed_ck'] == 'yes') ? '#ff2a00' : '';
+			$key_c[$val]['af_order_id'][] = $data['af_order_id'];
+			$key_c[$val]['ch_po'][] = $data['ch_po'];
+			$key_c[$val]['ch_vendor'][] = $data['ch_vendor'];
+			$key_c[$val]['clr_ven'][] = ($data['ch_vendor'] != '' || $data['ch_placed_ck'] == 'yes') ? '#ff2a00' : '';
+			$key_c[$val]['ch_placed_ck'][] = $data['ch_placed_ck'];
+			$key_c[$val]['clr_pl'][] = ($data['ch_placed_ck'] == 'yes') ? '#ff2a00' : '';
+			$key_c[$val]['ch_conf_ck'][] = $data['ch_conf_ck'];
+			$key_c[$val]['clr_conf'][] = ($data['ch_conf_ck'] == 'yes') ? '#ff2a00' : '';
+			$key_c[$val]['ch_cust_ck'][] = $data['ch_cust_ck'];
+			$key_c[$val]['clr_cust'][] = ($data['ch_cust_ck'] == 'yes') ? '#ff2a00' : '';
+
+			$key_c[$val]['ch_ship_ck'][] = $data['ch_ship_ck'];
+			$key_c[$val]['clr_ship'][] = ($data['ch_ship_ck'] == 'yes') ? '#ff2a00' : '';
+
+			$key_c[$val]['ch_ship_notes'][] = $data['ch_ship_notes'];
+			$key_c[$val]['ch_issue_ck'][] = $data['ch_issue_ck'];
+			$key_c[$val]['clr_is'][] = ($data['ch_issue_ck'] == 'yes') ? '#fdae03' : '';
+			$key_c[$val]['ch_notes'][] = (!empty($data['af_contacinfo']) ? $data['af_contacinfo'] . ' ' : '') . $data['ch_notes'];
+			$key_c[$val]['ch_datetime'][] = $data['ch_datetime'];
+
+
+		}
+	}
+	if ($num == 0)
+		$key_c['msg'][0] = "<div style=\"text-align:center; margin:20px; font-weight:bold; font-size:15px;\">No results to display</div>";
+	return $key_c;
 }
 
 function chk_attach_files()
