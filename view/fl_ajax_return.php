@@ -126,7 +126,7 @@ if ($_GET['q'] == 'getven') {
     echo $ret;
 }
 
-if ($_POST['q'] == 'getFullAf') {
+if (isset($_POST['q']) && $_POST['q'] == 'getFullAf') {
     $qry = "select  af_cust, af_desc, ch_ship_notes, ch_notes from af_master a, af_child b where a.af_order_id = b.af_order_id and ch_id = " . $_POST['val'];
     $res = $obj->query($qry);
     $data = $obj->fetch($res);
@@ -135,7 +135,7 @@ if ($_POST['q'] == 'getFullAf') {
 }
 
 
-if ($_POST['q'] == 'getFullChn') {
+if (isset($_POST['q']) && $_POST['q'] == 'getFullChn') {
     $qry = "select  ch_ship_notes, ch_notes from af_child where ch_id = " . $_POST['id'];
     $res = $obj->query($qry);
     $data = $obj->fetch($res);
@@ -146,14 +146,14 @@ if ($_POST['q'] == 'getFullChn') {
 
 
 
-if ($_GET['q'] == 'getvendetails') {
+if (isset($_GET['q']) && $_GET['q'] == 'getvendetails') {
     $qry = "select * from af_vendor where v_id = " . $_GET['val'];
     $res = $obj->query($qry);
     $data = $obj->fetch($res);
     echo json_encode($data);
 }
 
-if ($_GET['q'] == 'getitemdetails') {
+if (isset($_GET['q']) && $_GET['q'] == 'getitemdetails') {
     $qry = "select * from af_items where i_itemid = '" . $_GET['val'] . "'";
     $res = $obj->query($qry);
     $data = $obj->fetch($res);
@@ -161,14 +161,14 @@ if ($_GET['q'] == 'getitemdetails') {
     echo json_encode($data);
 }
 
-if ($_POST['q'] == 'get_item_notes') {
+if (isset($_POST['q']) && $_POST['q'] == 'get_item_notes') {
     $qry = "select i_oth_ven from af_items where i_itemid = '" . $_POST['id'] . "'";
     $res = $obj->query($qry);
     $data = $obj->fetch($res);
     echo json_encode($data);
 }
 
-if ($_POST['q'] == 'save_vendors' && is_numeric($_POST['val'])) {
+if (isset($_POST['q']) && $_POST['q'] == 'save_vendors' && is_numeric($_POST['val'])) {
     $qry = "select * from af_vendor where v_id!= " . $_POST['val'] . " and v_email = '" . strtolower($_POST['email']) . "'";
     $data = $obj->fetch($obj->query($qry));
     $qry = "select * from af_vendor where v_id!= " . $_POST['val'] . " and v_abbr = '" . strtolower($_POST['abbr']) . "'";
@@ -191,7 +191,7 @@ if ($_POST['q'] == 'save_vendors' && is_numeric($_POST['val'])) {
     }
 }
 
-if ($_POST['q'] == 'addNewVendor') {
+if (isset($_POST['q']) && $_POST['q'] == 'addNewVendor') {
     $qry = "select * from af_vendor where v_email = '" . strtolower($_POST['email']) . "'";
     $data = $obj->fetch($obj->query($qry));
     $qry = "select * from af_vendor where v_abbr = '" . strtolower($_POST['abbr']) . "'";
@@ -207,7 +207,7 @@ if ($_POST['q'] == 'addNewVendor') {
         $pwd = generatePassword();
         $qry = "insert into af_vendor values(null, '" . $_POST['name'] . "', '" . strtolower(substr($_POST['abbr'], 0, 7)) . "', '" . strtolower($_POST['email']) . "', '" . strtolower($_POST['addemail']) . "',  '$pwd', '" . $_POST['type'] . "', '" . $_POST['address'] . "', '" . $_POST['memos'] . "', '" . $_POST['phone'] . "', now())";
         $obj->query($qry);
-        $lastid = mysql_insert_id();
+        $lastid = mysqli_insert_id();
         $ar = array($_POST['name'], strtolower($_POST['email']), $pwd);
         $msg = emailTemplate('emailPassword', $ar);
         send_email_TEXT(strtolower($_POST['email']), 'Vendor Access into BLUETRACK System', $msg);
@@ -219,7 +219,7 @@ if ($_POST['q'] == 'addNewVendor') {
 
 
 
-if ($_POST['q'] == 'post_history' && is_numeric($_POST['cid'])) {
+if (isset($_POST['q']) && $_POST['q'] == 'post_history' && is_numeric($_POST['cid'])) {
     $date = date("m/d/y");
     $time = date("G:i");
     $qry = "insert into r2_history values(null," . $_POST['cid'] . ",'" . $_POST['msg'] . "','" . $_SESSION['screenname'] . "',now())";
@@ -229,7 +229,7 @@ if ($_POST['q'] == 'post_history' && is_numeric($_POST['cid'])) {
         echo "Error";
 }
 
-if ($_POST['q'] == 'save_ff_items') {
+if (isset($_POST['q']) && $_POST['q'] == 'save_ff_items') {
 
     $qry = "update af_items set i_itemid = '" . $_POST['itemid'] . "', i_desc = '" . $_POST['desc'] . "', i_price = " . $_POST['price'] . ", i_ven = '" . $_POST['ven'] . "', i_oth_ven = '" . $_POST['notes'] . "' where i_id = " . $_POST['id'];
     if ($obj->query($qry)) {
@@ -241,14 +241,14 @@ if ($_POST['q'] == 'save_ff_items') {
         echo 0;
 }
 
-if ($_POST['q'] == 'update_chn') {
+if (isset($_POST['q']) && $_POST['q'] == 'update_chn') {
     $qry = "update af_child set ch_ship_notes = '" . $_POST['shipCust'] . "' , ch_notes = '" . $_POST['notes'] . "' where ch_id = " . $_POST['child'];
     $obj->query($qry);
     $qry = "select ch_ship_notes, ch_notes from af_child where ch_id = " . $_POST['child'];
     $data = $obj->fetch($obj->query($qry));
     echo json_encode($data);
 }
-if ($_GET['q'] == 'getsendsbefore') {
+if (isset($_GET['q']) && $_GET['q'] == 'getsendsbefore') {
     $chid = $_GET['val'];
     $retarray = array(
         'result' => 0,
@@ -266,7 +266,7 @@ if ($_GET['q'] == 'getsendsbefore') {
     }
     echo json_encode($retarray);
 }
-if ($_POST['q'] == 'searchfullfilm') {
+if (isset($_POST['q']) && $_POST['q'] == 'searchfullfilm') {
     $retarray = array(
         'error' => '',
     );
