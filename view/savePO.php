@@ -25,27 +25,27 @@ if (!$res) {
                   r2_ship_act, r2_d1_date, r2_d1_type, r2_d1_add, r2_d2_date,
                   r2_d2_type, r2_d2_add, r2_d3_date, r2_d3_type, 
                   r2_d3_add, r2_histid, r2_datetime)
-            VALUES (".$_POST['chid'].", ".$_POST['r2_ven_id'].", '" . format_date($_POST['r2_date']) . "', '" . mysql_real_escape_string($_POST['r2_ven_msg']) . "', '" . format_date($_POST['r2_ship_date']) . "', 
-                '" . $_POST['r2_ship_act'] . "','" . format_date($_POST['r2_d1_date']) . "',  '" . $_POST['r2_d1_type'] . "', '" . mysql_real_escape_string($_POST['r2_d1_add']) . "', '" . format_date($_POST['r2_d2_date']) . "', 
-                '" . $_POST['r2_d2_type'] . "', '" . mysql_real_escape_string($_POST['r2_d2_add']) . "', '" . format_date($_POST['r2_d3_date']) . "', '" . $_POST['r2_d3_type'] . "', 
-                '" . mysql_real_escape_string($_POST['r2_d3_add']) . "', 5, now())";            
+            VALUES (".$_POST['chid'].", ".$_POST['r2_ven_id'].", '" . format_date($_POST['r2_date']) . "', '" . $obj->mysqlescapestring($_POST['r2_ven_msg']) . "', '" . format_date($_POST['r2_ship_date']) . "', 
+                '" . $_POST['r2_ship_act'] . "','" . format_date($_POST['r2_d1_date']) . "',  '" . $_POST['r2_d1_type'] . "', '" . $obj->mysqlescapestring($_POST['r2_d1_add']) . "', '" . format_date($_POST['r2_d2_date']) . "', 
+                '" . $_POST['r2_d2_type'] . "', '" . $obj->mysqlescapestring($_POST['r2_d2_add']) . "', '" . format_date($_POST['r2_d3_date']) . "', '" . $_POST['r2_d3_type'] . "', 
+                '" . $obj->mysqlescapestring($_POST['r2_d3_add']) . "', 5, now())";
             $res = $obj->query($sql);
         } else {
             $qry = "update af_r2 set 
             r2_ven_id = " . $_POST['r2_ven_id'] . ", 
             r2_date = '" . format_date($_POST['r2_date']) . "', 
-            r2_ven_msg = '" . mysql_real_escape_string($_POST['r2_ven_msg']) . "', 
+            r2_ven_msg = '" . $obj->mysqlescapestring($_POST['r2_ven_msg']) . "', 
             r2_ship_date = '" . format_date($_POST['r2_ship_date']) . "', 
             r2_ship_act = '" . $_POST['r2_ship_act'] . "', 
             r2_d1_date = '" . format_date($_POST['r2_d1_date']) . "', 
             r2_d1_type = '" . $_POST['r2_d1_type'] . "', 
-            r2_d1_add = '" . mysql_real_escape_string($_POST['r2_d1_add']) . "', 
+            r2_d1_add = '" . $obj->mysqlescapestring($_POST['r2_d1_add']) . "', 
             r2_d2_date = '" . format_date($_POST['r2_d2_date']) . "', 
             r2_d2_type = '" . $_POST['r2_d2_type'] . "', 
-            r2_d2_add = '" . mysql_real_escape_string($_POST['r2_d2_add']) . "', 
+            r2_d2_add = '" . $obj->mysqlescapestring($_POST['r2_d2_add']) . "', 
             r2_d3_date = '" . format_date($_POST['r2_d3_date']) . "', 
             r2_d3_type = '" . $_POST['r2_d3_type'] . "', 
-            r2_d3_add = '" . mysql_real_escape_string($_POST['r2_d3_add']) . "', 
+            r2_d3_add = '" . $obj->mysqlescapestring($_POST['r2_d3_add']) . "', 
             r2_histid = 5, 
             r2_datetime = now() where r2_id = " . $_POST['chid'];            
             $res = $obj->query($qry);
@@ -112,7 +112,7 @@ if (!$res) {
 
                         $arr = array();
                         $arr2 = array();
-                        $arr[0] = $save_name;
+                        // $arr[0] = $save_name;
                         $arr2[0] = "BLUETRACK_PO_BT" . $_POST['oid'] . $_POST['chpo'] . ".pdf";
 
                         if ($_POST['chpo'] == 'A') {
