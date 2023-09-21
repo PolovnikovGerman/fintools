@@ -92,9 +92,9 @@ function search_fullfilmentview() {
 
 
 <?php
-	if($_GET['msg']=='error')
+	if(isset($_GET['msg']) && $_GET['msg']=='error')
 		echo "<div class=\"error\">Unable to Process File.</div>";
-	else if($_GET['msg']=='success')
+	else if(isset($_GET['msg']) && $_GET['msg']=='success')
 		echo "<div class=\"success\">File Processed Successfully.</div>";
 	?>
  <div class="content"
@@ -159,7 +159,7 @@ Orders:<select onchange="display_or(this.value);" id="ordersnumberselect">
  <div ><table width="970px" border="0" cellpadding="0" cellspacing="0"  class="task_today_entry"  style="margin-left:10px; border:1px #181818 solid; border-bottom:1px #ababab solid; " >
  <tr class="ffTableHead"   >
 
- <td width="45px" align="center" class=ffOrderSort><?php echo ($_GET['sort'] == 'desc') ? '<a  href="fullfillment.php">' : '<a  href="fullfillment.php?sort=desc">'; ?>Order</a></td>
+ <td width="45px" align="center" class=ffOrderSort><?php echo (isset($_GET['sort']) && $_GET['sort'] == 'desc') ? '<a  href="fullfillment.php">' : '<a  href="fullfillment.php?sort=desc">'; ?>Order</a></td>
  <td width="120px" align="center">Customer</td>
   <td width="115px" align="center">Description</td>
  <td width="35px" align="center">Ap</td>
