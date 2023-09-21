@@ -205,7 +205,7 @@ class db
 		else
 		$sort_array = array_merge((array) $id, (array) $sort_array);
 		$qry = "update task_sort set sort_array = '".serialize($sort_array)."' where sort_sec = ".$secid." and sort_cat = ".$cat." ";
-		$res = mysqli_query($qry);
+		$res = mysqli_query($this->conn, $qry);
 		
 		
 		}	
@@ -385,6 +385,10 @@ class db
  		$res = $obj->query($qry);
  		$data = $obj->fetch($res); 
 		return $data['ch_id'];
+		}
+
+		function mysqlescapestring($txt) {
+			return mysqli_real_escape_string($this->conn, $txt);
 		}
 }
 ?>

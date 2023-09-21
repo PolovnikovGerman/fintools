@@ -683,9 +683,9 @@ class InputFilter {
 	  */	
 	function escapeString($string, &$connection) {
 		// depreciated function
-		if (version_compare(phpversion(),"4.3.0", "<")) mysql_escape_string($string);
+		if (version_compare(phpversion(),"4.3.0", "<")) mysqli_escape_string($string);
 		// current function
-		else mysql_real_escape_string($string);
+		else mysqli_real_escape_string($string);
 		return $string;
 	}
 }
@@ -701,5 +701,19 @@ function strpos_arr($haystack, $needle) {
         if(($pos = strpos($haystack, $what))!==false) return $pos;
     }
     return false;
+}
+
+if (!function_exists('money_format')) {
+	function money_format($format, $total) {
+		$decimal = 2;
+		if ($total < 0) {
+			$output = '-$';
+		} else {
+			$output = '$';
+		}
+		$output .= number_format(abs($total), $decimal, '.', $thousdelim);
+		return $output;
+
+	}
 }
 ?>
