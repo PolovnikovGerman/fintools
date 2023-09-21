@@ -7,7 +7,7 @@ include('../includes/utility_functions.php');
 $out = array('result' => 0, 'error' => 'Order Not Found');
 $postdata = $_POST;
 // Get Order bi ID
-if (isset($postdata['af_order_id'])) {
+if (isset($postdata['af_order_id']) && !empty($postdata['af_order_id'])) {
     $dat = get_orderart($postdata['af_order_id']);
     if (array_key_exists('af_order_id', $dat)) {
         if ($postdata['sync']=='data') {
