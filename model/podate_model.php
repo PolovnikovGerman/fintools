@@ -16,8 +16,8 @@ function get_podate_count() {
 function get_po_dates($limit,$offset) {
     $obj = new db();
     $key = array();
-    $qry = "select distinct date_format(email_datetime,'%Y-%m-%d') as po_date from email_conf where email_type like 'Purchase Order #BT%' order by email_datetime desc limit $offset,$limit";
-    
+    // $qry = "select distinct date_format(email_datetime,'%Y-%m-%d') as po_date from email_conf where email_type like 'Purchase Order #BT%' order by email_datetime desc limit $offset,$limit";
+    $qry = "select date_format(email_datetime,'%Y-%m-%d') as po_date, count(*) from email_conf where email_type like 'Purchase Order #BT%' group by po_date order by email_datetime desc limit $offset,$limit";
     $key=array();
     $res = $obj->query($qry);    
     while ($data = $obj->fetch($res)) {
