@@ -177,8 +177,12 @@ echo "</select>";
 <input type="button" id="save" onclick="r2_hist_post(<?php echo $_GET['chid']; ?>)" value="Update" /><br />
 <div style="width:257px; height:372px; border:1px black solid; margin-top:5px; overflow:auto;" rows="17" cols="27" id="r2_get" readonly="readonly"><table id="histTable" width="100%">
 <?php
-for($i=0;$i<sizeof($po_hist['r2_hid']); $i++)
-echo "<tr><td><b>".$po_hist['r2_user'][$i]." - ".print_date(substr($po_hist['r2_datetime'][$i],0,10))." - ".substr($po_hist['r2_datetime'][$i],10,6)."</b></td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;".$po_hist['r2_msg'][$i]."</td></tr>";
+if (count($po_hist) > 0) {
+    for($i=0;$i<sizeof($po_hist['r2_hid']); $i++) {
+        echo "<tr><td><b>".$po_hist['r2_user'][$i]." - ".print_date(substr($po_hist['r2_datetime'][$i],0,10))." - ".substr($po_hist['r2_datetime'][$i],10,6)."</b></td></tr><tr><td>&nbsp;&nbsp;&nbsp;&nbsp;".$po_hist['r2_msg'][$i]."</td></tr>";
+
+    }
+}
 ?>
 <tr><td>&nbsp;</td></tr></table></div>
 
