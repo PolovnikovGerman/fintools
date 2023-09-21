@@ -1,8 +1,9 @@
 <?php
 ob_start();
 session_start();
-if(!session_is_registered(myusername) || $_SESSION['uid'] == 11 || $_SESSION['uid'] == 12)
-header("location:../index.php");
+if (!$_SESSION['uid'] || $_SESSION['uid'] == 11 || $_SESSION['uid'] == 12) {
+    header("location:../index.php");
+}
 include('../model/report_model.php');
 include('../includes/utility_functions.php');
 $obj=new db();

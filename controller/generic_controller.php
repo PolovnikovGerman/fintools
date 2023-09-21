@@ -1,7 +1,8 @@
 <?php
 session_start();
-//if(!session_is_registered(myusername))
-//header("location:../index.php");
+if (!$_SESSION['uid']) {
+    header("location:../index.php");
+}
 require_once('../model/generic_model.php');
 require_once('../includes/utility_functions.php');
 $obj=new db();

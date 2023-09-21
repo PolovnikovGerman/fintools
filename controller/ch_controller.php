@@ -1,8 +1,9 @@
 <?php
 ob_start();
 session_start();
-if(!session_is_registered(myusername))
-header("location:../index.php");
+if (!$_SESSION['uid']) {
+    header("location:../index.php");
+}
 include('../model/ch_model.php');
 include('../includes/utility_functions.php');
 $obj=new db();

@@ -48,7 +48,7 @@ class db
 		{
 			
 			$qry="insert into $table values(null,'$parent','$msg',now(),'$user','$type')";
-			if(mysqli_query($qry))
+			if(mysqli_query($this->conn, $qry))
 			return 1;
 			else
 			return 0;
@@ -58,7 +58,7 @@ class db
 		{
 			
 			$qry="insert into r2_history values(null,'$parent','$msg','$user',now())";
-			if(mysqli_query($qry))
+			if(mysqli_query($this->conn, $qry))
 			return 1;
 			else
 			return 0;
@@ -68,7 +68,7 @@ class db
 		function get_start_point()
 		{
 		echo $qry="select af_order_id,ch_datetime from af_child where ch_datetime!= '0000-00-00' && ch_datetime!='2096-12-31'  order by ch_datetime desc limit 0,1";
-		$res = mysqli_query($qry);
+		$res = mysqli_query($this->conn, $qry);
 	$data = mysqli_fetch_array($res);
 		if(mysqli_num_rows($res) == 0)
 		return 22000;
@@ -81,7 +81,7 @@ class db
 		function read_vendor_history($table,$parent,$parent_col)
 		{
 			$qry="select * from $table where $parent_col = $parent order by vhist_id DESC";
-			$res=mysqli_query($qry);
+			$res=mysqli_query($this->conn, $qry);
 			$hist['attach_size']=0;
 			while($data = mysqli_fetch_array($res))
 			{
@@ -111,7 +111,7 @@ class db
 		function is_present_itemid($item_id)
 		{
 			$qry="select * from is_info where is_itemid = '$item_id' ";
-			$res=mysqli_query($qry) or die("Invalid SQL Query String");
+			$res=mysqli_query($this->conn, $qry) or die("Invalid SQL Query String");
 			if(mysqli_num_rows($res) > 0 )
 			return 1;
 			else
@@ -121,7 +121,7 @@ class db
 			function read_item_history($table,$parent,$parent_col)
 		{
 			$qry="select * from $table where $parent_col = $parent order by ishist_id DESC";
-			$res=mysqli_query($qry);
+			$res=mysqli_query($this->conn, $qry);
 			$hist['attach_size']=0;
 			while($data = mysqli_fetch_array($res))
 			{
@@ -157,7 +157,7 @@ class db
 			else if($table == 'iw_imprint')
 				$qry="select * from is_info where is_id not in (select is_id_fk from iw_info a, iw_imprint b where a.iw_id = b.iw_id) LIMIT 0,1 ";
 				
-				$res=mysqli_query($qry);
+				$res=mysqli_query($this->conn, $qry);
 				if($res)
 				{
 					if(mysqli_num_rows($res) == 1)
@@ -183,7 +183,7 @@ class db
 			else
 			return "error";
 			
-			$res=mysqli_query($qry);
+			$res=mysqli_query($this->conn, $qry);
 			if(mysqli_num_rows($res) == 1)
 			{
 				$inc_w=mysqli_fetch_array($res);
@@ -196,7 +196,7 @@ class db
 		function insert_sort($id,$secid, $cat)
 		{
 		$qry = "select * from task_sort where sort_sec = ".$secid." and sort_cat = ".$cat."";
-		$res=mysqli_query($qry);
+		$res=mysqli_query($this->conn, $qry);
 		$data = mysqli_fetch_array($res);
 		$sort_array = array();
 		$sort_array = unserialize($data['sort_array']);
@@ -212,7 +212,7 @@ class db
 		function get_sort_order($secid, $cat)
 		{
 		$qry = "select * from task_sort where sort_sec = ".$secid." and sort_cat = '".$cat."'";
-		$res=mysqli_query($qry);
+		$res=mysqli_query($this->conn, $qry);
 		$data = mysqli_fetch_array($res);
 		
 		
@@ -222,7 +222,7 @@ class db
 		function get_sort_dead_order($secid, $cat)
 		{
 		$qry = "select * from task_dead_sort where dead_sec = ".$secid." and dead_cat = '".$cat."'";
-		$res=mysqli_query($qry);
+		$res=mysqli_query($this->conn, $qry);
 		$data = mysqli_fetch_array($res);
 		
 		
@@ -232,7 +232,7 @@ class db
 		function remove_task_from_sort($taskid,$secid,$cat)
 		{
 			$qry = "select * from task_sort where sort_sec = ".$secid." and sort_cat = '".$cat."'";
-			$res = mysqli_query($qry);
+			$res = mysqli_query($this->conn, $qry);
 			$data = mysqli_fetch_array($res);
 			
 			$sort_array = array();
@@ -243,7 +243,7 @@ class db
 				$key = array_search($taskid, $sort_array); 
 				array_splice($sort_array, $key, 1); 
 				$qry = "update task_sort set sort_array = '".serialize($sort_array)."' where sort_sec = ".$secid." and sort_cat = '".$cat."' ";
-				$res = mysqli_query($qry);
+				$res = mysqli_query($this->conn, $qry);
 			}
 			
 		return 1;	
@@ -253,7 +253,7 @@ class db
 		function remove_task_from_dead_sort($taskid,$secid,$cat)
 		{
 			$qry = "select * from task_dead_sort where dead_sec = ".$secid." and dead_cat = '".$cat."'";
-			$res = mysqli_query($qry);
+			$res = mysqli_query($this->conn, $qry);
 			$data = mysqli_fetch_array($res);
 			
 			$sort_array = array();
@@ -264,7 +264,7 @@ class db
 				$key = array_search($taskid, $sort_array); 
 				array_splice($sort_array, $key, 1); 
 				$qry = "update task_dead_sort set dead_array = '".serialize($sort_array)."' where dead_sec = ".$secid." and dead_cat = '".$cat."' ";
-				$res = mysqli_query($qry);
+				$res = mysqli_query($this->conn, $qry);
 			}
 			
 		return 1;	
@@ -274,7 +274,7 @@ class db
 		function insert_dead_sort($id,$secid, $cat)
 		{
 		$qry = "select * from task_dead_sort where dead_sec = ".$secid." and dead_cat = ".$cat."";
-		$res=mysqli_query($qry);
+		$res=mysqli_query($this->conn, $qry);
 		$data = mysqli_fetch_array($res);
 		$sort_array = array();
 		$sort_array = unserialize($data['dead_array']);
@@ -283,14 +283,14 @@ class db
 		else
 		$sort_array = array_merge((array) $id, (array) $sort_array);
 		$qry = "update task_dead_sort set dead_array = '".serialize($sort_array)."' where dead_sec = ".$secid." and dead_cat = ".$cat." ";
-		$res = mysqli_query($qry);
+		$res = mysqli_query($this->conn, $qry);
 		
 		
 		}	
 		function isin_section($tid,$live)
 		{
 		$qry = "select * from task_active where task_id = $tid and section_id = $live";
-		$res=mysqli_query($qry);
+		$res=mysqli_query($this->conn, $qry);
 		if(mysqli_num_rows($res) > 0)
 		return 1;
 		else
@@ -301,7 +301,7 @@ class db
 		function _get_chid($val)
 		{
 		$qry = "select ch_id from af_child where af_order_id = $val and ch_po = 'A' ";
-		$res = mysqli_query($qry);
+		$res = mysqli_query($this->conn, $qry);
 		$data = mysqli_fetch_array($res);
 		//$data = $obj->fetch($obj->query($qry));
 		return $data['ch_id'];
