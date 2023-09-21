@@ -127,7 +127,7 @@ echo $obj->numrow($res);
 }
 }
 
-if($_POST['q'] == 'reqChange')
+if(isset($_POST['q']) && $_POST['q'] == 'reqChange')
 {
 $qry = "delete from af_attach where att_ch = ".$_POST['child']." and att_type = '".$_POST['type']."'";
 $res = $obj->query($qry);
@@ -146,7 +146,7 @@ $pp = $obj->get_email_data($_POST['child']);
 
 }
 // Show link on documents
-if ($_POST['q'] == 'showpoart') {
+if (isset($_POST['q']) && $_POST['q'] == 'showpoart') {
     $response = array('errors' => 'Not Found');
     if ($_POST['type'] == 'art') {
         $qry = " select * from af_attach where att_ref = " . $_POST['ordid'];
