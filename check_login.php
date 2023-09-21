@@ -37,9 +37,10 @@ if($count==1)
 {
 	// Register $myusername, $mypassword and redirect to file "login_success.php"
 	$info = mysqli_fetch_array($result);
-	 $_SESSION['uid']=$info['user_id'];
+	$_SESSION['uid']=$info['user_id'];
  	$_SESSION['screenname']=$info['name'];
-
+	$_SESSION['myusername'] = $myusername;
+	$_SESSION['mypassword'] = $mypassword;
 //	session_register("myusername");
 //	session_register("mypassword"); 
 	

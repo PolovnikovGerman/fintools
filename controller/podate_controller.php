@@ -1,7 +1,7 @@
 <?php
 ob_start();
 session_start();
-if(!session_is_registered(myusername)) {
+if (!$_SESSION['uid']) {
     header("location:../index.php");
 } else {
     include('../model/podate_model.php');

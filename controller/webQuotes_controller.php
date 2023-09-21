@@ -1,8 +1,9 @@
 <?php
 ob_start();
 session_start();
-if(!session_is_registered(myusername))
-header("location:../index.php");
+if (!$_SESSION['uid']) {
+    header("location:../index.php");
+}
 include('../model/webQuotes_model.php');
 include_once('../includes/utility_functions.php');
 $obj=new db();
