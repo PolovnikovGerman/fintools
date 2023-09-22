@@ -706,6 +706,7 @@ function strpos_arr($haystack, $needle) {
 if (!function_exists('money_format')) {
 	function money_format($format, $total) {
 		$decimal = 2;
+		$thousdelim = ',';
 		if ($total < 0) {
 			$output = '-$';
 		} else {
