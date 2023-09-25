@@ -377,7 +377,7 @@ function _outfullfilmentpage($key_c, $att) {
             $content.=" value=no ></td>";            
         }
         $content.="<td width=\"35px\" class=tdbg align=\"center\" >";
-        if ($att['art'][$key_c[$point]['af_order_id'][0]] == 'yes') {
+        if (isset($att['art'][$key_c[$point]['af_order_id'][0]]) && $att['art'][$key_c[$point]['af_order_id'][0]] == 'yes') {
             $content.="<span class=get_art_files id=" . $key_c[$point]['af_order_id'][0] . "  onclick=send_data(" . $key_c[$point]['af_order_id'][0] . ",'art','no'," . $key_c[$point]['ch_id'][0] . ",'" . $key_c[$point]['ch_po'][0] . "')><img class=point src=\"../images/open_icon.gif\"></span></span>";
         } else {
             $content.="<span>NA</span>";
