@@ -360,6 +360,7 @@ if (isset($_POST['q']) && $_POST['q'] == 'searchfullfilm') {
 
 function _outfullfilmentpage($key_c, $att) {
     $content = "";
+    $po_title = array(0 => 'B', 1 => 'C', 2 => 'D' );
     for ($i = 0; $i < sizeof($key_c['1']['1']); $i++) {
         $point = $key_c['1']['1'][$i];
         $content.="<div>";
@@ -384,14 +385,14 @@ function _outfullfilmentpage($key_c, $att) {
         $content.="</td>";
         $content.="<td width=\"70px\"   align=\"center\" id=af_shdate$i bgcolor=\"" . $key_c[$point]['ch_ship'][0] . "\"  ondblclick=edit_af($i," . $key_c[$point]['af_order_id'][0] . "," . $key_c[$point]['ch_id'][0] . ")>" . print_date($key_c[$point]['ch_ship_date'][0]) . "</td>";
         if (sizeof($key_c[$point]['af_order_id']) == 1) {
-            $content.="<td width=\"35px\" bgcolor=\"" . $key_c[$point]['clr_ven'][0] . "\" id=af_po$i align=\"center\"><span onclick=add_PO($i," . $key_c[$point]['ch_id'][0] . ",'$po_title[0]'," . $key_c[$point]['af_order_id'][0] . ")>A</span></td>";            
+            $content.="<td width=\"35px\" bgcolor=\"" . $key_c[$point]['clr_ven'][0] . "\" id=af_po$i align=\"center\"><span onclick=add_PO($i," . $key_c[$point]['ch_id'][0] . ",'$po_title[0]'," . $key_c[$point]['af_order_id'][0] . ")>A</span></td>";
         } else {
             $content.="<td width=\"35px\" id=af_po$i bgcolor=\"" . $key_c[$point]['clr_ven'][0] . "\" align=\"center\">A</td>";            
         }
         $content.="<td width=\"75px\" align=\"center\"  bgcolor=\"" . $key_c[$point]['clr_ven'][0] . "\"  id=af_ven$i  ondblclick=edit_af($i," . $key_c[$point]['af_order_id'][0] . "," . $key_c[$point]['ch_id'][0] . ")>" . $key_c[$point]['ch_vendor'][0] . "</td>";
 
         $content.="<td align=\"center\"    width=\"35px\">";
-        if ($att['poart'][$key_c[$point]['ch_id'][0]] == 'yes') {
+        if (isset($att['poart'][$key_c[$point]['ch_id'][0]]) && $att['poart'][$key_c[$point]['ch_id'][0]] == 'yes') {
             $content.="<span class=get_art_files id=" . $key_c[$point]['ch_id'][0] . "><span id=icon_" . $key_c[$point]['ch_id'][0] . " onclick=send_data(" . $key_c[$point]['af_order_id'][0] . ",'poart','yes'," . $key_c[$point]['ch_id'][0] . ",'" . $key_c[$point]['ch_po'][0] . "')><img class=point src=\"../images/open_icon.png\"></span></span>";
         } else {
             $content.="<span id=icon_" . $key_c[$point]['ch_id'][0] . " onclick=send_data(" . $key_c[$point]['af_order_id'][0] . ",'poart','yes'," . $key_c[$point]['ch_id'][0] . ",'" . $key_c[$point]['ch_po'][0] . "') class=point ><img src=\"../images/attch_icon.png\"></span>";
