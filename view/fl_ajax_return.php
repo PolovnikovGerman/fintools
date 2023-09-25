@@ -470,7 +470,7 @@ function _outfullfilmentpage($key_c, $att) {
             $content.="<td width=\"75px\"  bgcolor=\"" . $key_c[$point]['clr_ven'][$j] . "\"  align=\"center\" id=ch_ven" . $key_c[$point]['ch_id'][$j] . "  ondblclick=edit_ch(" . $key_c[$point]['ch_id'][$j] . ")>" . $key_c[$point]['ch_vendor'][$j] . "</td>";
 
             $content.="<td align=\"center\"   width=\"35px\">";
-            if ($att['poart'][$key_c[$point]['ch_id'][$j]] == 'yes') {
+            if (isset($att['poart'][$key_c[$point]['ch_id'][$j]]) && $att['poart'][$key_c[$point]['ch_id'][$j]] == 'yes') {
                 $content.="<span class=get_art_files id=" . $key_c[$point]['ch_id'][$j] . "><span  id=icon_" . $key_c[$point]['ch_id'][$j] . "  onclick=send_data(" . $key_c[$point]['af_order_id'][$j] . ",'poart','yes'," . $key_c[$point]['ch_id'][$j] . ",'" . $key_c[$point]['ch_po'][$j] . "')><img class=point src=\"../images/open_icon.png\"></span></span>";
             } else {
                 $content.="<span  id=icon_" . $key_c[$point]['ch_id'][$j] . "  onclick=send_data(" . $key_c[$point]['af_order_id'][$j] . ",'poart','yes'," . $key_c[$point]['ch_id'][$j] . ",'" . $key_c[$point]['ch_po'][$j] . "') class=point ><img src=\"../images/attch_icon.png\"></span>";
