@@ -6,14 +6,14 @@ $obj = new db();
 
 $attachTitle=array('art'=>'Approved Artwork','poart'=>'Purchase Order','clay'=>'Clay pictures', 'prv'=>'Preview pictures');
 
-if($_GET['q'] == 'display_art')
+if(isset($_GET['q']) && $_GET['q'] == 'display_art')
 {
-if($_GET['type']=='art' )
+if(isset($_GET['type']) && $_GET['type']=='art' )
 {
 $qry = " select * from af_attach where att_ref = ".$_GET['ordid'];
 $res = $obj->query($qry);
 }
-else if($_GET['type']=='poart' || $_GET['type'] == 'clay' || $_GET['type'] == 'prv' )
+else if(isset($_GET['type']) && ($_GET['type']=='poart' || $_GET['type'] == 'clay' || $_GET['type'] == 'prv' ))
 {
 $qry = "select ch_po from af_child where ch_id = ".$_GET['chid'];
 $res = $obj->query($qry);
@@ -61,7 +61,7 @@ echo $disp;
 
 
 
-if($_GET['q'] == 'remove_attach' )
+if(isset($_GET['q']) && $_GET['q'] == 'remove_attach' )
 {
  $qry = "select att_ch, att_type from af_attach where att_id =".substr($_GET['att_id'],4);
  $res = $obj->query($qry);
@@ -111,9 +111,9 @@ $qry = "delete from af_attach where att_id = ".substr($_GET['att_id'],4);
 	}
 }
 
-if($_GET['q'] == 'change_icon')
+if(isset($_GET['q']) && $_GET['q'] == 'change_icon')
 {
-if($_GET['type'] == 'poart' || $_GET['type'] == 'clay' || $_GET['type'] == 'prv' )
+if(isset($_GET['type']) && ($_GET['type'] == 'poart' || $_GET['type'] == 'clay' || $_GET['type'] == 'prv' ))
 {
 $qry = "select * from af_attach where att_ch = ".$_GET['chid']." and att_type = '".$_GET['type']."'";
 $res = $obj->query($qry);
