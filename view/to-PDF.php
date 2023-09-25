@@ -360,8 +360,8 @@ for($i=0;$i<10;$i++)
 {
 $mark+=8;
 $pdf->SetXY(52,$mark);
-$pdf->Cell(18,4,$_POST['r2_qty'.$i],0,0,'C');
-$pdf->Cell(91,4,$_POST['r2_desc'.$i],0,0,'L');
+$pdf->Cell(18,4,(isset($_POST['r2_qty'.$i]) ? $_POST['r2_qty'.$i] : ''),0,0,'C');
+$pdf->Cell(91,4,(isset($_POST['r2_desc'.$i]) ? $_POST['r2_desc'.$i] : ''),0,0,'L');
 if($_POST['r2_qty'.$i] > 0)
 $pdf->Cell(21,4,"$".$_POST['r2_price'.$i],0,0,'C');
 if(is_numeric($_POST['r2_qty'.$i]) && is_numeric($_POST['r2_price'.$i]))

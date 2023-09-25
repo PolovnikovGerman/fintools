@@ -12,8 +12,8 @@ $obj = new db();
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-if ($_GET['q'] == 'update_master') {
-    if ($_GET['ven'] == '0')
+if (isset($_GET['q']) && $_GET['q'] == 'update_master') {
+    if (isset($_GET['ven']) && $_GET['ven'] == '0')
         $qry = "update af_master set af_cust = '', af_desc = '' where af_order_id = " . $_GET['ord'];
     else
         $qry = "update af_master set af_cust = '" . $_GET['cust'] . "', af_desc = '" . $_GET['dsc'] . "' where af_order_id = " . $_GET['ord'];
@@ -50,7 +50,7 @@ if ($_GET['q'] == 'update_master') {
 }
 
 
-if ($_GET['q'] == 'update_child') {
+if (isset($_GET['q']) && $_GET['q'] == 'update_child') {
 
     if ($_GET['ven'] == '0')
         $qry = "update af_child set ch_ship_date = '2090-12-30', ch_vendor = '', ch_ship_notes = '', ch_notes= '' where ch_id = " . $_GET['chid'];
@@ -77,7 +77,7 @@ if ($_GET['q'] == 'update_child') {
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //
-if ($_GET['q'] == 'toggle') {
+if (isset($_GET['q']) && $_GET['q'] == 'toggle') {
 
     $qry = " update af2_master set " . $_GET['col'] . " = '" . $_GET['state'] . "' where af_order_id = " . $_GET['ord'];
     if ($obj->query($qry))
@@ -86,7 +86,7 @@ if ($_GET['q'] == 'toggle') {
         echo "false";
 }
 
-if ($_GET['q'] == 'child_toggle') {
+if (isset($_GET['q']) && $_GET['q'] == 'child_toggle') {
 
     $qry = " update af_child set " . $_GET['col'] . " = '" . $_GET['state'] . "' where ch_id = " . $_GET['chid'];
     if ($obj->query($qry)) {
@@ -109,7 +109,7 @@ if ($_GET['q'] == 'child_toggle') {
         echo "false";
 }
 
-if ($_GET['q'] == 'getven') {
+if (isset($_GET['q']) && $_GET['q'] == 'getven') {
     $qry = "select * from af_vendor";
     $res = $obj->query($qry);
     $ret = "<select  id=" . $_GET['hr'] . $_GET['val'] . ">";
