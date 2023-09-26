@@ -201,7 +201,7 @@ echo "<table width=970px border=0 cellpadding=0 cellspacing=0 class=task_today_e
 echo "<tr ".col_bg('#ececec',$i)." class=hilite>";
 echo "<td width=\"45px\" class=tdbg  align=center  >".$key_c[$point]['af_order_id'][0]."</td>";
 echo "<td width=\"120px\"   align=\"center\" id=af_cust$i class=\"tdbg small_font\" ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].")><a class=info href=#>".(isset($key_c[$point]['af_cust'][0]) ? substr($key_c[$point]['af_cust'][0],0,19) : '')."<span>".(isset($key_c[$point]['af_cust'][0]) ? $key_c[$point]['af_cust'][0] : '')."</span></a></td>";
-echo "<td width=\"115px\" class=\"tdbg small_font\"    align=\"center\" id=af_desc$i  ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].")><a class=info href=#>".(isset($key_c[$point]['af_desc'][0]) ? substr($key_c[$point]['af_desc'][0],0,19) : '')."<span>".isset($key_c[$point]['af_desc'][0]) ? $key_c[$point]['af_desc'][0] :''."</span></a></td>";
+echo "<td width=\"115px\" class=\"tdbg small_font\"    align=\"center\" id=af_desc$i  ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].")><a class=info href=#>".(isset($key_c[$point]['af_desc'][0]) ? substr($key_c[$point]['af_desc'][0],0,19) : '')."<span>".(isset($key_c[$point]['af_desc'][0]) ? $key_c[$point]['af_desc'][0] :'')."</span></a></td>";
 
 echo  "<td width=\"35px\"  align=\"center\"  bgcolor=\"".$key_c[$point]['clr_appr'][0]."\"     ><input type=checkbox onclick=\"return false\" name=af_appr_ck ";
 if($key_c[$point]['af_appr_ck'][0] == 'yes') echo " checked value=yes ></td>"; else echo " value=no ></td>";
