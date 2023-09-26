@@ -126,11 +126,11 @@ Orders:<select onchange="display_or(this.value);" id="ordersnumberselect">
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  <span <?php echo (!isset($_SESSION['whr'])) ? 'class=_sort_act' : 'class=_sort'; ?>><a href="fullfillment.php?whr=all">ALL</a></span>
- <span <?php echo ($_SESSION['whr']=='ch_placed_ck') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="fullfillment.php?whr=ch_placed_ck">Not Placed</a></span>
- <span <?php echo ($_SESSION['whr']=='ch_conf_ck') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="fullfillment.php?whr=ch_conf_ck">Not Confirmed</a></span>
- <span <?php echo ($_SESSION['whr']=='ch_ship_ck') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="fullfillment.php?whr=ch_ship_ck">Not Shipped</a></span>
- <span <?php echo ($_SESSION['whr']=='ch_cust_ck') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="fullfillment.php?whr=ch_cust_ck">Cust Trk</a></span>
- <span <?php echo ($_SESSION['whr']=='ch_issue_ck') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="fullfillment.php?whr=ch_issue_ck">Issues</a></span>
+ <span <?php echo (isset($_SESSION['whr']) && $_SESSION['whr']=='ch_placed_ck') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="fullfillment.php?whr=ch_placed_ck">Not Placed</a></span>
+ <span <?php echo (isset($_SESSION['whr']) && $_SESSION['whr']=='ch_conf_ck') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="fullfillment.php?whr=ch_conf_ck">Not Confirmed</a></span>
+ <span <?php echo (isset($_SESSION['whr']) && $_SESSION['whr']=='ch_ship_ck') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="fullfillment.php?whr=ch_ship_ck">Not Shipped</a></span>
+ <span <?php echo (isset($_SESSION['whr']) && $_SESSION['whr']=='ch_cust_ck') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="fullfillment.php?whr=ch_cust_ck">Cust Trk</a></span>
+ <span <?php echo (isset($_SESSION['whr']) && $_SESSION['whr']=='ch_issue_ck') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="fullfillment.php?whr=ch_issue_ck">Issues</a></span>
  <span class='_sort'><a id="fullfill_export" href="javascript:void(0)">Export</a></span>
  <div style="  margin:5px 10px 0px 10px; float:left;"  >
      <ul class="ff_mn">
@@ -207,7 +207,7 @@ echo  "<td width=\"35px\"  align=\"center\"  bgcolor=\"".$key_c[$point]['clr_app
 if($key_c[$point]['af_appr_ck'][0] == 'yes') echo " checked value=yes ></td>"; else echo " value=no ></td>";
 
 echo  "<td width=\"35px\" class=tdbg align=\"center\" >";
-if($att['art'][$key_c[$point]['af_order_id'][0]] == 'yes')
+if(isset($att['art'][$key_c[$point]['af_order_id'][0]]) && $att['art'][$key_c[$point]['af_order_id'][0]] == 'yes')
 echo "<span class=get_art_files id=".$key_c[$point]['af_order_id'][0]."  onclick=send_data(".$key_c[$point]['af_order_id'][0].",'art','no',".$key_c[$point]['ch_id'][0].",'".$key_c[$point]['ch_po'][0]."')><img class=point src=\"../images/open_icon.gif\"></span></span>";
 else echo "<span>NA</span>";
 echo "</td>";
@@ -220,7 +220,7 @@ echo  "<td width=\"75px\" align=\"center\"  bgcolor=\"".$key_c[$point]['clr_ven'
 
 	echo "<td align=\"center\"    width=\"35px\"
 			 				 >";
-			if($att['poart'][$key_c[$point]['ch_id'][0]] == 'yes')
+			if(isset($att['poart'][$key_c[$point]['ch_id'][0]]) && $att['poart'][$key_c[$point]['ch_id'][0]] == 'yes')
 			echo "<span class=get_art_files id=".$key_c[$point]['ch_id'][0]."><span id=icon_".$key_c[$point]['ch_id'][0]." onclick=send_data(".$key_c[$point]['af_order_id'][0].",'poart','yes',".$key_c[$point]['ch_id'][0].",'".$key_c[$point]['ch_po'][0]."')><img class=point src=\"../images/open_icon.png\"></span></span>";
 			else
 			echo "<span id=icon_".$key_c[$point]['ch_id'][0]." onclick=send_data(".$key_c[$point]['af_order_id'][0].",'poart','yes',".$key_c[$point]['ch_id'][0].",'".$key_c[$point]['ch_po'][0]."') class=point ><img src=\"../images/attch_icon.png\"></span>";
@@ -367,7 +367,7 @@ echo "</td>";
 
 		}
 $point++;
-$clr++;
+//$clr++;
 }
 ?>
 <input type=hidden name=_type id=att_type value=poart>
