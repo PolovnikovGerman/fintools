@@ -48,9 +48,9 @@
 
 
 <?php
-	if($_GET['msg']=='error')
+	if(isset($_GET['msg']) && $_GET['msg']=='error')
 		echo "<div class=\"error\">Unable to Process File.</div>";
-	else if($_GET['msg']=='success')
+	else if(isset($_GET['msg']) && $_GET['msg']=='success')
 		echo "<div class=\"success\">File Processed Successfully.</div>";
 	?>
  <div class="content" >
@@ -71,9 +71,9 @@ Orders:<select onchange="display_or(this.value);">
 
  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
  <span <?php echo (!isset($_SESSION['whr_ch'])) ? 'class=_sort_act' : 'class=_sort'; ?>><a href="chinese.php?whr_ch=all">ALL</a></span>
- <span <?php echo ($_SESSION['whr_ch']=='on_vendor') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="chinese.php?whr_ch=on_vendor">On Vendor</a></span>
- <span <?php echo ($_SESSION['whr_ch']=='on_cust') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="chinese.php?whr_ch=on_cust">On Customer</a></span>
- <span <?php echo ($_SESSION['whr_ch']=='on_us') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="chinese.php?whr_ch=on_us">On Us</a></span>
+ <span <?php echo (isset($_SESSION['whr_ch']) && $_SESSION['whr_ch']=='on_vendor') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="chinese.php?whr_ch=on_vendor">On Vendor</a></span>
+ <span <?php echo (isset($_SESSION['whr_ch']) && $_SESSION['whr_ch']=='on_cust') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="chinese.php?whr_ch=on_cust">On Customer</a></span>
+ <span <?php echo (isset($_SESSION['whr_ch']) && $_SESSION['whr_ch']=='on_us') ? 'class=_sort_act' : 'class=_sort'; ?>><a href="chinese.php?whr_ch=on_us">On Us</a></span>
  <span class='_sort'><a id="exportdata" href="javascript:void(0)">Export</a></span>
 
  <div style="  margin:5px 10px 0px 10px; " ><ul class="ff_mn">
@@ -107,7 +107,7 @@ Orders:<select onchange="display_or(this.value);">
        <td width="140px" align="center">Notes</td>
  </tr></table>
  <div  style="width:980px; height:690px; overflow:auto;">
- <?php if(sizeof($vch_order['ch_id']) > 0) { ?>
+ <?php if(isset($vch_order['ch_id']) && sizeof($vch_order['ch_id']) > 0) { ?>
  <table width="950px" class="chn_tb" border="0" cellpadding="0" cellspacing="0"   style="margin-left:10px; border:1px #181818 solid;>
  <?php } else { ?>
  <table width="950px" class="chn_tb" border="1" cellpadding="0" cellspacing="10"   style="margin-left:10px; border:1px #181818 solid;"><tr><td align="center"><b>No orders to display</b></td></tr> <?php } ?>
