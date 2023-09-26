@@ -17,11 +17,12 @@ $obj = new db();
 $qry = "select att_path, att_name from af_attach where att_ref = ".$oid." and att_type = 'art'";
 $res = $obj->query($qry);
 while($data = $obj->fetch($res)){
-    $arr[]=$data['att_path'];
+    $arr[]=str_replace('../docs/','./docs/', $data['att_path']);
     $arr2[]=$data['att_name'];
 }
 var_dump($data2);
 var_dump($arr);
 var_dump($arr2);
 echo $msg.PHP_EOL;
-// send_email_attach($data2['v_email'],'Purchase Order #BT'.$oid.$chpo,$msg,$arr,$arr2);
+// $res = send_email_attach($data2['v_email'],'Purchase Order #BT'.$oid.$chpo,$msg,$arr,$arr2);
+// echo 'Send result '.$res.' !'.PHP_EOL;
