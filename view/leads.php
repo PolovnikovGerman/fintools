@@ -74,7 +74,7 @@
  		echo "<option class=option1 ";
 	else
 		echo "<option class=option2 ";
- if($_SESSION['leadPg'] == $i) echo "\"selected = selected\"";
+ if(isset($_SESSION['leadPg']) && $_SESSION['leadPg'] == $i) echo "\"selected = selected\"";
  echo " value=$i>Leads <b>".(($i*200)+1)." - ".(($i*200)+200)."</b></option>";
  }
  echo "</select>";
@@ -86,7 +86,7 @@
  <table ><tr><td style="border:1px #626262 solid" bgcolor="#fbde1f" width="10px">&nbsp;</td><td>Priority</td><td width="10px"  style="border:1px #626262 solid"  bgcolor="#91c9fc">&nbsp;</td><td>Closed</td></tr>
 <tr><td  style="border:1px #626262 solid"  bgcolor="#ffffff">&nbsp;</td><td>Open</td><td  style="border:1px #626262 solid"  bgcolor="#b35895">&nbsp;</td><td>Dead</td></tr></table>
  </div>
- <div class="ld_toggle"><?php if($_SESSION['DC'] == 'yes') echo "Hide:"; else echo "Show:"; ?> <span id="closedDead"><?php if($_SESSION['DC'] == 'yes') echo "<a class=load  href=\"leads.php?DC=no\">Closed/Dead</a>"; else echo "<a class=load  href=\"leads.php?DC=yes\">Closed/Dead</a>"; ?></span></div>
+ <div class="ld_toggle"><?php if(isset($_SESSION['DC']) && $_SESSION['DC'] == 'yes') echo "Hide:"; else echo "Show:"; ?> <span id="closedDead"><?php if(isset($_SESSION['DC']) && $_SESSION['DC'] == 'yes') echo "<a class=load  href=\"leads.php?DC=no\">Closed/Dead</a>"; else echo "<a class=load  href=\"leads.php?DC=yes\">Closed/Dead</a>"; ?></span></div>
 <div class="clear"></div>
 
 <div>

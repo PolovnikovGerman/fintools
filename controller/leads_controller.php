@@ -44,7 +44,7 @@ if(isset($_GET['pageDC']) && is_numeric($_GET['pageDC']) )
 
 if($_SESSION['leadSort'] == 'leadType') $scheme = true; else $scheme = false;
 
-	if($_SESSION['DC'] == 'yes')
+	if(isset($_SESSION['DC']) && $_SESSION['DC'] == 'yes')
 	{
 		$dispDCLead = getDCLeads();
 		$cssOpen = "ld_table ld_shortOpen";
