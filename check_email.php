@@ -20,4 +20,8 @@ while($data = $obj->fetch($res)){
     $arr[]=$data['att_path'];
     $arr2[]=$data['att_name'];
 }
-send_email_attach($data2['v_email'],'Purchase Order #BT'.$oid.$chpo,$msg,$arr,$arr2);
+var_dump($data2);
+var_dump($arr);
+var_dump($arr2);
+echo $msg.PHP_EOL;
+// send_email_attach($data2['v_email'],'Purchase Order #BT'.$oid.$chpo,$msg,$arr,$arr2);
