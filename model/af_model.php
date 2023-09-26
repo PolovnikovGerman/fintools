@@ -142,7 +142,7 @@ function update_orderart($updparams, $artnotes) {
             $newnote='blank order '.$artnotes;
         }        
     } else {
-        if (mb_strpos($artnotes,'blank order')!==FALSE) {
+        if (isset($artnotes) && mb_strpos($artnotes,'blank order')!==FALSE) {
             $newnote=str_replace('blank order', '', $artnotes);
         }
     }
