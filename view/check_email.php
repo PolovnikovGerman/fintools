@@ -3,7 +3,7 @@ require('../includes/utility_functions.php');
 require('../model/mysql.php');
 $from = "ff@bluetrack.net";
 $headers = [];
-$headers[] = "From: ff@";
+$headers[] = "From: {$from}";
 // boundary
 $semi_rand = md5(time());
 $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
