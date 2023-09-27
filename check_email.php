@@ -1,6 +1,6 @@
 <?php
-require('./includes/utility_functions.php');
-require('./model/mysql.php');
+require('../includes/utility_functions.php');
+require('../model/mysql.php');
 
 $data2 = array();
 $data2['v_email'] = 'to_german@yahoo.com';
