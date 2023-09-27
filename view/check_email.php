@@ -1,6 +1,14 @@
 <?php
 require('../includes/utility_functions.php');
 require('../model/mysql.php');
+$from = "ff@bluetrack.com";
+$headers = [];
+$headers[] = "From: ff@";
+// boundary
+$semi_rand = md5(time());
+$mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
+// headers for attachment
+$headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
 
 $data2 = array();
 $data2['v_email'] = 'to_german@yahoo.com';
@@ -10,6 +18,15 @@ $oid = 63238;
 $chpo = 'A';
 $par=array($data2['v_name'],'BT'.$oid.$chpo);
 $msg=emailTemplate('po',$par);
+
+$message = "This is a multi-part message in MIME format.\n\n" . "--{$mime_boundary}\n" . "Content-Type: text/html; charset=\"iso-8859-1\"\n" . "Content-Transfer-Encoding: 7bit\n\n" . $message . "\n\n";
+$message .= "--{$mime_boundary}\n";
+
+$ok = mail($data2['v_email'], 'Purchase Order #BT'.$oid.$chpo, $message, $headers);
+echo 'Test SEND '.$ok.'!'.PHP_EOL;
+die();
+
+
 $save_name = "../docs/art_af_fl_uploads/poart/BLUETRACK_PO_BT".$oid.$chpo.".pdf";
 $arr = array(); $arr2 = array();
 $arr[0] = $save_name; $arr2[0] = "BLUETRACK_PO_BT".$oid.$chpo.".pdf";

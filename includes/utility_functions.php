@@ -251,16 +251,12 @@ for($x=0;$x<count($files);$x++){
 			"Content-Disposition: attachment;\n" . " filename=\"$filenames[$x]\"\n" .
 			"Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
 		$message .= "--{$mime_boundary}\n";
-	} else {
-		echo 'File '.$files[$x].' NOT FOUND '.PHP_EOL;
 	}
 }
  
 // send
 // @mail('bluetrack_niladhar@hotmail.com',$subject, $message, $headers);
-	echo 'Send data to '.$to.PHP_EOL;
 $ok = @mail($to, $subject, $message, $headers);
-echo 'Mail Result '.$ok.PHP_EOL;
 $obj = new db();
 if($ok)  
 {
