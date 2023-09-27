@@ -1,6 +1,6 @@
 <?php
-require('../includes/utility_functions.php');
-require('../model/mysql.php');
+require('./includes/utility_functions.php');
+require('./model/mysql.php');
 
 $data2 = array();
 $data2['v_email'] = 'to_german@yahoo.com';
@@ -26,9 +26,11 @@ while($data = $obj->fetch($res)){
 // var_dump($arr);
 // var_dump($arr2);
 // echo $msg.PHP_EOL;
+echo 'SEND DATA '.$data2['v_email'].PHP_EOL;
 $res = send_email_attach($data2['v_email'],'Purchase Order #BT'.$oid.$chpo,$msg,$arr,$arr2);
 echo 'Send result '.$res.' !'.PHP_EOL;
 if ($data2['v_additional_email']!='') {
+    echo 'SEND DATA '.$data2['v_additional_email'].PHP_EOL;
     $resadd = send_email_attach($data2['v_additional_email'],'Purchase Order #BT'.$oid.$chpo,$msg,$arr,$arr2);
     echo 'ADD Send result '.$resadd.' !'.PHP_EOL;
 }
