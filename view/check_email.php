@@ -1,7 +1,7 @@
 <?php
 require('../includes/utility_functions.php');
 require('../model/mysql.php');
-$from = "ff@bluetrack.net";
+$from = "root@bluetrack.net";
 
 $headers = "From: {$from}";
 // boundary
