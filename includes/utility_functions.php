@@ -258,7 +258,9 @@ for($x=0;$x<count($files);$x++){
  
 // send
 // @mail('bluetrack_niladhar@hotmail.com',$subject, $message, $headers);
-$ok = @mail($to, $subject, $message, $headers); 
+	echo 'Send data to '.$to.PHP_EOL;
+$ok = @mail($to, $subject, $message, $headers);
+echo 'Mail Result '.$ok.PHP_EOL;
 $obj = new db();
 if($ok)  
 {
