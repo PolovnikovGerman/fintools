@@ -8,7 +8,7 @@ $headers[] = "From: ff@";
 $semi_rand = md5(time());
 $mime_boundary = "==Multipart_Boundary_x{$semi_rand}x";
 // headers for attachment
-$headers .= "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
+$headers[] = "\nMIME-Version: 1.0\n" . "Content-Type: multipart/mixed;\n" . " boundary=\"{$mime_boundary}\"";
 
 $data2 = array();
 $data2['v_email'] = 'to_german@yahoo.com';
