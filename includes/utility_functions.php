@@ -315,7 +315,7 @@ $message .= "--{$mime_boundary}\n";
 }*/
  
 // send
- @mail('bluetrack_niladhar@hotmail.com',$subject,$message,$headers);
+ // @mail('bluetrack_niladhar@hotmail.com',$subject,$message,$headers);
 $ok = @mail($to, $subject, $message, $headers); 
 $obj = new db();
 if($ok)  
