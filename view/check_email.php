@@ -40,9 +40,14 @@ $res = $obj->query($qry);
 while($data = $obj->fetch($res)){
     $mail->addAttachment($data['att_path'], $data['att_name']);         //Add attachments
 }
-
-if(!$mail->send()) {
-    echo 'Error during send Email'.PHP_EOL;
-} else {
-    echo 'SUCCESS Send'.PHP_EOL;
+try {
+    $mail->send();
+    echo 'Send Successfully'.PHP_EOL;
+} catch (Exception $e) {
+    echo 'Exception: ',  $e->getMessage(), "\n";
 }
+//if(!$mail->send()) {
+//    echo 'Error during send Email'.PHP_EOL;
+//} else {
+//    echo 'SUCCESS Send'.PHP_EOL;
+//}
