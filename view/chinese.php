@@ -132,9 +132,9 @@ if($ch_att['poart'][$vch_order['ch_id'][$i]] == 'yes')
  echo "<td class=tdbg  width=50px align=center >".print_date($vch_order['ch_ship_date'][$i])."</td>";
 
   if($ch_att['clay'][$vch_order['ch_id'][$i]] == 'yes')
- echo "<td width=35px align=center ><span  id=icon_clay".$vch_order['ch_id'][$i]."  onclick=send_data(".$vch_order['af_order_id'][$i].",'clay','yes',".$vch_order['ch_id'][$i].")><img class=point src=\"../images/open_icon.png\"></span></span></td>";
+ echo "<td width=35px align=center ><span  id=icon_clay".$vch_order['ch_id'][$i]."  onclick=send_data(".$vch_order['af_order_id'][$i].",'clay','yes',".$vch_order['ch_id'][$i].",'".$vch_order['ch_po'][$i]."')><img class=point src=\"../images/open_icon.png\"></span></span></td>";
  else
- echo "<td width=35px align=center ><span  id=icon_clay".$vch_order['ch_id'][$i]."  onclick=send_data(".$vch_order['af_order_id'][$i].",'clay','yes',".$vch_order['ch_id'][$i].")><img class=point src=\"../images/attch_icon.png\"></span></span></td>";
+ echo "<td width=35px align=center ><span  id=icon_clay".$vch_order['ch_id'][$i]."  onclick=send_data(".$vch_order['af_order_id'][$i].",'clay','yes',".$vch_order['ch_id'][$i].",'".$vch_order['ch_po'][$i]."')><img class=point src=\"../images/attch_icon.png\"></span></span></td>";
 
  echo "<td width=25px align=center  bgcolor=\"".$vch_order['claysent'][$i]."\" id=chn_claysent_ck".$vch_order['ch_id'][$i]."><input type=checkbox onclick=\"child_toggle(".$vch_order['ch_id'][$i].",this,$i,'chn_claysent_ck')\"
  name=chn_claysent_ck$i "; if($vch_order['chn_claysent_ck'][$i] ==  'yes') echo" checked=yes"; else echo " value=no"; echo "></td>";
@@ -143,9 +143,9 @@ if($ch_att['poart'][$vch_order['ch_id'][$i]] == 'yes')
  name=chn_clayapr_ck$i "; if($vch_order['chn_clayapr_ck'][$i] ==  'yes') echo" checked=yes"; else echo " value=no"; echo "></td>";
 
  if($ch_att['prv'][$vch_order['ch_id'][$i]] == 'yes')
- echo "<td  width=35px align=center ><span  id=icon_prv".$vch_order['ch_id'][$i]."  onclick=send_data(".$vch_order['af_order_id'][$i].",'prv','yes',".$vch_order['ch_id'][$i].")><img class=point src=\"../images/open_icon.png\"></span></span></td>";
+ echo "<td  width=35px align=center ><span  id=icon_prv".$vch_order['ch_id'][$i]."  onclick=send_data(".$vch_order['af_order_id'][$i].",'prv','yes',".$vch_order['ch_id'][$i].",'".$vch_order['ch_po'][$i]."')><img class=point src=\"../images/open_icon.png\"></span></span></td>";
  else
- echo "<td  width=35px align=center ><span  id=icon_prv".$vch_order['ch_id'][$i]."  onclick=send_data(".$vch_order['af_order_id'][$i].",'prv','yes',".$vch_order['ch_id'][$i].")><img class=point src=\"../images/attch_icon.png\"></span></span></td>";
+ echo "<td  width=35px align=center ><span  id=icon_prv".$vch_order['ch_id'][$i]."  onclick=send_data(".$vch_order['af_order_id'][$i].",'prv','yes',".$vch_order['ch_id'][$i].",'".$vch_order['ch_po'][$i]."')><img class=point src=\"../images/attch_icon.png\"></span></span></td>";
 
  echo "<td  width=25px align=center  bgcolor=\"".$vch_order['prvsent'][$i]."\" id=chn_prvsent_ck".$vch_order['ch_id'][$i]."><input type=checkbox onclick=\"child_toggle(".$vch_order['ch_id'][$i].",this,$i,'chn_prvsent_ck')\"
  name=chn_prvsent_ck$i "; if($vch_order['chn_prvsent_ck'][$i] ==  'yes') echo" checked=yes"; else echo " value=no"; echo "></td>";
