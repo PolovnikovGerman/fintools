@@ -2,7 +2,8 @@
 
 include_once('../controller/fl_controller.php');
 include_once ('../model/mysql.php');
-// include('../includes/firephp.php');
+require('../includes/email_functions.php');
+
 
 $obj = new db();
 
@@ -96,12 +97,14 @@ if (isset($_GET['q']) && $_GET['q'] == 'child_toggle') {
             $pp = $obj->get_email_data($_GET['chid']);
             $par = array($pp['v_name'], 'BT' . $pp['af_order_id'] . $pp['chpo'], 'items' => $pp['items']);
             $msg = emailTemplate('clayApproved', $par);
-            send_email_attach($pp['v_email'], 'Clay approved for #BT' . $pp['af_order_id'] . $ppT['chpo'], $msg, $arr, $arr2);
+            // send_email_attach($pp['v_email'], 'Clay approved for #BT' . $pp['af_order_id'] . $ppT['chpo'], $msg, $arr, $arr2);
+            send_email_docs($pp['v_email'], 'Clay approved for #BT' . $pp['af_order_id'] . $pp['chpo'], $msg);
         } else if ($_GET['col'] == 'chn_prvapr_ck' && $_GET['state'] == 'yes') {
             $pp = $obj->get_email_data($_GET['chid']);
             $par = array($pp['v_name'], 'BT' . $pp['af_order_id'] . $pp['chpo'], 'items' => $pp['items']);
             $msg = emailTemplate('prvApproved', $par);
-            send_email_attach($pp['v_email'], 'Preview approved for #BT' . $pp['af_order_id'] . $ppT['chpo'], $msg, $arr, $arr2);
+            // send_email_attach($pp['v_email'], 'Preview approved for #BT' . $pp['af_order_id'] . $ppT['chpo'], $msg, $arr, $arr2);
+            send_email_docs($pp['v_email'], 'Preview approved for #BT' . $pp['af_order_id'] . $pp['chpo'], $msg);
         }
 
         echo $_GET['state'];
@@ -210,7 +213,8 @@ if (isset($_POST['q']) && $_POST['q'] == 'addNewVendor') {
         $lastid = mysqli_insert_id();
         $ar = array($_POST['name'], strtolower($_POST['email']), $pwd);
         $msg = emailTemplate('emailPassword', $ar);
-        send_email_TEXT(strtolower($_POST['email']), 'Vendor Access into BLUETRACK System', $msg);
+        // send_email_TEXT(strtolower($_POST['email']), 'Vendor Access into BLUETRACK System', $msg);
+        send_email_docs(strtolower($_POST['email']), 'Vendor Access into BLUETRACK System', $msg);
         echo $lastid;
     }
 }

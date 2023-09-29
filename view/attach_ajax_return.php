@@ -1,6 +1,7 @@
 <?php
 include_once('../controller/af_controller.php');
 include_once ('../model/mysql.php');
+require('../includes/email_functions.php');
 
 $obj = new db();
 
@@ -137,11 +138,13 @@ $pp = $obj->get_email_data($_POST['child']);
 			$par=array($pp['v_name'],'BT'.$pp['af_order_id'].$pp['chpo'],$_POST['msg'],'items'=>$pp['items']);
 			if($_POST['type'] == 'clay'){
 				$msg=emailTemplate('clayChange',$par);
-				send_email_attach($pp['v_email'],'Clay Change needed for PO #BT'.$pp['af_order_id'].$ppT['chpo'],$msg,$arr,$arr2);
+				// send_email_attach($pp['v_email'],'Clay Change needed for PO #BT'.$pp['af_order_id'].$pp['chpo'],$msg,$arr,$arr2);
+                send_email_docs($pp['v_email'],'Clay Change needed for PO #BT'.$pp['af_order_id'].$pp['chpo'],$msg);
 				}
 			else if($_POST['type'] == 'prv'){
 				$msg=emailTemplate('prvChange',$par);
-				send_email_attach($pp['v_email'],'Preview Change needed for PO #BT'.$pp['af_order_id'].$ppT['chpo'],$msg,$arr,$arr2);
+				// send_email_attach($pp['v_email'],'Preview Change needed for PO #BT'.$pp['af_order_id'].$pp['chpo'],$msg,$arr,$arr2);
+                send_email_docs($pp['v_email'],'Preview Change needed for PO #BT'.$pp['af_order_id'].$pp['chpo'],$msg);
 				}
 
 }

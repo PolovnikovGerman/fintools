@@ -364,7 +364,7 @@ class db
 		$data4[] = $data3['r2i_desc'];
 		
 		$arr=array('af_order_id'=>$data['af_order_id'],'chpo'=>$data['ch_po'],'v_name'=>$data2['v_name'],'v_email'=>$data2['v_email'],'items'=>$data4);
-		print_r($arr);
+		// print_r($arr);
 		
 		return $arr;
  		}
