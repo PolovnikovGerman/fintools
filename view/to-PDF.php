@@ -2,6 +2,8 @@
 require('fpdf.php');
 setlocale(LC_MONETARY, "en_US");
 require('../includes/utility_functions.php');
+require('../includes/email_functions.php');
+require('../config/smtp_config.php');
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////PDF FOR 1 ADDRESS///////////////////////////////////////////////////////////////////////////////////////
@@ -1338,39 +1340,46 @@ $qry = "select * from af_vendor where v_id = '".$_POST['r2_ven_id']."'";
 $res = $obj->query($qry);
 $data2 = $obj->fetch($res);
 
-$arr = array(); $arr2 = array();
-$arr[0] = $save_name; $arr2[0] = "BLUETRACK_PO_BT".$_POST['oid'].$_POST['chpo'].".pdf";
-
+// $arr = array(); $arr2 = array();
+// $arr[0] = $save_name; $arr2[0] = "BLUETRACK_PO_BT".$_POST['oid'].$_POST['chpo'].".pdf";
+$attachs = array();
+$attachs[] = array(
+    'link' => $save_name,
+    'name' =>  "BLUETRACK_PO_BT".$_POST['oid'].$_POST['chpo'].".pdf",
+);
 if($_POST['chpo'] == 'A'){
-$qry = "select att_path, att_name from af_attach where att_ref = ".$_POST['oid']." and att_type = 'art'";
-$res = $obj->query($qry);
-while($data = $obj->fetch($res)){
-$arr[]=$data['att_path'];
-$arr2[]=$data['att_name'];
+    $qry = "select att_path, att_name from af_attach where att_ref = ".$_POST['oid']." and att_type = 'art'";
+    $res = $obj->query($qry);
+    while($data = $obj->fetch($res)){
+        // $arr[]=$data['att_path'];
+        // $arr2[]=$data['att_name'];
+        $attachs[] = array(
+            'link' => $data['att_path'],
+            'name' => $data['att_name'],
+        );
+    }
 }
-}
-
 
 $par=array($data2['v_name'],'BT'.$_POST['oid'].$_POST['chpo']);
 $msg=emailTemplate('po',$par);
-//tester email
-//send_email_attach('bluetrack_niladhar@hotmail.com','Purchase Order #BT'.$_POST['oid'].$_POST['chpo'],$msg,$arr,$arr2);
-//live email
-// $to=$data2['v_email'];
-// $to.=','.$data2['v_additional_email'];
-if ($_SERVER['SERVER_NAME']=='fintool.dev') {
+
+if ($_SERVER['SERVER_NAME']=='fintools.local') {
     $data2['v_email']='to_german@yahoo.com';    
     $data2['v_additional_email']='';
 }
-send_email_attach($data2['v_email'],'Purchase Order #BT'.$_POST['oid'].$_POST['chpo'],$msg,$arr,$arr2);
-if ($data2['v_additional_email']!='') {
-    send_email_attach($data2['v_additional_email'],'Purchase Order #BT'.$_POST['oid'].$_POST['chpo'],$msg,$arr,$arr2);
-}
+// send_email_attach($data2['v_email'],'Purchase Order #BT'.$_POST['oid'].$_POST['chpo'],$msg,$arr,$arr2);
+// if ($data2['v_additional_email']!='') {
+//    send_email_attach($data2['v_additional_email'],'Purchase Order #BT'.$_POST['oid'].$_POST['chpo'],$msg,$arr,$arr2);
+// }
+send_email_docs($data2['v_email'], 'Purchase Order #BT'.$_POST['oid'].$_POST['chpo'],$msg, $attachs, $data2['v_additional_email']);
 if($error['flag'])
 {
-$msg = implode(",",$error['msg']);
-send_email_TEXT('niladhar8@gmail.com', 'Error on PO', $msg, $frm = 'error@bluetrack.com');
-
+    $msg = implode(",",$error['msg']);
+    // send_email_TEXT('niladhar8@gmail.com', 'Error on PO', $msg, $frm = 'error@bluetrack.com');
+    $devemail = DEVELOPER_EMAIL;
+    if (!empty($devemail)) {
+        send_email_docs($devemail, 'Error on PO '.$_POST['oid'].$_POST['chpo'], $msg);
+    }
 } else {
     $error['docfile']=$save_name;
 }    
