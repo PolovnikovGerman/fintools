@@ -1,7 +1,9 @@
 <?php
-// $newdoc=generate_pdf($_POST);
+$newdoc=generate_pdf($_POST);
 require('../model/mysql.php');
 require('../includes/utility_functions.php');
+require('../includes/email_functions.php');
+require('../config/smtp_config.php');
 $error = array('flag' => false);
 $error['docfile']=$newdoc;
 $obj = new db();
@@ -134,7 +136,12 @@ if (!$res) {
 
                         if ($error['flag']) {
                             $msg = implode(",", $error['msg']);
-                            send_email_TEXT('niladhar8@gmail.com', 'Error on PO', $msg, $frm = 'error@bluetrack.com');
+                            // send_email_TEXT('niladhar8@gmail.com', 'Error on PO', $msg, $frm = 'error@bluetrack.com');
+                            $devemail = DEVELOPER_EMAIL;
+                            if (!empty($devemail)) {
+                                send_email_docs($devemail, 'Error on PO '.$_POST['oid'].$_POST['chpo'], $msg);
+                            }
+
                         }                    
                         
                     }

@@ -242,19 +242,21 @@ $message .= "--{$mime_boundary}\n";
  
 // preparing attachments
 for($x=0;$x<count($files);$x++){
-	$file = fopen($files[$x],"rb");
-	$data = fread($file,filesize($files[$x]));
-	fclose($file);
-	$data = chunk_split(base64_encode($data));
-	$message .= "Content-Type: {\"application/octet-stream\"};\n" . " name=\"$files[$x]\"\n" . 
-	"Content-Disposition: attachment;\n" . " filename=\"$filenames[$x]\"\n" . 
-	"Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
-	$message .= "--{$mime_boundary}\n";
+	if (file_exists($files[$x])) {
+		$file = fopen($files[$x],"rb");
+		$data = fread($file,filesize($files[$x]));
+		fclose($file);
+		$data = chunk_split(base64_encode($data));
+		$message .= "Content-Type: {\"application/octet-stream\"};\n" . " name=\"$files[$x]\"\n" .
+			"Content-Disposition: attachment;\n" . " filename=\"$filenames[$x]\"\n" .
+			"Content-Transfer-Encoding: base64\n\n" . $data . "\n\n";
+		$message .= "--{$mime_boundary}\n";
+	}
 }
  
 // send
- @mail('bluetrack_niladhar@hotmail.com',$subject, $message, $headers);
-$ok = @mail($to, $subject, $message, $headers); 
+// @mail('bluetrack_niladhar@hotmail.com',$subject, $message, $headers);
+$ok = @mail($to, $subject, $message, $headers);
 $obj = new db();
 if($ok)  
 {
@@ -313,7 +315,7 @@ $message .= "--{$mime_boundary}\n";
 }*/
  
 // send
- @mail('bluetrack_niladhar@hotmail.com',$subject,$message,$headers);
+ // @mail('bluetrack_niladhar@hotmail.com',$subject,$message,$headers);
 $ok = @mail($to, $subject, $message, $headers); 
 $obj = new db();
 if($ok)  
