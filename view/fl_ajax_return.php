@@ -210,7 +210,7 @@ if (isset($_POST['q']) && $_POST['q'] == 'addNewVendor') {
         $pwd = generatePassword();
         $qry = "insert into af_vendor values(null, '" . $_POST['name'] . "', '" . strtolower(substr($_POST['abbr'], 0, 7)) . "', '" . strtolower($_POST['email']) . "', '" . strtolower($_POST['addemail']) . "',  '$pwd', '" . $_POST['type'] . "', '" . $_POST['address'] . "', '" . $_POST['memos'] . "', '" . $_POST['phone'] . "', now())";
         $obj->query($qry);
-        $lastid = mysqli_insert_id();
+        $lastid = mysqli_insert_id($obj->conn);
         $ar = array($_POST['name'], strtolower($_POST['email']), $pwd);
         $msg = emailTemplate('emailPassword', $ar);
         // send_email_TEXT(strtolower($_POST['email']), 'Vendor Access into BLUETRACK System', $msg);

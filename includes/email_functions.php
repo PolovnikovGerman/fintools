@@ -38,19 +38,19 @@ function send_email_docs($to, $subject, $body, $attachs=array(), $cc='') {
     try {
         $mail->send();
         $from = SENDER_EMAIL;
-        $qry = "insert into email_conf values(null,'$to','',now(),'$subject','yes','success')";
+        $qry = "insert into email_conf values(null,'$to','$from',now(),'$subject','yes','success')";
         $obj->query($qry);
         if (!empty($cc)) {
-            $qry = "insert into email_conf values(null,'$to','',now(),'$subject','yes','success')";
+            $qry = "insert into email_conf values(null,'$to','$from',now(),'$subject','yes','success')";
             $obj->query($qry);
         }
         return 1;
     } catch (Exception $e) {
         // echo 'Exception: ',  $e->getMessage(), "\n";
-        $qry = "insert into email_conf values(null,'$to','$from',now(),'$sub','yes','failed')";
+        $qry = "insert into email_conf values(null,'$to','$from',now(),'$subject','yes','failed')";
         $obj->query($qry);
         if (!empty($cc)) {
-            $qry = "insert into email_conf values(null,'$cc','$from',now(),'$sub','yes','failed')";
+            $qry = "insert into email_conf values(null,'$cc','$from',now(),'$subject','yes','failed')";
             $obj->query($qry);
         }
         return 0;

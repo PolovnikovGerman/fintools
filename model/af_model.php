@@ -92,7 +92,7 @@ for ($i=1; $i<sizeof($_FILES['fileX']['name']); $i++)
 if($go){
 	$qry = substr($qry,0,strlen($qry)-1);
 		if(!$obj->query($qry)) $ret =  0;
-			else $ret=mysqli_insert_id();
+			else $ret=mysqli_insert_id($obj->conn);
 		}
 if($_POST['_type'] == 'poart'){
 $qry = "update af_child set ch_placed_ck = 'yes' where ch_id = ".$_POST['chid'];
