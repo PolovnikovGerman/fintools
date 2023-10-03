@@ -1,7 +1,7 @@
 <?php
 require('../includes/utility_functions.php');
 require('../model/mysql.php');
-require('../config/smtp_config.php');
+require_once('../config/smtp_config.php');
 require('../includes/Exception.php');
 require('../includes/PHPMailer.php') ;
 require('../includes/SMTP.php');
