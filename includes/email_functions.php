@@ -1,5 +1,5 @@
 <?php
-require('../config/smtp_config.php');
+require_once('../config/smtp_config.php');
 require('Exception.php');
 require('PHPMailer.php') ;
 require('SMTP.php');

@@ -3,7 +3,6 @@ $newdoc=generate_pdf($_POST);
 require('../model/mysql.php');
 require('../includes/utility_functions.php');
 require('../includes/email_functions.php');
-require('../config/smtp_config.php');
 $error = array('flag' => false);
 $error['docfile']=$newdoc;
 $obj = new db();
