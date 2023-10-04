@@ -19,15 +19,16 @@ $mail->Username = SMTP_USER;
 $mail->Password = SMTP_PASSWORD;
 
 $mail->setFrom('ff@bluetrack.com', 'Test Mail');  // FROM
-$mail->addAddress('to_german@yahoo.com');         // To
+$mail->addAddress('german.polovnikov@bluetrack.com');         // To
 $mail->addCC('sage.katakura@bluetrack.com');      // CC
+$mail->addCC('junior.gonzalez@bluetrack.com');
 $mail->isHTML(true);                                  // Set email format to HTML
 $mail->Subject = 'Purchase Order BLUETRACK_PO_BT63238A';
 $data2 = array();
 // $data2['v_email'] = 'to_german@yahoo.com';
 // $data2['v_additional_email'] = 'german.polovnikov@bluetrack.com';
 $data2['v_name'] = 'ChemLite';
-$oid = 63238;
+$oid = 63295;
 $chpo = 'A';
 $par=array($data2['v_name'],'BT'.$oid.$chpo);
 $msg=emailTemplate('po',$par);
