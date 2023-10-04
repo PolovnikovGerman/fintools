@@ -16,11 +16,12 @@ function send_email_docs($to, $subject, $body, $attachs=array(), $cc='') {
     $mail = new PHPMailer;
     if ($logger) {
         fwrite($logfn,'Open PHPMAILER'.PHP_EOL);
-        fwrite($logfn,'SMTP '.SMTP_SERVER.PHP_EOL);
-        fwrite($logfn,'SMTP '.SMTP_SECURE.PHP_EOL);
-        fwrite($logfn,'SMTP '.SMTP_USER.PHP_EOL);
-        fwrite($logfn,'SMTP '.SMTP_PASSWORD.PHP_EOL);
-        fwrite($logfn,'SMTP '.SENDER_EMAIL.PHP_EOL);
+        fwrite($logfn,'SMTP server'.SMTP_SERVER.PHP_EOL);
+        fwrite($logfn,'SMTP secure '.SMTP_SECURE.PHP_EOL);
+        fwrite($logfn,'SMTP port '.SMTP_PORT.PHP_EOL);
+        fwrite($logfn,'SMTP user '.SMTP_USER.PHP_EOL);
+        fwrite($logfn,'SMTP passwd '.SMTP_PASSWORD.PHP_EOL);
+        fwrite($logfn,'SMTP sender '.SENDER_EMAIL.PHP_EOL);
     }
     $mail->isSMTP();
     $mail->CharSet = 'utf-8';
@@ -51,30 +52,38 @@ function send_email_docs($to, $subject, $body, $attachs=array(), $cc='') {
         fwrite($logfn,'Number of attachments '.count($attachs).PHP_EOL);
     }
     $obj = new db();
+    if ($logger) {
+        fwrite($logfn,'Start SEND '.PHP_EOL);
+    }
+    $flagsend = 0;
+    $errmsg = '';
     try {
-        if ($logger) {
-            fwrite($logfn,'Start SEND '.count($attachs).PHP_EOL);
-        }
         $mail->send();
-        if ($logger) {
-            fwrite($logfn,'SEND FINISHED'.count($attachs).PHP_EOL);
-        }
-        $from = SENDER_EMAIL;
+    } catch (Exception $e) {
+        $errmsg = $e->getMessage();
+    }
+    $from = SENDER_EMAIL;
+    if (empty($errmsg)) {
+        $flagsend = 1;
         $qry = "insert into email_conf values(null,'$to','$from',now(),'$subject','yes','success')";
         $obj->query($qry);
         if (!empty($cc)) {
             $qry = "insert into email_conf values(null,'$to','$from',now(),'$subject','yes','success')";
             $obj->query($qry);
         }
-        return 1;
-    } catch (Exception $e) {
-        // echo 'Exception: ',  $e->getMessage(), "\n";
+    } else {
+        if ($logger) {
+            fwrite($logfn,'SEND ERROR '.$errmsg.PHP_EOL);
+        }
         $qry = "insert into email_conf values(null,'$to','$from',now(),'$subject','yes','failed')";
         $obj->query($qry);
         if (!empty($cc)) {
             $qry = "insert into email_conf values(null,'$cc','$from',now(),'$subject','yes','failed')";
             $obj->query($qry);
         }
-        return 0;
     }
+    if ($logger) {
+        fclose($logfn);
+    }
+    return $flagsend;
 }
