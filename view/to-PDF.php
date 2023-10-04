@@ -1425,7 +1425,9 @@ if ($logger) {
 $res = send_email_docs($data2['v_email'], 'Purchase Order #BT'.$_POST['oid'].$_POST['chpo'],$msg, $attachs, $data2['v_additional_email']);
 if ($logger) {
     fwrite($logfn,'SEND EMAIL result '.$res.PHP_EOL);
+    fclose($logfn);
 }
+
 if($error['flag'])
 {
     $msg = implode(",",$error['msg']);

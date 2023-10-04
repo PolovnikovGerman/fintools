@@ -8,7 +8,20 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 function send_email_docs($to, $subject, $body, $attachs=array(), $cc='') {
+    $logfn = fopen('../topdf.log', 'a');
+    $logger = 0;
+    if ($logfn) {
+        $logger = 1;
+    }
     $mail = new PHPMailer;
+    if ($logger) {
+        fwrite($logfn,'Open PHPMAILER'.PHP_EOL);
+        fwrite($logfn,'SMTP '.SMTP_SERVER.PHP_EOL);
+        fwrite($logfn,'SMTP '.SMTP_SECURE.PHP_EOL);
+        fwrite($logfn,'SMTP '.SMTP_USER.PHP_EOL);
+        fwrite($logfn,'SMTP '.SMTP_PASSWORD.PHP_EOL);
+        fwrite($logfn,'SMTP '.SENDER_EMAIL.PHP_EOL);
+    }
     $mail->isSMTP();
     $mail->CharSet = 'utf-8';
     $mail->Host = SMTP_SERVER;
@@ -34,9 +47,18 @@ function send_email_docs($to, $subject, $body, $attachs=array(), $cc='') {
             }
         }
     }
+    if ($logger) {
+        fwrite($logfn,'Number of attachments '.count($attachs).PHP_EOL);
+    }
     $obj = new db();
     try {
+        if ($logger) {
+            fwrite($logfn,'Start SEND '.count($attachs).PHP_EOL);
+        }
         $mail->send();
+        if ($logger) {
+            fwrite($logfn,'SEND FINISHED'.count($attachs).PHP_EOL);
+        }
         $from = SENDER_EMAIL;
         $qry = "insert into email_conf values(null,'$to','$from',now(),'$subject','yes','success')";
         $obj->query($qry);
