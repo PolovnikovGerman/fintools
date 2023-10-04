@@ -34,7 +34,8 @@ class db
 				echo 'Error '.mysqli_error($this->conn);
 				die();
 			}
-
+//			$this->res=mysqli_query($this->conn, $qry) or die(mysqli_error($this->conn));
+//			return $this->res;
         }
         //to select num of rows in the resulting query result
         function numrow($txt)
