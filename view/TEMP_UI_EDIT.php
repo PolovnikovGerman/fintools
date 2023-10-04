@@ -5,7 +5,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script language="JavaScript" type="text/javascript" src="../js/json2.js"></script>
 <!-- <script language="JavaScript" type="text/javascript" src="../js/jquery.js"></script> -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-latest.js"></script>
 <script language="JavaScript" type="text/javascript" src="../js/client.js?v=1.0"></script>
 <script language="JavaScript" type="text/javascript" src="ajax_calls.js"></script>
 <script language="JavaScript" type="text/javascript" src="attach_ajax_calls.js"></script>
