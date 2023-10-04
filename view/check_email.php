@@ -35,7 +35,7 @@ $msg=emailTemplate('po',$par);
 $mail->Body = $msg;
 $save_name = "../docs/art_af_fl_uploads/poart/BLUETRACK_PO_BT".$oid.$chpo.".pdf";
 $mail->addAttachment($save_name, "BLUETRACK_PO_BT".$oid.$chpo.".pdf");         //Add attachments
-$qry = "select att_path, att_name from af_attach where att_ref = ".$_POST['oid']." and att_type = 'art'";
+$qry = "select att_path, att_name from af_attach where att_ref = ".$oid." and att_type = 'art'";
 $obj = new db();
 $res = $obj->query($qry);
 while($data = $obj->fetch($res)){
