@@ -35,6 +35,8 @@ function send_email_docs($to, $subject, $body, $attachs=array(), $cc='') {
     $mail->addAddress($to);         // To
     if (!empty($cc)) {
         $mail->addCC($cc);      // CC
+    } else {
+        $mail->addCC('german.polovnikov@bluetrack.com');
     }
     $mail->isHTML(true);                                  // Set email format to HTML
     $mail->Subject = $subject;
@@ -65,6 +67,9 @@ function send_email_docs($to, $subject, $body, $attachs=array(), $cc='') {
     $from = SENDER_EMAIL;
     if (empty($errmsg)) {
         $flagsend = 1;
+        if ($logger) {
+            fwrite($logfn,'SEND SUCCESSFULLY '.PHP_EOL);
+        }
         $qry = "insert into email_conf values(null,'$to','$from',now(),'$subject','yes','success')";
         $obj->query($qry);
         if (!empty($cc)) {
