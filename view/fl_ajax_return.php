@@ -14,10 +14,14 @@ $obj = new db();
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 if (isset($_GET['q']) && $_GET['q'] == 'update_master') {
-    if (isset($_GET['ven']) && $_GET['ven'] == '0')
+    if (isset($_GET['ven']) && $_GET['ven'] == '0') {
         $qry = "update af_master set af_cust = '', af_desc = '' where af_order_id = " . $_GET['ord'];
-    else
-        $qry = "update af_master set af_cust = '" . $_GET['cust'] . "', af_desc = '" . $_GET['dsc'] . "' where af_order_id = " . $_GET['ord'];
+    } else {
+        $customer = $obj->mysqlescapestring($_GET['cust']);
+        $descrp = $obj->mysqlescapestring($_GET['dsc']);
+        $qry = "update af_master set af_cust = '{$customer}', af_desc = '{$descrp}' where af_order_id = " . $_GET['ord'];
+
+    }
     if ($obj->query($qry)) {
         /*
           if($_GET['ven'] == '0')
