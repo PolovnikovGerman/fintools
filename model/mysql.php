@@ -27,8 +27,14 @@ class db
         //function query sending query string as the parameter
         function query($qry)
         {
-                $this->res=mysqli_query($this->conn, $qry) or die(mysqli_error($this->conn));
-                return $this->res;
+			try {
+				$this->res=mysqli_query($this->conn, $qry);
+				return $this->res;
+			} catch (Exception $e) {
+				echo 'Error '.mysqli_error($this->conn);
+				die();
+			}
+
         }
         //to select num of rows in the resulting query result
         function numrow($txt)
