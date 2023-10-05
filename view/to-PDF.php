@@ -3,20 +3,12 @@ require('fpdf.php');
 setlocale(LC_MONETARY, "en_US");
 require('../includes/utility_functions.php');
 require('../includes/email_functions.php');
-$logfn = fopen('../topdf.log', 'a');
-$logger = 0;
-if ($logfn) {
-    $logger = 1;
-}
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////PDF FOR 1 ADDRESS///////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 if($_POST['r2_d2_add'] == '' && $_POST['r2_d3_add'] == ''){
-if ($logger) {
-  fwrite($logfn,'START NEW DOC - 1 ADDRESS '.PHP_EOL);
-}
 $pdf=new FPDF();
 $pdf->AddPage();
 $pdf->SetFont('Arial','',11);
@@ -407,9 +399,6 @@ $pdf->SetTextColor(0);
 $pdf->MultiCell(42,5,"Artwork should be on the PO email. It is also available online at bluetrack.net/vendors\n\n Simply enter username and password emailed to you to access this and any other art. No proof needed. Just match our art exactly.",0,'L');
 // Bt Print 
 if ($_POST['r2_ven_id']=='184') {
-    if ($logger) {
-        fwrite($logfn,'Add Page for BTPrint'.PHP_EOL);
-    }
     $pdf->AddPage();
     $pdf->SetXY(17, 7);
     $pdf->SetFont('Arial', 'BU', 16);
@@ -419,15 +408,7 @@ if ($_POST['r2_ven_id']=='184') {
     $pdf->Image('../images/print_reports4.jpg', 17, 160, 177, 66);
 }
 $save_name = "../docs/art_af_fl_uploads/poart/BLUETRACK_PO_BT".$_POST['oid'].$_POST['chpo'].".pdf";
-if ($logger) {
-    fwrite($logfn,'PDF DOC '.$save_name.PHP_EOL);
-    fwrite($logfn,'DELETE old file '.PHP_EOL);
-}
-@unlink($save_name);
 $pdf->Output($save_name,'F');
-if ($logger) {
-    fwrite($logfn,'SAVE NEW FILE '.$save_name.PHP_EOL);
-}
 // $pdf->Output();
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////PDF FOR 2 ADDRESS//////////////////////////////////////////////////////////////////////////////////////////////
@@ -1242,9 +1223,6 @@ $pdf->Output($save_name,'F');
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
-if ($logger) {
-    fwrite($logfn,'DOC SAVED SUCCESSFULLY '.PHP_EOL);
-}
 $save_name = "../docs/art_af_fl_uploads/poart/BLUETRACK_PO_BT".$_POST['oid'].$_POST['chpo'].".pdf";
 require('../model/mysql.php');
 $error=array('flag'=>false);
@@ -1254,9 +1232,6 @@ $res=$obj->query($qry);
 if(!$res){
 $error['flag']=true;
 $error['msg'][]="delete from af_attach query failed for PO ".$_POST['oid'].$_POST['chpo']."<br>";
-    if ($logger) {
-        fwrite($logfn,'Error with delete PO ART'.PHP_EOL);
-    }
 }
 
 $qry = "insert into af_attach(att_ref, att_ch, att_path, att_name, att_type,att_datetime, att_edit) values(0,".$_POST['chid'].",'".$save_name."','BLUETRACK_PO_BT".$_POST['oid'].$_POST['chpo'].".pdf','poart',now(),".$_POST['chid'].")";
@@ -1264,9 +1239,6 @@ $res = $obj->query($qry);
 if(!$res){
 $error['flag']=true;
 $error['msg'][]="insert into af_attach query failed for PO ".$_POST['oid'].$_POST['chpo']."<br>";
-    if ($logger) {
-        fwrite($logfn,'Error with INSERT PO ART'.PHP_EOL);
-    }
 }
 $qry="select count(*) as cnt from af_r2 where r2_id=".$_POST['chid'];
 $res=$obj->query($qry);
@@ -1304,9 +1276,6 @@ if ($data['cnt']==0) {
 if(!$res){
 $error['flag']=true;
 $error['msg'][]="update af_r2 query failed for PO ".$_POST['oid'].$_POST['chpo']."<br>";
-    if ($logger) {
-        fwrite($logfn,'Error with update AF_R2 PO ART'.PHP_EOL);
-    }
 }
 
 $qry = "select v_abbr from af_vendor where v_id = ".$_POST['r2_ven_id'];
@@ -1314,9 +1283,6 @@ $res = $obj->query($qry);
 if(!$res){
 $error['flag']=true;
 $error['msg'][]="select v_abbr query failed for PO ".$_POST['oid'].$_POST['chpo']."<br>";
-    if ($logger) {
-        fwrite($logfn,'Vendor Not Found'.PHP_EOL);
-    }
 }
 $data = $obj->fetch($res);
 $ch_rush_ck=(isset($_POST['ch_rush_ck']) ? $_POST['ch_rush_ck'] : 0);
@@ -1330,9 +1296,6 @@ $res = $obj->query($qry);
 if(!$res){
 $error['flag']=true;
 $error['msg'][]="update af_child query failed for PO ".$_POST['oid'].$_POST['chpo']."<br>";
-    if ($logger) {
-        fwrite($logfn,'Error with update af_child PO ART'.PHP_EOL);
-    }
 }
 if (intval($_POST['af_itemqty'])>0) {
     $qry = "update af_master set af_itemqty=".intval($_POST['af_itemqty'])." where af_order_id = ".$_POST['oid'];
@@ -1340,9 +1303,6 @@ if (intval($_POST['af_itemqty'])>0) {
     if(!$res){
         $error['flag']=true;
         $error['msg'][]="update af_master query failed for PO ".$_POST['oid']."<br>";
-        if ($logger) {
-            fwrite($logfn,'Error with update af_master PO '.$_POST['oid'].PHP_EOL);
-        }
     }
 }
 
@@ -1367,16 +1327,10 @@ $go=1;
 if($go){
 
  $qry = substr($qry,0, strlen($qry)-1);
-    if ($logger) {
-        fwrite($logfn,'INSERT PO DATA '.$qry.PHP_EOL);
-    }
 $res = $obj->query($qry);
 if(!$res){
 $error['flag']=true;
 $error['msg'][]="delete from af_attach query failed for PO ".$_POST['oid'].$_POST['chpo']."<br>";
-    if ($logger) {
-        fwrite($logfn,'ERROR insert ATTACH'.PHP_EOL);
-    }
 }
 
 }
@@ -1392,6 +1346,7 @@ $attachs[] = array(
     'link' => $save_name,
     'name' =>  "BLUETRACK_PO_BT".$_POST['oid'].$_POST['chpo'].".pdf",
 );
+
 if($_POST['chpo'] == 'A'){
     $qry = "select att_path, att_name from af_attach where att_ref = ".$_POST['oid']." and att_type = 'art'";
     $res = $obj->query($qry);
@@ -1407,9 +1362,6 @@ if($_POST['chpo'] == 'A'){
 
 $par=array($data2['v_name'],'BT'.$_POST['oid'].$_POST['chpo']);
 $msg=emailTemplate('po',$par);
-if ($logger) {
-    fwrite($logfn,'EMAIL MESSAGE '.$msg.PHP_EOL);
-}
 
 if ($_SERVER['SERVER_NAME']=='fintools.local') {
     $data2['v_email']='to_german@yahoo.com';    
@@ -1419,15 +1371,12 @@ if ($_SERVER['SERVER_NAME']=='fintools.local') {
 // if ($data2['v_additional_email']!='') {
 //    send_email_attach($data2['v_additional_email'],'Purchase Order #BT'.$_POST['oid'].$_POST['chpo'],$msg,$arr,$arr2);
 // }
-if ($logger) {
-    fwrite($logfn,'SEND EMAIL MESSAGE '.PHP_EOL);
-}
-$res = send_email_docs($data2['v_email'], 'Purchase Order #BT'.$_POST['oid'].$_POST['chpo'],$msg, $attachs, $data2['v_additional_email']);
-if ($logger) {
-    fwrite($logfn,'SEND EMAIL result '.$res.PHP_EOL);
-    fclose($logfn);
-}
-
+// Temporary comment - instead add queue to
+// $res = send_email_docs($data2['v_email'], 'Purchase Order #BT'.$_POST['oid'].$_POST['chpo'],$msg, $attachs, $data2['v_additional_email']);
+$subj = 'Purchase Order #BT'.$_POST['oid'].$_POST['chpo'];
+$mailattach = json_encode($attachs);
+$qry = "insert into email_queue(email_to, email_cc, email_subj, email_body, email_attach) values ('{$data2['v_email']}','{$data2['v_additional_email']}','{$subj}','{$obj->mysqlescapestring($msg)}','{$mailattach}')";
+$obj->query($qry);
 if($error['flag'])
 {
     $msg = implode(",",$error['msg']);
@@ -1440,5 +1389,4 @@ if($error['flag'])
     $error['docfile']=$save_name;
 }    
 echo json_encode($error);
-
 ?>
