@@ -52,6 +52,12 @@ function send_email_docs($to, $subject, $body, $attachs=array(), $cc='') {
             $obj->query($qry);
         }
     } else {
+        $fn = fopen('../sendemail.log','a');
+        if ($fn) {
+            fwrite($fn, 'Subject '.$subject.PHP_EOL);
+            fwrite($fn, $errmsg.PHP_EOL);
+            fclose($fn);
+        }
         $qry = "insert into email_conf values(null,'$to','$from',now(),'$subject','yes','failed')";
         $obj->query($qry);
         if (!empty($cc)) {
