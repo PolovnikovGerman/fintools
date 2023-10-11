@@ -123,11 +123,19 @@ if (isset($_POST['q']) && $_POST['q'] == 'reqChange') {
     if ($_POST['type'] == 'clay') {
         $msg = emailTemplate('clayChange', $par);
         // send_email_attach($pp['v_email'],'Clay Change needed for PO #BT'.$pp['af_order_id'].$pp['chpo'],$msg,$arr,$arr2);
-        send_email_docs($pp['v_email'], 'Clay Change needed for PO #BT' . $pp['af_order_id'] . $pp['chpo'], $msg);
+        // Temporary comment - instead add queue to
+        // send_email_docs($pp['v_email'], 'Clay Change needed for PO #BT' . $pp['af_order_id'] . $pp['chpo'], $msg);
+        $subj = 'Clay Change needed for PO #BT' . $pp['af_order_id'] . $pp['chpo'];
+        $qry = "insert into email_queue(email_to, email_subj, email_body) values ('{$pp['v_email']}','{$subj}','{$obj->mysqlescapestring($msg)}')";
+        $obj->query($qry);
     } else if ($_POST['type'] == 'prv') {
         $msg = emailTemplate('prvChange', $par);
         // send_email_attach($pp['v_email'],'Preview Change needed for PO #BT'.$pp['af_order_id'].$pp['chpo'],$msg,$arr,$arr2);
-        send_email_docs($pp['v_email'], 'Preview Change needed for PO #BT' . $pp['af_order_id'] . $pp['chpo'], $msg);
+        // Temporary comment - instead add queue to
+        // send_email_docs($pp['v_email'], 'Preview Change needed for PO #BT' . $pp['af_order_id'] . $pp['chpo'], $msg);
+        $subj = 'Preview Change needed for PO #BT' . $pp['af_order_id'] . $pp['chpo'];
+        $qry = "insert into email_queue(email_to, email_subj, email_body) values ('{$pp['v_email']}','{$subj}','{$obj->mysqlescapestring($msg)}')";
+        $obj->query($qry);
     }
 
 }

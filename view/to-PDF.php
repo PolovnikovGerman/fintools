@@ -1383,7 +1383,11 @@ if($error['flag'])
     // send_email_TEXT('niladhar8@gmail.com', 'Error on PO', $msg, $frm = 'error@bluetrack.com');
     $devemail = DEVELOPER_EMAIL;
     if (!empty($devemail)) {
-        send_email_docs($devemail, 'Error on PO '.$_POST['oid'].$_POST['chpo'], $msg);
+        // Temporary comment - instead add queue to
+        // send_email_docs($devemail, 'Error on PO '.$_POST['oid'].$_POST['chpo'], $msg);
+        $subj = 'Error on PO '.$_POST['oid'].$_POST['chpo'];
+        $qry = "insert into email_queue(email_to, email_subj, email_body) values ('{$devemail}','{$subj}','{$obj->mysqlescapestring($msg)}')";
+        $obj->query($qry);
     }
 } else {
     $error['docfile']=$save_name;
