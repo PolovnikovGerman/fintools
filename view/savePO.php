@@ -111,17 +111,27 @@ if (!$res) {
                         $res = $obj->query($qry);
                         $data2 = $obj->fetch($res);
 
-                        $arr = array();
-                        $arr2 = array();
+                        // $arr = array();
+                        // $arr2 = array();
                         // $arr[0] = $save_name;
-                        $arr2[0] = "BLUETRACK_PO_BT" . $_POST['oid'] . $_POST['chpo'] . ".pdf";
+                        // $arr2[0] = "BLUETRACK_PO_BT" . $_POST['oid'] . $_POST['chpo'] . ".pdf";
+                        $save_name = "../docs/art_af_fl_uploads/poart/BLUETRACK_PO_BT".$_POST['oid'].$_POST['chpo'].".pdf";
+
+                        $attachs[] = array(
+                            'link' => $save_name,
+                            'name' =>  "BLUETRACK_PO_BT".$_POST['oid'].$_POST['chpo'].".pdf",
+                        );
 
                         if ($_POST['chpo'] == 'A') {
                             $qry = "select att_path, att_name from af_attach where att_ref = " . $_POST['oid'] . " and att_type = 'art'";
                             $res = $obj->query($qry);
                             while ($data = $obj->fetch($res)) {
-                                $arr[] = $data['att_path'];
-                                $arr2[] = $data['att_name'];
+                                $attachs[] = array(
+                                    'link' => $data['att_path'],
+                                    'name' =>  $data['att_name'],
+                                );
+//                                $arr[] = $data['att_path'];
+//                                $arr2[] = $data['att_name'];
                             }
                         }
 
@@ -132,6 +142,10 @@ if (!$res) {
                         //send_email_attach('bluetrack_niladhar@hotmail.com','Purchase Order #BT'.$_POST['oid'].$_POST['chpo'],$msg,$arr,$arr2);
                         //live email
                         // send_email_attach($data2['v_email'], 'Purchase Order #BT' . $_POST['oid'] . $_POST['chpo'], $msg, $arr, $arr2);
+                        $mailattach = json_encode($attachs);
+                        $subj = 'Purchase Order #BT'.$_POST['oid'].$_POST['chpo'];
+                        $qry = "insert into email_queue(email_to, email_cc, email_subj, email_body, email_attach) values ('{$data2['v_email']}','{$data2['v_additional_email']}','{$subj}','{$obj->mysqlescapestring($msg)}','{$mailattach}')";
+                        $obj->query($qry);
 
                         if ($error['flag']) {
                             $msg = implode(",", $error['msg']);
