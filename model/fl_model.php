@@ -81,10 +81,9 @@ function get_child()
 		$qry = "select * from af_child a, af_master b   where a.af_order_id = b.af_order_id and a.ch_active = 'on' and a.af_order_id >= $value and a.af_order_id <=" . ($value + 500) . "  order by a.af_order_id " . $_SESSION['sort'] . " , a.ch_po";
 		$num = 1;
 	}
-	var_dump($qry);
 	$key_c = [];
 	if ($num > 0) {
-
+		$numtt = 0;
 		$res = $obj->query($qry);
 		while ($data = $obj->fetch($res)) {
 
@@ -124,11 +123,15 @@ function get_child()
 			$key_c[$val]['ch_notes'][] = (!empty($data['af_contacinfo']) ? $data['af_contacinfo'] . ' ' : '') . $data['ch_notes'];
 			$key_c[$val]['ch_datetime'][] = $data['ch_datetime'];
 
-
+			$numtt++;
+		}
+		if ($numtt==0) {
+			$key_c['msg'][0] = "<div style=\"text-align:center; margin:20px; font-weight:bold; font-size:15px;\">No results to display</div>";
 		}
 	}
 	if ($num == 0)
 		$key_c['msg'][0] = "<div style=\"text-align:center; margin:20px; font-weight:bold; font-size:15px;\">No results to display</div>";
+
 	return $key_c;
 }
 
