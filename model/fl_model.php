@@ -82,7 +82,7 @@ function get_child()
 		$num = 1;
 	}
 
-
+	$key_c = [];
 	if ($num > 0) {
 
 		$res = $obj->query($qry);
