@@ -192,182 +192,184 @@ $point = $ind;
 
 if(!empty($key_c['msg'][0]))
 echo "<h4>".$key_c['msg'][0]."</h4>";
-
+if (isset($key_c['1']['1'])) {
 for($i=0;$i<sizeof($key_c['1']['1']); $i++)
 {
-$point=$key_c['1']['1'][$i];
-echo "<div>";
-echo "<table width=970px border=0 cellpadding=0 cellspacing=0 class=task_today_entry >";
-echo "<tr ".col_bg('#ececec',$i)." class=hilite>";
-echo "<td width=\"45px\" class=tdbg  align=center  >".$key_c[$point]['af_order_id'][0]."</td>";
-echo "<td width=\"120px\"   align=\"center\" id=af_cust$i class=\"tdbg small_font\" ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].")><a class=info href=#>".(isset($key_c[$point]['af_cust'][0]) ? substr($key_c[$point]['af_cust'][0],0,19) : '')."<span>".(isset($key_c[$point]['af_cust'][0]) ? $key_c[$point]['af_cust'][0] : '')."</span></a></td>";
-echo "<td width=\"115px\" class=\"tdbg small_font\"    align=\"center\" id=af_desc$i  ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].")><a class=info href=#>".(isset($key_c[$point]['af_desc'][0]) ? substr($key_c[$point]['af_desc'][0],0,19) : '')."<span>".(isset($key_c[$point]['af_desc'][0]) ? $key_c[$point]['af_desc'][0] :'')."</span></a></td>";
+    $point=$key_c['1']['1'][$i];
+    echo "<div>";
+    echo "<table width=970px border=0 cellpadding=0 cellspacing=0 class=task_today_entry >";
+    echo "<tr ".col_bg('#ececec',$i)." class=hilite>";
+    echo "<td width=\"45px\" class=tdbg  align=center  >".$key_c[$point]['af_order_id'][0]."</td>";
+    echo "<td width=\"120px\"   align=\"center\" id=af_cust$i class=\"tdbg small_font\" ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].")><a class=info href=#>".(isset($key_c[$point]['af_cust'][0]) ? substr($key_c[$point]['af_cust'][0],0,19) : '')."<span>".(isset($key_c[$point]['af_cust'][0]) ? $key_c[$point]['af_cust'][0] : '')."</span></a></td>";
+    echo "<td width=\"115px\" class=\"tdbg small_font\"    align=\"center\" id=af_desc$i  ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].")><a class=info href=#>".(isset($key_c[$point]['af_desc'][0]) ? substr($key_c[$point]['af_desc'][0],0,19) : '')."<span>".(isset($key_c[$point]['af_desc'][0]) ? $key_c[$point]['af_desc'][0] :'')."</span></a></td>";
 
-echo  "<td width=\"35px\"  align=\"center\"  bgcolor=\"".$key_c[$point]['clr_appr'][0]."\"     ><input type=checkbox onclick=\"return false\" name=af_appr_ck ";
-if($key_c[$point]['af_appr_ck'][0] == 'yes') echo " checked value=yes ></td>"; else echo " value=no ></td>";
+    echo  "<td width=\"35px\"  align=\"center\"  bgcolor=\"".$key_c[$point]['clr_appr'][0]."\"     ><input type=checkbox onclick=\"return false\" name=af_appr_ck ";
+    if($key_c[$point]['af_appr_ck'][0] == 'yes') echo " checked value=yes ></td>"; else echo " value=no ></td>";
 
-echo  "<td width=\"35px\" class=tdbg align=\"center\" >";
-if(isset($att['art'][$key_c[$point]['af_order_id'][0]]) && $att['art'][$key_c[$point]['af_order_id'][0]] == 'yes')
-echo "<span class=get_art_files id=".$key_c[$point]['af_order_id'][0]."  onclick=send_data(".$key_c[$point]['af_order_id'][0].",'art','no',".$key_c[$point]['ch_id'][0].",'".$key_c[$point]['ch_po'][0]."')><img class=point src=\"../images/open_icon.gif\"></span></span>";
-else echo "<span>NA</span>";
-echo "</td>";
-echo "<td width=\"70px\"   align=\"center\" id=af_shdate$i bgcolor=\"".$key_c[$point]['ch_ship'][0]."\"  ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].")>".print_date($key_c[$point]['ch_ship_date'][0])."</td>";
-if(sizeof($key_c[$point]['af_order_id']) ==1 )
-echo  "<td width=\"35px\" bgcolor=\"".$key_c[$point]['clr_ven'][0]."\" id=af_po$i align=\"center\"><span onclick=add_PO($i,".$key_c[$point]['ch_id'][0].",'$po_title[0]',".$key_c[$point]['af_order_id'][0].")>A</span></td>";
-else
-echo  "<td width=\"35px\" id=af_po$i bgcolor=\"".$key_c[$point]['clr_ven'][0]."\" align=\"center\">A</td>";
-echo  "<td width=\"75px\" align=\"center\"  bgcolor=\"".$key_c[$point]['clr_ven'][0]."\"  id=af_ven$i  ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].")>".$key_c[$point]['ch_vendor'][0]."</td>";
+    echo  "<td width=\"35px\" class=tdbg align=\"center\" >";
+    if(isset($att['art'][$key_c[$point]['af_order_id'][0]]) && $att['art'][$key_c[$point]['af_order_id'][0]] == 'yes')
+        echo "<span class=get_art_files id=".$key_c[$point]['af_order_id'][0]."  onclick=send_data(".$key_c[$point]['af_order_id'][0].",'art','no',".$key_c[$point]['ch_id'][0].",'".$key_c[$point]['ch_po'][0]."')><img class=point src=\"../images/open_icon.gif\"></span></span>";
+    else echo "<span>NA</span>";
+    echo "</td>";
+    echo "<td width=\"70px\"   align=\"center\" id=af_shdate$i bgcolor=\"".$key_c[$point]['ch_ship'][0]."\"  ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].")>".print_date($key_c[$point]['ch_ship_date'][0])."</td>";
+    if(sizeof($key_c[$point]['af_order_id']) ==1 )
+        echo  "<td width=\"35px\" bgcolor=\"".$key_c[$point]['clr_ven'][0]."\" id=af_po$i align=\"center\"><span onclick=add_PO($i,".$key_c[$point]['ch_id'][0].",'$po_title[0]',".$key_c[$point]['af_order_id'][0].")>A</span></td>";
+    else
+        echo  "<td width=\"35px\" id=af_po$i bgcolor=\"".$key_c[$point]['clr_ven'][0]."\" align=\"center\">A</td>";
+    echo  "<td width=\"75px\" align=\"center\"  bgcolor=\"".$key_c[$point]['clr_ven'][0]."\"  id=af_ven$i  ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].")>".$key_c[$point]['ch_vendor'][0]."</td>";
 
-	echo "<td align=\"center\"    width=\"35px\"
+    echo "<td align=\"center\"    width=\"35px\"
 			 				 >";
-			if(isset($att['poart'][$key_c[$point]['ch_id'][0]]) && $att['poart'][$key_c[$point]['ch_id'][0]] == 'yes')
-			echo "<span class=get_art_files id=".$key_c[$point]['ch_id'][0]."><span id=icon_".$key_c[$point]['ch_id'][0]." onclick=send_data(".$key_c[$point]['af_order_id'][0].",'poart','yes',".$key_c[$point]['ch_id'][0].",'".$key_c[$point]['ch_po'][0]."')><img class=point src=\"../images/open_icon.png\"></span></span>";
-			else
-			echo "<span id=icon_".$key_c[$point]['ch_id'][0]." onclick=send_data(".$key_c[$point]['af_order_id'][0].",'poart','yes',".$key_c[$point]['ch_id'][0].",'".$key_c[$point]['ch_po'][0]."') class=point ><img src=\"../images/attch_icon.png\"></span>";
-echo "</td>";
-/*echo  "<td align=\"center\" bgcolor=\"".$key_c[$point]['clr_pl'][0]."\"  width=\"35px\"
-			 id=ch_placed_ck".$key_c[$point]['ch_id'][0]." >
-			 <input type=checkbox
-			 onclick=\"child_toggle(".$key_c[$point]['ch_id'][0].",this,$i,'ch_placed_ck')\"
-			 id=_pl".$key_c[$point]['ch_id'][0]."
-			 name=ch_placed_ck ";
-					if($key_c[$point]['ch_placed_ck'][0] == 'yes')
-					echo " checked value=yes ></td>";
-					else echo " value=no ></td>";
- */
-echo  "<td align=\"center\"  bgcolor=\"".$key_c[$point]['clr_conf'][0]."\"  width=\"35px\"
+    if(isset($att['poart'][$key_c[$point]['ch_id'][0]]) && $att['poart'][$key_c[$point]['ch_id'][0]] == 'yes')
+        echo "<span class=get_art_files id=".$key_c[$point]['ch_id'][0]."><span id=icon_".$key_c[$point]['ch_id'][0]." onclick=send_data(".$key_c[$point]['af_order_id'][0].",'poart','yes',".$key_c[$point]['ch_id'][0].",'".$key_c[$point]['ch_po'][0]."')><img class=point src=\"../images/open_icon.png\"></span></span>";
+    else
+        echo "<span id=icon_".$key_c[$point]['ch_id'][0]." onclick=send_data(".$key_c[$point]['af_order_id'][0].",'poart','yes',".$key_c[$point]['ch_id'][0].",'".$key_c[$point]['ch_po'][0]."') class=point ><img src=\"../images/attch_icon.png\"></span>";
+    echo "</td>";
+    /*echo  "<td align=\"center\" bgcolor=\"".$key_c[$point]['clr_pl'][0]."\"  width=\"35px\"
+                 id=ch_placed_ck".$key_c[$point]['ch_id'][0]." >
+                 <input type=checkbox
+                 onclick=\"child_toggle(".$key_c[$point]['ch_id'][0].",this,$i,'ch_placed_ck')\"
+                 id=_pl".$key_c[$point]['ch_id'][0]."
+                 name=ch_placed_ck ";
+                        if($key_c[$point]['ch_placed_ck'][0] == 'yes')
+                        echo " checked value=yes ></td>";
+                        else echo " value=no ></td>";
+     */
+    echo  "<td align=\"center\"  bgcolor=\"".$key_c[$point]['clr_conf'][0]."\"  width=\"35px\"
 			 id=ch_conf_ck".$key_c[$point]['ch_id'][0].">
 			 <input type=checkbox
 			 onclick=\"child_toggle(".$key_c[$point]['ch_id'][0].",this,$i,'ch_conf_ck')\"
 			 id=_conf".$key_c[$point]['ch_id'][0]."
 			 name=ch_conf_ck ";
-					if($key_c[$point]['ch_conf_ck'][0] == 'yes')
-					echo " checked value=yes ></td>";
-					else echo " value=no ></td>";
+    if($key_c[$point]['ch_conf_ck'][0] == 'yes')
+        echo " checked value=yes ></td>";
+    else echo " value=no ></td>";
 
-echo  "<td align=\"left\"  bgcolor=\"".$key_c[$point]['clr_ship'][0]."\" width=\"100px\"
+    echo  "<td align=\"left\"  bgcolor=\"".$key_c[$point]['clr_ship'][0]."\" width=\"100px\"
 			ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].")
 			id=ch_ship_ck".$key_c[$point]['ch_id'][0].">
 			<input type=checkbox
 			onclick=\"child_toggle(".$key_c[$point]['ch_id'][0].",this,$i,'ch_ship_ck')\"
 			id=_ship".$key_c[$point]['ch_id'][0]."
 			name=ch_ship_ck ";
-					if($key_c[$point]['ch_ship_ck'][0] == 'yes')
-					echo " checked value=yes >";
-					else echo " value=no >";
-					echo "<span id=af_shnotes$i  >".substr($key_c[$point]['ch_ship_notes'][0],0,10)."</span></td>";
+    if($key_c[$point]['ch_ship_ck'][0] == 'yes')
+        echo " checked value=yes >";
+    else echo " value=no >";
+    echo "<span id=af_shnotes$i  >".substr($key_c[$point]['ch_ship_notes'][0],0,10)."</span></td>";
 
- echo  "<td  class=tdbg align=\"center\" bgcolor=\"".$key_c[$point]['clr_cust'][0]."\"  width=\"35px\"
+    echo  "<td  class=tdbg align=\"center\" bgcolor=\"".$key_c[$point]['clr_cust'][0]."\"  width=\"35px\"
 							 id=ch_cust_ck".$key_c[$point]['ch_id'][0]." >
 							<input type=checkbox
 							onclick=\"child_toggle(".$key_c[$point]['ch_id'][0].",this,$i,'ch_cust_ck')\"
 							name=ch_cust_ck ";
-							if($key_c[$point]['ch_cust_ck'][0] == 'yes')
-							echo " checked value=yes ></td>";
-							else echo " value=no ></td>";
+    if($key_c[$point]['ch_cust_ck'][0] == 'yes')
+        echo " checked value=yes ></td>";
+    else echo " value=no ></td>";
 
-echo  "<td align=\"center\"    bgcolor=\"".$key_c[$point]['clr_is'][0]."\" width=\"35px\"
+    echo  "<td align=\"center\"    bgcolor=\"".$key_c[$point]['clr_is'][0]."\" width=\"35px\"
  			id=ch_issue_ck".$key_c[$point]['ch_id'][0]." >
 			<input type=checkbox
 			onclick=\"child_toggle(".$key_c[$point]['ch_id'][0].",this,$i,'ch_issue_ck')\"
 			name=ch_issue_ck ";
-					if($key_c[$point]['ch_issue_ck'][0] == 'yes')
-					echo " checked value=yes ></td>";
-					else echo " value=no ></td>";
+    if($key_c[$point]['ch_issue_ck'][0] == 'yes')
+        echo " checked value=yes ></td>";
+    else echo " value=no ></td>";
 
-echo "<td width=\"175px\" align=\"center\" id=af_notes$i  ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].") ><a class=info href=#>".substr($key_c[$point]['ch_notes'][0],0,25)."<span>".$key_c[$point]['ch_notes'][0]."</span></a></td>";
+    echo "<td width=\"175px\" align=\"center\" id=af_notes$i  ondblclick=edit_af($i,".$key_c[$point]['af_order_id'][0].",".$key_c[$point]['ch_id'][0].") ><a class=info href=#>".substr($key_c[$point]['ch_notes'][0],0,25)."<span>".$key_c[$point]['ch_notes'][0]."</span></a></td>";
 
-echo  "</tr>";
-echo  "</table>";
-echo  "</div>";
-if(sizeof($key_c[$point]['af_order_id']) ==1 )
-echo "<div id=po_child".($key_c[$point]['ch_id'][0]+1)."></div>";
+    echo  "</tr>";
+    echo  "</table>";
+    echo  "</div>";
+    if(sizeof($key_c[$point]['af_order_id']) ==1 )
+        echo "<div id=po_child".($key_c[$point]['ch_id'][0]+1)."></div>";
 
-		for($j=1;$j<sizeof($key_c[$point]['af_order_id']); $j++)
-		{
-			echo "<div id=po_child".$key_c[$point]['ch_id'][$j]." >";
-			echo "<table width=970px border=0 cellpadding=0 cellspacing=0 class=task_today_entry >";
-			echo "<tr  ".col_bg('#ececec',$i)." class=hilite>";
-			echo "<td width=\"45px\"  class=tdbg align=center >&nbsp;</td>";
-			echo "<td width=\"120px\" class=tdbg  >&nbsp;</td>";
-			echo "<td width=\"115px\" class=tdbg >&nbsp;</td>";
-			echo  "<td width=\"35px\" >&nbsp;</td>";
-			echo  "<td width=\"35px\"  class=tdbg>&nbsp;</td>";
+    for($j=1;$j<sizeof($key_c[$point]['af_order_id']); $j++)
+    {
+        echo "<div id=po_child".$key_c[$point]['ch_id'][$j]." >";
+        echo "<table width=970px border=0 cellpadding=0 cellspacing=0 class=task_today_entry >";
+        echo "<tr  ".col_bg('#ececec',$i)." class=hilite>";
+        echo "<td width=\"45px\"  class=tdbg align=center >&nbsp;</td>";
+        echo "<td width=\"120px\" class=tdbg  >&nbsp;</td>";
+        echo "<td width=\"115px\" class=tdbg >&nbsp;</td>";
+        echo  "<td width=\"35px\" >&nbsp;</td>";
+        echo  "<td width=\"35px\"  class=tdbg>&nbsp;</td>";
 
-			echo "<td   width=\"70px\"   align=\"center\"  bgcolor=\"".$key_c[$point]['ch_ship'][$j]."\"   id=ch_shdate".$key_c[$point]['ch_id'][$j]."   ondblclick=edit_ch(".$key_c[$point]['ch_id'][$j].")>".print_date($key_c[$point]['ch_ship_date'][$j])."</td>";
-			if(($j+1) == sizeof($key_c[$point]['af_order_id']) && $j<=2)
-			echo  "<td width=\"35px\" id=ch_po".$key_c[$point]['ch_id'][$j]." bgcolor=\"".$key_c[$point]['clr_ven'][$j]."\" align=\"center\"><span onclick=add_PO($i,".$key_c[$point]['ch_id'][$j].",'$po_title[$j]',".$key_c[$point]['af_order_id'][$j].")>".$key_c[$point]['ch_po'][$j]."</span></td>";
-			else
-		    echo  "<td width=\"35px\" id=ch_po".$key_c[$point]['ch_id'][$j]."  bgcolor=\"".$key_c[$point]['clr_ven'][$j]."\" align=\"center\">".$key_c[$point]['ch_po'][$j]."</td>";
+        echo "<td   width=\"70px\"   align=\"center\"  bgcolor=\"".$key_c[$point]['ch_ship'][$j]."\"   id=ch_shdate".$key_c[$point]['ch_id'][$j]."   ondblclick=edit_ch(".$key_c[$point]['ch_id'][$j].")>".print_date($key_c[$point]['ch_ship_date'][$j])."</td>";
+        if(($j+1) == sizeof($key_c[$point]['af_order_id']) && $j<=2)
+            echo  "<td width=\"35px\" id=ch_po".$key_c[$point]['ch_id'][$j]." bgcolor=\"".$key_c[$point]['clr_ven'][$j]."\" align=\"center\"><span onclick=add_PO($i,".$key_c[$point]['ch_id'][$j].",'$po_title[$j]',".$key_c[$point]['af_order_id'][$j].")>".$key_c[$point]['ch_po'][$j]."</span></td>";
+        else
+            echo  "<td width=\"35px\" id=ch_po".$key_c[$point]['ch_id'][$j]."  bgcolor=\"".$key_c[$point]['clr_ven'][$j]."\" align=\"center\">".$key_c[$point]['ch_po'][$j]."</td>";
 
-			echo  "<td width=\"75px\"  bgcolor=\"".$key_c[$point]['clr_ven'][$j]."\"  align=\"center\" id=ch_ven".$key_c[$point]['ch_id'][$j]."  ondblclick=edit_ch(".$key_c[$point]['ch_id'][$j].")>".$key_c[$point]['ch_vendor'][$j]."</td>";
+        echo  "<td width=\"75px\"  bgcolor=\"".$key_c[$point]['clr_ven'][$j]."\"  align=\"center\" id=ch_ven".$key_c[$point]['ch_id'][$j]."  ondblclick=edit_ch(".$key_c[$point]['ch_id'][$j].")>".$key_c[$point]['ch_vendor'][$j]."</td>";
 
-			echo "<td align=\"center\"   width=\"35px\"
+        echo "<td align=\"center\"   width=\"35px\"
 			 				 >";
-			if($att['poart'][$key_c[$point]['ch_id'][$j]] == 'yes')
-			echo "<span class=get_art_files id=".$key_c[$point]['ch_id'][$j]."><span  id=icon_".$key_c[$point]['ch_id'][$j]."  onclick=send_data(".$key_c[$point]['af_order_id'][$j].",'poart','yes',".$key_c[$point]['ch_id'][$j].",'".$key_c[$point]['ch_po'][$j]."')><img class=point src=\"../images/open_icon.png\"></span></span>";
-			else
-			echo "<span  id=icon_".$key_c[$point]['ch_id'][$j]."  onclick=send_data(".$key_c[$point]['af_order_id'][$j].",'poart','yes',".$key_c[$point]['ch_id'][$j].",'".$key_c[$point]['ch_po'][$j]."') class=point ><img src=\"../images/attch_icon.png\"></span>";
-echo "</td>";
-			/*echo  "<td align=\"center\" bgcolor=\"".$key_c[$point]['clr_pl'][$j]."\"  width=\"35px\"
-			 				id=ch_placed_ck".$key_c[$point]['ch_id'][$j]." >
-							<input type=checkbox
-							onclick=\"child_toggle(".$key_c[$point]['ch_id'][$j].",this,$i,'ch_placed_ck')\"
-							name=ch_placed_ck ";
-							if($key_c[$point]['ch_placed_ck'][$j] == 'yes')
-							echo " checked value=yes ></td>";
-							else echo " value=no ></td>";
- */
-            echo  "<td align=\"center\" bgcolor=\"".$key_c[$point]['clr_conf'][$j]."\"  width=\"35px\"
+        if($att['poart'][$key_c[$point]['ch_id'][$j]] == 'yes')
+            echo "<span class=get_art_files id=".$key_c[$point]['ch_id'][$j]."><span  id=icon_".$key_c[$point]['ch_id'][$j]."  onclick=send_data(".$key_c[$point]['af_order_id'][$j].",'poart','yes',".$key_c[$point]['ch_id'][$j].",'".$key_c[$point]['ch_po'][$j]."')><img class=point src=\"../images/open_icon.png\"></span></span>";
+        else
+            echo "<span  id=icon_".$key_c[$point]['ch_id'][$j]."  onclick=send_data(".$key_c[$point]['af_order_id'][$j].",'poart','yes',".$key_c[$point]['ch_id'][$j].",'".$key_c[$point]['ch_po'][$j]."') class=point ><img src=\"../images/attch_icon.png\"></span>";
+        echo "</td>";
+        /*echo  "<td align=\"center\" bgcolor=\"".$key_c[$point]['clr_pl'][$j]."\"  width=\"35px\"
+                         id=ch_placed_ck".$key_c[$point]['ch_id'][$j]." >
+                        <input type=checkbox
+                        onclick=\"child_toggle(".$key_c[$point]['ch_id'][$j].",this,$i,'ch_placed_ck')\"
+                        name=ch_placed_ck ";
+                        if($key_c[$point]['ch_placed_ck'][$j] == 'yes')
+                        echo " checked value=yes ></td>";
+                        else echo " value=no ></td>";
+*/
+        echo  "<td align=\"center\" bgcolor=\"".$key_c[$point]['clr_conf'][$j]."\"  width=\"35px\"
 							 id=ch_conf_ck".$key_c[$point]['ch_id'][$j]." >
 							<input type=checkbox
 							onclick=\"child_toggle(".$key_c[$point]['ch_id'][$j].",this,$i,'ch_conf_ck')\"
 							name=ch_conf_ck ";
-							if($key_c[$point]['ch_conf_ck'][$j] == 'yes')
-							echo " checked value=yes ></td>";
-							else echo " value=no ></td>";
+        if($key_c[$point]['ch_conf_ck'][$j] == 'yes')
+            echo " checked value=yes ></td>";
+        else echo " value=no ></td>";
 
-            echo  "<td    width=\"100px\" align=\"left\"   bgcolor=\"".$key_c[$point]['clr_ship'][$j]."\"
+        echo  "<td    width=\"100px\" align=\"left\"   bgcolor=\"".$key_c[$point]['clr_ship'][$j]."\"
 							ondblclick=edit_ch(".$key_c[$point]['ch_id'][$j].")
 							id=ch_ship_ck".$key_c[$point]['ch_id'][$j].">
 							<input type=checkbox
 							onclick=\"child_toggle(".$key_c[$point]['ch_id'][$j].",this,$i,'ch_ship_ck')\"
 							name=ch_ship_ck ";
-							if($key_c[$point]['ch_ship_ck'][$j] == 'yes')
-							echo " checked value=yes >";
-							else echo " value=no >";
-							echo "<span id=ch_shnotes".$key_c[$point]['ch_id'][$j]."> ".substr($key_c[$point]['ch_ship_notes'][$j],0,10)."</span></td>";
+        if($key_c[$point]['ch_ship_ck'][$j] == 'yes')
+            echo " checked value=yes >";
+        else echo " value=no >";
+        echo "<span id=ch_shnotes".$key_c[$point]['ch_id'][$j]."> ".substr($key_c[$point]['ch_ship_notes'][$j],0,10)."</span></td>";
 
-			 echo  "<td  class=tdbg align=\"center\" bgcolor=\"".$key_c[$point]['clr_cust'][$j]."\"  width=\"35px\"
+        echo  "<td  class=tdbg align=\"center\" bgcolor=\"".$key_c[$point]['clr_cust'][$j]."\"  width=\"35px\"
 							 id=ch_cust_ck".$key_c[$point]['ch_id'][$j]." >
 							<input type=checkbox
 							onclick=\"child_toggle(".$key_c[$point]['ch_id'][$j].",this,$i,'ch_cust_ck')\"
 							name=ch_cust_ck ";
-							if($key_c[$point]['ch_cust_ck'][$j] == 'yes')
-							echo " checked value=yes ></td>";
-							else echo " value=no ></td>";
+        if($key_c[$point]['ch_cust_ck'][$j] == 'yes')
+            echo " checked value=yes ></td>";
+        else echo " value=no ></td>";
 
-            echo  "<td align=\"center\" bgcolor=\"".$key_c[$point]['clr_is'][$j]."\"  width=\"35px\"
+        echo  "<td align=\"center\" bgcolor=\"".$key_c[$point]['clr_is'][$j]."\"  width=\"35px\"
 							 id=ch_issue_ck".$key_c[$point]['ch_id'][$j]." >
 							<input type=checkbox
 							onclick=\"child_toggle(".$key_c[$point]['ch_id'][$j].",this,$i,'ch_issue_ck')\"
 							name=ch_issue_ck ";
-							if($key_c[$point]['ch_issue_ck'][$j] == 'yes')
-							echo " checked value=yes ></td>";
-							else echo " value=no ></td>";
+        if($key_c[$point]['ch_issue_ck'][$j] == 'yes')
+            echo " checked value=yes ></td>";
+        else echo " value=no ></td>";
 
-            echo "<td    width=\"175px\" align=\"center\" id=ch_notes".$key_c[$point]['ch_id'][$j]."  ondblclick=edit_ch(".$key_c[$point]['ch_id'][$j].")    ><a class=info href=#>".substr($key_c[$point]['ch_notes'][$j],0,23)."<span>".$key_c[$point]['ch_notes'][$j]."</span></a></td>";
+        echo "<td    width=\"175px\" align=\"center\" id=ch_notes".$key_c[$point]['ch_id'][$j]."  ondblclick=edit_ch(".$key_c[$point]['ch_id'][$j].")    ><a class=info href=#>".substr($key_c[$point]['ch_notes'][$j],0,23)."<span>".$key_c[$point]['ch_notes'][$j]."</span></a></td>";
 
-	        echo  "</tr>";
-			echo  "</table>";
-			echo  "</div>";
-			if(($j+1) == sizeof($key_c[$point]['af_order_id']) && $j<=2 )
-			echo "<div id=po_child".($key_c[$point]['ch_id'][$j]+1)."></div>";
+        echo  "</tr>";
+        echo  "</table>";
+        echo  "</div>";
+        if(($j+1) == sizeof($key_c[$point]['af_order_id']) && $j<=2 )
+            echo "<div id=po_child".($key_c[$point]['ch_id'][$j]+1)."></div>";
 
 
-		}
-$point++;
+    }
+    $point++;
 //$clr++;
+}
+
 }
 ?>
 <input type=hidden name=_type id=att_type value=poart>
