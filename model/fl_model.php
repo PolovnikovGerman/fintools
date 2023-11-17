@@ -81,7 +81,7 @@ function get_child()
 		$qry = "select * from af_child a, af_master b   where a.af_order_id = b.af_order_id and a.ch_active = 'on' and a.af_order_id >= $value and a.af_order_id <=" . ($value + 500) . "  order by a.af_order_id " . $_SESSION['sort'] . " , a.ch_po";
 		$num = 1;
 	}
-
+	var_dump($num);
 	$key_c = [];
 	if ($num > 0) {
 
