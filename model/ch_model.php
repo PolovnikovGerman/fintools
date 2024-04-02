@@ -30,6 +30,7 @@ else
 // $qry = "select * from af_master a,af_child b  where b.ch_vendor in (select distinct(v_abbr) from af_vendor where v_type = 'chinese') and b.af_order_id >= $value and b.af_order_id <=".($value+1000)." and a.af_order_id = b.af_order_id and b.ch_conf_ck = 'yes'";
     $qry = "select * from af_master a,af_child b  where b.ch_vendor in (select distinct(v_abbr) from af_vendor where v_type = 'chinese') and b.af_order_id >= $value and b.af_order_id <=".($value+1000)." and a.af_order_id = b.af_order_id";
 
+$qry.=" order by a.af_order_id";
 $res = $obj->query($qry);
 $vch_ord = array();
 while($data = $obj->fetch($res) )

@@ -1,7 +1,7 @@
 <div class="header_default" >
  <div style="float:left;  margin-top:8px;">
      <a href="blank.php">
-         <img style="margin-left:10px;" src="/images/page_newlogo.png" id="logo"/>
+         <img style="margin-left:10px;" src="../images/page_newlogo.png" id="logo"/>
      </a>
  </div>
  <div style="float:left; position:absolute; top:0; margin-left:450px;"></div>
