@@ -13,7 +13,7 @@ $obj=new db();
 
 for($i=64500;$i<=74999;$i++)
 {
-    $qry="INSERT into af_master (af_order_id, af_date) values($i,'0000-00-00')";
+    $qry="INSERT into af_master (af_order_id) values($i)";
     $obj->query($qry);
     echo 'Record '.$i.' Inserted '.PHP_EOL;
 
