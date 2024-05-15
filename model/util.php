@@ -11,7 +11,7 @@ echo 'Record '.$i.' Inserted '.PHP_EOL;
 $po=array('A','B','C','D');
 $obj=new db();
 
-for($i=45000;$i<=54999;$i++)
+for($i=64500;$i<=74999;$i++)
 {
     $qry="INSERT into af_master (af_order_id) values($i)";
     $obj->query($qry);
