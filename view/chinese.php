@@ -64,7 +64,7 @@ Orders:<select onchange="display_or(this.value);">
  if(isset($_GET['or']))
  echo "<option value=".$_GET['or'].">".$_GET['or']."-".($_GET['or']+1000)."</option>";
 
- for($i=22000; $i<65000; $i+=1000)
+ for($i=22000; $i<75000; $i+=1000)
  echo "<option value=$i>$i-".($i+1000)."</option>";
  ?>
  </select>

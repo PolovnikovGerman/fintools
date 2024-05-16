@@ -72,7 +72,7 @@
                 if(isset($_SESSION['or']) && is_numeric($_SESSION['or']))
                 echo "<option value=".$_SESSION['or'].">".$_SESSION['or']."-".($_SESSION['or']+500)."</option>"; 
 
-                for($i=22000; $i<65000; $i+=500) {
+                for($i=22000; $i<75000; $i+=500) {
                     if(($i%1000) == 0)
                         echo "<option style=\"background-color:#ececec;font-weight:bold;font-size:11px; color:#3A3A3A; padding:3px 3px;\" value=$i <b>$i-".($i+499)."</b></option>";
                     else

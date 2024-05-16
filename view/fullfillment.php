@@ -112,7 +112,7 @@ Orders:<select onchange="display_or(this.value);" id="ordersnumberselect">
 // echo "<option value=$i>$i-".($i+500)."</option>";
 //  for($i=22000; $i<30000; $i+=500)
 
-  for($i=22000; $i<65000; $i+=500)
+  for($i=22000; $i<75000; $i+=500)
  {
 
  if(($i%1000) == 0)
