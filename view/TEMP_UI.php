@@ -196,6 +196,8 @@ echo "</select>";
             <!-- <option value="Ocean">Ocean</option> -->
             <option value="1st Class">1st Class</option>
             <option value="Priority">Priority</option>
+            <option value="FedEx 207796640">FedEx 207796640</option>
+            <option value="Ocean">Ocean</option>
             <option value="Truck">Truck</option>
             <option value="ASAP">ASAP</option>
         </select>
@@ -221,6 +223,8 @@ echo "</select>";
             <!-- <option value="Ocean">Ocean</option> -->
             <option value="1st Class">1st Class</option>
             <option value="Priority">Priority</option>
+            <option value="FedEx 207796640">FedEx 207796640</option>
+            <option value="Ocean">Ocean</option>
             <option value="Truck">Truck</option>
             <option value="ASAP">ASAP</option>
         </select>
@@ -246,6 +250,8 @@ echo "</select>";
             <!-- <option value="Ocean">Ocean</option> -->
             <option value="1st Class">1st Class</option>
             <option value="Priority">Priority</option>
+            <option value="FedEx 207796640">FedEx 207796640</option>
+            <option value="Ocean">Ocean</option>
             <option value="Truck">Truck</option>
             <option value="ASAP">ASAP</option>
         </select>

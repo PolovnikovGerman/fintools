@@ -131,6 +131,7 @@ echo "</select>";
 <option value="NextDay Early">Next Day Early AM</option>
 <option value="DHL Express">DHL Express</option>
 <option value="DHL Expedited">DHL Expedited</option>
+<option value="FedEx 207796640">FedEx 207796640</option>
 <option value="Ocean">Ocean</option>
 <option value="Truck">Truck</option>
 </select>
@@ -145,6 +146,7 @@ echo "</select>";
 <option value="NextDay Early">Next Day Early AM</option>
 <option value="DHL Express">DHL Express</option>
 <option value="DHL Expedited">DHL Expedited</option>
+<option value="FedEx 207796640">FedEx 207796640</option>
 <option value="Ocean">Ocean</option>
 <option value="Truck">Truck</option>
 </select>
@@ -158,6 +160,7 @@ echo "</select>";
 <option value="NextDay Early">Next Day Early AM</option>
 <option value="DHL Express">DHL Express</option>
 <option value="DHL Expedited">DHL Expedited</option>
+<option value="FedEx 207796640">FedEx 207796640</option>
 <option value="Ocean">Ocean</option>
 <option value="Truck">Truck</option>
 </select>
