@@ -1,24 +1,15 @@
 <?php
-$fh = fopen('../test.txt', 'a+');
-if (!$fh) {
-    echo json_encode(array('error' => 'Unable to open test.txt'));
-    return FALSE;
-} else {
-    fwrite($fh, 'Export start '.date('Y-m-d H:i:s').PHP_EOL);
-}
 $out = array('result' => 0, 'error' => 'Clay / Previews Not Found');
 include_once('../model/mysql.php');
 $obj = new db();
 $results = array();
-$qry = 'select * from lift_exportpo where managed=0 order by id desc limit 100';
-fwrite($fh, 'PO SQL '.$qry.PHP_EOL);
+$qry = 'select * from lift_exportpo where managed=0 order by id limit 100';
 $res = $obj->query($qry);
 while($data = $obj->fetch($res)){
     $methods = array();
     $items = array();
     // Get methods
     $methsql = 'select * from lift_exportpo_methods where exportpo_id='.$data['id'];
-    fwrite($fh, 'Method SQL '.$methsql.PHP_EOL);
     $methres = $obj->query($methsql);
     while ($methdat = $obj->fetch($methres)){
         $methods[] = array(
@@ -31,7 +22,6 @@ while($data = $obj->fetch($res)){
     }
     // Get items
     $itemsql = 'select * from lift_exportpo_items where exportpo_id='.$data['id'];
-    fwrite($fh, 'Items SQL '.$itemsql.PHP_EOL);
     $itemres = $obj->query($itemsql);
     while ($itemdata = $obj->fetch($itemres)) {
         $items[] = array(
@@ -59,7 +49,6 @@ while($data = $obj->fetch($res)){
         'items' => $items,
     );
     $updsql = "update lift_exportpo set managed=1 where id=".$data['id'];
-    fwrite($fh, 'UPdate PO '.$updsql.PHP_EOL);
     $resupd = $obj->query($updsql);
 }
 if  (count($results) > 0) {
@@ -67,5 +56,4 @@ if  (count($results) > 0) {
     $out['orders'] = $results;
 }
 echo json_encode($out);
-fclose($fh);
 return TRUE;
