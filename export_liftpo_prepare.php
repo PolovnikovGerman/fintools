@@ -2,9 +2,11 @@
 include('model/mysql.php');
 $obj = new db();
 // $startdate = strtotime(date("Y-m-d"));
-$startdate = strtotime('2026-09-16');
-$finishdate = strtotime(date('Y-m-d', $startdate)."+1 day");
-echo 'Start '.date("Y-m-d",$startdate).' to '.date("Y-m-d",$finishdate).PHP_EOL;
+// $startdate = strtotime('2026-09-16');
+// $finishdate = strtotime(date('Y-m-d', $startdate)."+1 day");
+$finishdate = strtotime(date('Y-m-d'));
+$startdate = strtotime(date('Y-m-d', $finishdate)."-1 day");
+echo 'Start '.date("Y-m-d H:i:s",$startdate).' to '.date("Y-m-d  H:i:s",$finishdate).PHP_EOL;
 $qry = 'select ch.ch_id, ch.af_order_id, ch.ch_po, r.r2_date, ch.ch_vendor, ch.ch_poTotal, r.r2_ship_date, r.r2_ship_act, r.r2_ven_msg';
 for ($i=1; $i<4; $i++) {
     $qry.=',r.r2_d'.$i.'_type, r.r2_d'.$i.'_date, r.r2_d'.$i.'_add';
@@ -35,7 +37,6 @@ while($data = $obj->fetch($res) )
     $poexpid = mysqli_insert_id($obj->conn);
     if ($poexpid > 0) {
         for ($i=1; $i<4; $i++) {
-            echo 'Method '.$i.' insert'.PHP_EOL;
             if (!empty($data['r2_d'.$i.'_type'])) {
                 //$shipaddr = preg_replace('/"([^"]+)"/', '«$1»', $data['r2_d'.$i.'_add']);
                 $shipaddr = addslashes($data['r2_d'.$i.'_add']);
@@ -48,7 +49,6 @@ while($data = $obj->fetch($res) )
         $itmsql = 'select * from af_r2_items where r2_id = '.$data['ch_id'];
         $itmobj = $obj->query($itmsql);
         while ($item = $obj->fetch($itmobj)) {
-            echo 'Item '.$item['r2i_id'].' insert'.PHP_EOL;
             // $itemname = preg_replace('/"([^"]+)"/', '«$1»', $item['r2i_desc']);
             $itemname = substr(addslashes($item['r2i_desc']),0,250);
             $itmins = 'insert into lift_exportpo_items(exportpo_id, item_number, item_name, item_qty, item_price) ';
