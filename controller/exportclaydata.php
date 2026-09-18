@@ -2,7 +2,7 @@
 $out = array('result' => 0, 'error' => 'Clay / Previews Not Found');
 include_once ('../model/mysql.php');
 $obj = new db();
-$qry = "select id, order_number, doc_type, doc_link, doc_name from lift_exports where managed=0 limit 10";
+$qry = "select id, order_number, doc_type, doc_link, doc_name from lift_exports where managed=0 limit 10 order by id desc";
 $res = $obj->query($qry);
 $results = array();
 while($data = $obj->fetch($res) ) {
