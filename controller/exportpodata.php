@@ -3,7 +3,7 @@ $out = array('result' => 0, 'error' => 'Clay / Previews Not Found');
 include_once('../model/mysql.php');
 $obj = new db();
 $results = array();
-$qry = 'select * from lift_exportpo where managed=0 order by id desc limit 10';
+$qry = 'select * from lift_exportpo where managed=0 order by id limit 100';
 $res = $obj->query($qry);
 while($data = $obj->fetch($res)){
     $methods = array();
