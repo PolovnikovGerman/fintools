@@ -765,20 +765,23 @@ $pdf->SetFont('Arial','B',11);
 $mark = 141;
 for($i=0;$i<10;$i++)
 {
-$mark+=8;
-$pdf->SetXY(52,$mark);
-$pdf->Cell(18,4,$_POST['r2_qty'.$i],0,0,'C');
-$pdf->Cell(91,4,$_POST['r2_desc'.$i],0,0,'L');
-if($_POST['r2_qty'.$i] > 0)
-$pdf->Cell(21,4,"$".$_POST['r2_price'.$i],0,0,'C');
-if(is_numeric($_POST['r2_qty'.$i]) && is_numeric($_POST['r2_price'.$i]))
-{
+if (isset($_POST['r2_qty'.$i]) && isset($_POST['r2_desc'.$i])) {
+    $mark+=8;
+    $pdf->SetXY(52,$mark);
+    $pdf->Cell(18,4,$_POST['r2_qty'.$i],0,0,'C');
+    $pdf->Cell(91,4,$_POST['r2_desc'.$i],0,0,'L');
+    if($_POST['r2_qty'.$i] > 0)
+        $pdf->Cell(21,4,"$".$_POST['r2_price'.$i],0,0,'C');
+    if(is_numeric($_POST['r2_qty'.$i]) && is_numeric($_POST['r2_price'.$i]))
+    {
 //$x=$_POST['r2_price'.$i] * $_POST['r2_qty'.$i];
-$x=money_format("%(#1n",$_POST['r2_price'.$i] * $_POST['r2_qty'.$i]);
-$pdf->Cell(25,4,$x,0,0,'R');
+        $x=money_format("%(#1n",$_POST['r2_price'.$i] * $_POST['r2_qty'.$i]);
+        $pdf->Cell(25,4,$x,0,0,'R');
+    }
+    else
+        $pdf->Cell(25,4,'',0,0,'R');
 }
-else
-$pdf->Cell(25,4,'',0,0,'R');
+
 }
 
 //creating number bullets

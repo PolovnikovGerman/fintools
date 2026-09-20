@@ -427,20 +427,22 @@ function generate_pdf($details) {
         $pdf->SetFont('Arial', 'B', 11);
         $mark = 141;
         for ($i = 0; $i < 10; $i++) {
-            $mark+=8;
-            $pdf->SetXY(52, $mark);
-            $pdf->Cell(18, 4, $details['r2_qty' . $i], 0, 0, 'C');
-            $pdf->Cell(91, 4, $details['r2_desc' . $i], 0, 0, 'L');
-            if ($details['r2_qty' . $i] > 0)
-                $pdf->Cell(21, 4, "$" . $details['r2_price' . $i], 0, 0, 'C');
-            if (is_numeric($details['r2_qty' . $i]) && is_numeric($details['r2_price' . $i])) {
+            if (isset($_POST['r2_qty'.$i]) && isset($_POST['r2_desc'.$i])) {
+                $mark+=8;
+                $pdf->SetXY(52, $mark);
+                $pdf->Cell(18, 4, $details['r2_qty' . $i], 0, 0, 'C');
+                $pdf->Cell(91, 4, $details['r2_desc' . $i], 0, 0, 'L');
+                if ($details['r2_qty' . $i] > 0)
+                    $pdf->Cell(21, 4, "$" . $details['r2_price' . $i], 0, 0, 'C');
+                if (is_numeric($details['r2_qty' . $i]) && is_numeric($details['r2_price' . $i])) {
 //$x = $details['r2_price'.$i] * $details['r2_qty'.$i];
 //MONEY_FORMAT WILL NOT WORK ON YOUR SYSTEM, DOESNOT WORK ON WINDOWS OS
-                $x = money_format("%(#1n", $details['r2_price' . $i] * $details['r2_qty' . $i]);
-                $pdf->Cell(25, 4, $x, 0, 0, 'R');
+                    $x = money_format("%(#1n", $details['r2_price' . $i] * $details['r2_qty' . $i]);
+                    $pdf->Cell(25, 4, $x, 0, 0, 'R');
+                }
+                else
+                    $pdf->Cell(25, 4, '', 0, 0, 'R');
             }
-            else
-                $pdf->Cell(25, 4, '', 0, 0, 'R');
         }
 
 //creating number bullets
