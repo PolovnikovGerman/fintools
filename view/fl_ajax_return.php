@@ -540,7 +540,7 @@ function _outfullfilmentpage($key_c, $att) {
             } else {
                 $content.=" value=no ></td>";
             }
-            $content.="<td    width=\"175px\" align=\"center\" id=ch_notes" . $key_c[$point]['ch_id'][$j] . "  ondblclick=edit_ch(" . $key_c[$point]['ch_id'][$j] . ")    ><a class=info href=#>" . substr($key_c[$point]['ch_notes'][$j], 0, 23) . "<span>" . $key_c[$point]['ch_notes'][$j] . "</span></a></td>";
+            $content.="<td    width=\"175px\" align=\"center\" id=ch_notes" . $key_c[$point]['ch_id'][$j] . "  ondblclick=edit_ch(" . $key_c[$point]['ch_id'][$j] . ")    ><a class=info href=#>" . (empty($key_c[$point]['ch_notes'][$j]) ? '' : substr($key_c[$point]['ch_notes'][$j], 0, 23)) . "<span>" . $key_c[$point]['ch_notes'][$j] . "</span></a></td>";
 
             $content.="</tr>";
             $content.="</table>";
