@@ -88,12 +88,12 @@ if (!$res) {
                         $go = 0;
                         $qry = "delete from af_r2_items where r2_id = $last_id";
                         $obj->query($qry);
-                        $qry = "insert into af_r2_items values";
+                        $qry = "insert into af_r2_items(r2_id, r2i_itemid, r2i_desc, r2i_qty,r2i_prc) values";
                         for ($i = 0; $i < 10; $i++) {
                             if (!empty($_POST['r2_itemid' . $i]) && !empty($_POST['r2_desc' . $i])) {
                                 $_POST['r2_qty' . $i] = ($_POST['r2_qty' . $i] > 0 ) ? $_POST['r2_qty' . $i] : 0;
                                 $_POST['r2_price' . $i] = ($_POST['r2_price' . $i] > 0 ) ? $_POST['r2_price' . $i] : 0.00;
-                                $qry.="(null,$last_id, '" . $_POST['r2_itemid' . $i] . "','" . $_POST['r2_desc' . $i] . "'," . $_POST['r2_qty' . $i] . "," . $_POST['r2_price' . $i] . "),";
+                                $qry.="($last_id, '" . $_POST['r2_itemid' . $i] . "','" . $_POST['r2_desc' . $i] . "'," . $_POST['r2_qty' . $i] . "," . $_POST['r2_price' . $i] . "),";
                                 $go = 1;
                             }
                         }

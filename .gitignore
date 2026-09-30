@@ -1,3 +1,4 @@
 /.idea/
 /docs
 /config/smtp_config.php
+/savepo.log

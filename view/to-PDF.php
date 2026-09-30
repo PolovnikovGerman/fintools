@@ -3,6 +3,9 @@ require('fpdf.php');
 setlocale(LC_MONETARY, "en_US");
 require('../includes/utility_functions.php');
 require('../includes/email_functions.php');
+// Log File
+$filelog = '../savepo.log';
+$fh = fopen($filelog, 'a');
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////////////////////PDF FOR 1 ADDRESS///////////////////////////////////////////////////////////////////////////////////////
@@ -1313,7 +1316,7 @@ $last_id = $_POST['chid'];
 $go=0;
 $qry = "delete from af_r2_items where r2_id = $last_id";
 $obj->query($qry);
- $qry = "insert into af_r2_items values";
+ $qry = "insert into af_r2_items(r2_id, r2i_itemid, r2i_desc, r2i_qty,r2i_prc) values";
 for($i=0;$i<10;$i++)
 {
 
@@ -1322,7 +1325,7 @@ if(!empty($_POST['r2_itemid'.$i]) && !empty($_POST['r2_desc'.$i]) )
  $_POST['r2_qty'.$i] = ($_POST['r2_qty'.$i] > 0 ) ?  $_POST['r2_qty'.$i] : 0 ;
  $_POST['r2_price'.$i] = ($_POST['r2_price'.$i] > 0 ) ? $_POST['r2_price'.$i] : 0.00;
 
-$qry.="(null,$last_id, '".$_POST['r2_itemid'.$i]."','".$_POST['r2_desc'.$i]."',".$_POST['r2_qty'.$i].",".$_POST['r2_price'.$i]."),";
+$qry.="($last_id, '".$_POST['r2_itemid'.$i]."','".$_POST['r2_desc'.$i]."',".$_POST['r2_qty'.$i].",".$_POST['r2_price'.$i]."),";
 $go=1;
 }
 }
@@ -1366,7 +1369,7 @@ if($_POST['chpo'] == 'A'){
 $par=array($data2['v_name'],'BT'.$_POST['oid'].$_POST['chpo']);
 $msg=emailTemplate('po',$par);
 
-if ($_SERVER['SERVER_NAME']=='fintools.local') {
+if ($_SERVER['SERVER_NAME']=='fintools.test') {
     $data2['v_email']='to_german@yahoo.com';    
     $data2['v_additional_email']='';
 }
@@ -1379,6 +1382,10 @@ if ($_SERVER['SERVER_NAME']=='fintools.local') {
 $subj = 'Purchase Order #BT'.$_POST['oid'].$_POST['chpo'];
 $mailattach = json_encode($attachs);
 $qry = "insert into email_queue(email_to, email_cc, email_subj, email_body, email_attach) values ('{$data2['v_email']}','{$data2['v_additional_email']}','{$subj}','{$obj->mysqlescapestring($msg)}','{$mailattach}')";
+if ($fh) {
+    $msg = 'INSERT EMAIL_QUEUE '.$qry.PHP_EOL;
+    fwrite($fh, $msg);
+}
 $obj->query($qry);
 if($error['flag'])
 {
